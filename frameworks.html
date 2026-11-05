@@ -1,0 +1,586 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Framework Finder</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Andika:wght@400;700&family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap">
+<style>
+/* Layout: a ruled index, like the contents page of a school handbook. One column of rows, controls on top, a "start here" path per role. */
+:root {
+  --bg: #f3f6f8;
+  --surface: #ffffff;
+  --ink: #142330;
+  --muted: #4f606c;
+  --line: #d3dce2;
+  --accent: #00756f;
+  --accent-soft: #dff1ef;
+  --mark: #ffd84d;
+  --focus: #1c6ed5;
+  --display: "Bricolage Grotesque", "Arial Narrow", Arial, sans-serif;
+  --body: "Source Sans 3", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d1a22;
+    --surface: #13242e;
+    --ink: #e7eff4;
+    --muted: #9ab0bd;
+    --line: #26394a;
+    --accent: #4fd1c5;
+    --accent-soft: #123a3d;
+    --focus: #6aa8ff;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d1a22;
+  --surface: #13242e;
+  --ink: #e7eff4;
+  --muted: #9ab0bd;
+  --line: #26394a;
+  --accent: #4fd1c5;
+  --accent-soft: #123a3d;
+  --focus: #6aa8ff;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 17px;
+  line-height: 1.5;
+  padding-block: 0 64px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.wrap { max-width: 900px; margin-inline: auto; }
+h1, h2, h3 { font-family: var(--display); margin: 0; line-height: 1.05; text-wrap: balance; }
+p { margin: 0; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+
+/* Site navigation */
+.sitenav { display: flex; flex-wrap: wrap; gap: 8px; padding-block: 16px 0; }
+.sitenav a { font-weight: 600; text-decoration: none; padding: 8px 14px; border: 2px solid var(--ink); }
+.sitenav a[aria-current="page"] { background: var(--ink); color: var(--bg); }
+
+/* Masthead */
+.mast { padding-block: 44px 24px; }
+.mast h1 { font-size: clamp(2.6rem, 9vw, 4.6rem); font-weight: 800; letter-spacing: -0.02em; }
+.mast h1 span { background: linear-gradient(transparent 62%, var(--mark) 62%, var(--mark) 92%, transparent 92%); }
+.mast .sub { margin-top: 16px; max-width: 54ch; font-size: 1.12rem; color: var(--muted); }
+.checked { margin-top: 10px; font-size: 0.88rem; color: var(--muted); }
+
+/* Controls */
+.controls { display: flex; flex-direction: column; gap: 14px; padding-block: 18px; border-block: 2px solid var(--ink); }
+.roles { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip {
+  font: 600 0.98rem/1 var(--body); min-height: 42px; padding: 0 16px; cursor: pointer;
+  border: 2px solid var(--ink); background: transparent; color: var(--ink);
+}
+.chip[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+.filters { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; }
+@media (min-width: 640px) { .filters { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.field { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.field > span { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); }
+.field select, .field input {
+  min-height: 44px; padding: 0 12px; border: 2px solid var(--line); border-radius: 0;
+  background: var(--surface); color: var(--ink); font: 400 1rem var(--body); min-width: 0; width: 100%;
+}
+.searchrow { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; }
+@media (min-width: 640px) { .searchrow { grid-template-columns: minmax(0, 1fr) auto; align-items: end; } }
+.status-line { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; font-size: 0.92rem; color: var(--muted); padding-block: 12px 4px; }
+.linkbtn { background: none; border: 0; padding: 0; font: 600 0.92rem var(--body); color: var(--accent); cursor: pointer; text-decoration: underline; }
+
+/* Start here */
+.path { margin-top: 22px; background: var(--accent-soft); padding: 18px 20px; }
+.path[hidden] { display: none; }
+.path h2 { font-size: 1.35rem; margin-bottom: 10px; }
+.path ol { margin: 0; padding-left: 1.3rem; display: flex; flex-direction: column; gap: 6px; }
+.path li::marker { font-weight: 700; color: var(--accent); }
+.path button { background: none; border: 0; padding: 0; font: 600 1rem var(--body); color: var(--ink); text-decoration: underline; cursor: pointer; text-align: left; }
+
+/* Index rows */
+.index { list-style: none; margin: 18px 0 0; padding: 0; border-top: 2px solid var(--ink); }
+.item { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px 16px; padding: 18px 0; border-bottom: 1px solid var(--line); scroll-margin-top: 16px; }
+.item.flash { animation: flash 1.6s ease-out; }
+@keyframes flash { from { background: var(--accent-soft); } to { background: transparent; } }
+.item h3 { font-size: 1.3rem; font-weight: 700; }
+.item .org { font-size: 0.88rem; color: var(--muted); margin-top: 2px; }
+.item .desc { grid-column: 1 / -1; max-width: 66ch; }
+.tags { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 6px; }
+.tag { font-size: 0.78rem; font-weight: 600; padding: 3px 8px; border: 1px solid var(--line); color: var(--muted); }
+.tag.status { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.tag.free { border-color: var(--accent); color: var(--accent); }
+.acts { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.open { display: inline-flex; align-items: center; min-height: 42px; padding: 0 16px; background: var(--accent); color: var(--bg); font-weight: 600; text-decoration: none; }
+.open:hover { filter: brightness(1.08); }
+.save { min-height: 42px; padding: 0 14px; border: 2px solid var(--line); background: transparent; color: var(--ink); font: 600 0.95rem var(--body); cursor: pointer; }
+.save[aria-pressed="true"] { background: var(--mark); border-color: var(--mark); color: #142330; }
+.empty { padding: 36px 0; color: var(--muted); }
+
+/* Updates */
+.updates { margin-top: 56px; }
+.updates h2 { font-size: 1.9rem; margin-bottom: 4px; }
+.updates .intro { color: var(--muted); margin-bottom: 14px; }
+.upd { list-style: none; margin: 0; padding: 0; border-top: 2px solid var(--ink); }
+.upd li { display: grid; grid-template-columns: minmax(0, 1fr); gap: 4px; padding: 14px 0; border-bottom: 1px solid var(--line); }
+@media (min-width: 640px) { .upd li { grid-template-columns: 150px minmax(0, 1fr); gap: 16px; } }
+.upd .when { font-weight: 600; font-variant-numeric: tabular-nums; }
+.upd a { color: var(--accent); font-weight: 600; }
+
+footer { margin-top: 48px; font-size: 0.88rem; color: var(--muted); max-width: 70ch; }
+footer p + p { margin-top: 8px; }
+@media (prefers-reduced-motion: reduce) { .item.flash { animation: none; } }
+
+.sitenav { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding-block: 16px 0; }
+.sitenav a { font-weight: 600; text-decoration: none; padding: 8px 14px; border: 2px solid var(--ink); }
+.sitenav a[aria-current="page"] { background: var(--ink); color: var(--bg); }
+.sitenav a.wordmark { border: 0; padding-left: 0; margin-right: auto; font-family: var(--display); font-size: 1.3rem; font-weight: 800; letter-spacing: -0.01em; }
+@media (max-width: 640px) { .sitenav a.wordmark { flex: 1 0 100%; } }
+/* cute-early-years */
+:root {
+  --bg: #fff8ec; --surface: #ffffff; --ink: #2b2a4c; --muted: #6a6788; --line: #f0e2c8;
+  --accent: #e8590c; --accent-soft: #ffe9d6; --mark: #ffd84d; --focus: #3b5bdb;
+  --display: "Fredoka", "Nunito", "Trebuchet MS", system-ui, sans-serif;
+  --body: "Nunito", "Trebuchet MS", system-ui, sans-serif;
+  --a-communication: #3b82e0; --a-personal-social: #e0457b; --a-physical: #f08a24; --a-literacy: #8b5cf6;
+  --a-mathematics: #14a8b8; --a-understanding-world: #3aa655; --a-expressive-arts: #e0a812;
+  --pop: 4px 4px 0 var(--ink);
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg: #211f3d; --surface: #2d2a52; --ink: #fff3de; --muted: #c5c0e6; --line: #433f75; --accent: #ff9a5c; --accent-soft: #4a3560; --focus: #8fb0ff; --pop: 4px 4px 0 #0f0e22; } }
+:root[data-theme="dark"] { --bg: #211f3d; --surface: #2d2a52; --ink: #fff3de; --muted: #c5c0e6; --line: #433f75; --accent: #ff9a5c; --accent-soft: #4a3560; --focus: #8fb0ff; --pop: 4px 4px 0 #0f0e22; }
+body { font-family: var(--body); font-weight: 600; background-image: radial-gradient(circle at 12px 12px, rgba(232,89,12,.07) 3px, transparent 4px); background-size: 48px 48px; }
+h1, h2, h3, .rl-t, .tile .t-name, .wordmark { font-family: var(--display) !important; letter-spacing: 0 !important; font-weight: 600 !important; }
+h1 { font-weight: 700 !important; }
+.eyebrow, .grouplabel, .field > span, .a-kind { font-family: var(--display); letter-spacing: .06em; }
+.eyebrow { display: inline-block; padding: 4px 14px; border-radius: 999px; background: var(--accent-soft); }
+/* rainbow ribbon at the very top */
+body::before { content: ""; display: block; height: 10px; margin-inline: calc(-1 * max(16px, env(safe-area-inset-left, 0px))); margin-bottom: 0;
+  background: linear-gradient(90deg, var(--a-communication) 0 14.28%, var(--a-personal-social) 0 28.56%, var(--a-physical) 0 42.84%, var(--a-literacy) 0 57.12%, var(--a-mathematics) 0 71.4%, var(--a-understanding-world) 0 85.68%, var(--a-expressive-arts) 0); }
+.sitenav a { border: 2px solid var(--ink) !important; border-radius: 999px; background: var(--surface); box-shadow: 2px 2px 0 var(--ink); transition: transform .12s; }
+.sitenav a:hover { transform: translateY(-2px) rotate(-1.5deg); }
+.sitenav a[aria-current="page"] { background: var(--accent) !important; color: #fff !important; border-color: var(--ink) !important; }
+.sitenav a.wordmark { border: 0 !important; box-shadow: none; background: none; font-size: 1.55rem; color: var(--accent); }
+.sitenav a.wordmark::before { content: "\2605 "; color: var(--mark); -webkit-text-stroke: 1.5px var(--ink); }
+.btn, .chip, .vbar button, .item .prev, .item .open { border-radius: 999px !important; border: 2px solid var(--ink) !important; box-shadow: 3px 3px 0 var(--ink); font-family: var(--display); font-weight: 600 !important; transition: transform .12s, box-shadow .12s; }
+.btn:hover, .chip:hover { transform: translate(-1px,-2px); box-shadow: 4px 5px 0 var(--ink); filter: none; }
+.btn:active, .chip:active { transform: translate(2px,2px); box-shadow: 1px 1px 0 var(--ink); }
+.btn.primary { background: var(--accent); color: #fff; }
+.chip[aria-pressed="true"] { background: var(--a-communication) !important; color: #fff !important; }
+.tile, .area { border-radius: 26px !important; border: 3px solid var(--ink); box-shadow: var(--pop); transition: transform .15s; }
+.tile:hover, .area:hover { transform: translateY(-4px) rotate(-1deg); filter: none; }
+.tiles .tile:nth-child(even):hover { transform: translateY(-4px) rotate(1deg); }
+.tile .t-n { background: rgba(255,255,255,.25); align-self: flex-start; padding: 2px 12px; border-radius: 999px; }
+.tile[href*="frameworks"], .tile[href$="teacher"], .tile[href$="student"] { background: var(--a-mathematics); }
+.tile[href$="student"] { background: var(--a-literacy); } .tile[href*="frameworks"] { background: var(--a-understanding-world); }
+.rule-list { border-top: 0 !important; display: grid; gap: 12px; }
+.rule-list li { border: 3px solid var(--ink) !important; border-radius: 22px; background: var(--surface); box-shadow: 3px 3px 0 var(--ink); overflow: hidden; }
+.rule-list a { padding: 14px 20px; } .rule-list li:hover { transform: translateY(-2px); }
+.rl-n { background: var(--accent-soft); border-radius: 999px; padding: 4px 14px; color: var(--accent); }
+.hero h1 span, .mast h1 span, .mkhead h1 { background-size: 100% 100%; }
+.hero h1 span { background: linear-gradient(transparent 58%, var(--mark) 58%, var(--mark) 92%, transparent 92%); border-radius: 10px; }
+.controls { border: 3px solid var(--ink) !important; border-radius: 26px; background: var(--surface); padding: 18px !important; box-shadow: var(--pop); }
+.field input, .field select, .field textarea { border: 2px solid var(--ink) !important; border-radius: 16px !important; background: var(--bg) !important; font-family: var(--body); font-weight: 600; }
+.item { border: 3px solid var(--ink) !important; border-radius: 22px; background: var(--surface); padding: 16px 20px !important; margin-bottom: 12px; box-shadow: 3px 3px 0 var(--ink); }
+.index { padding-left: 0 !important; list-style: none; } .group-head { border: 0 !important; color: var(--accent); }
+.tag { border-radius: 999px !important; border: 2px solid var(--line) !important; background: var(--bg); padding: 3px 12px !important; }
+.tag.new { background: var(--mark) !important; border-color: var(--ink) !important; color: #2b2a4c !important; }
+.tag.area { background: var(--accent-soft) !important; border-color: var(--accent-soft) !important; color: var(--accent); }
+.note { border-radius: 18px; border: 2px dashed var(--accent); background: var(--accent-soft); }
+.swrap { border-radius: 8px; }
+footer { border-top: 3px dashed var(--accent) !important; font-weight: 600; }
+.viewer { background: #1d1b3a !important; }
+a { text-decoration-thickness: 2px; text-underline-offset: 3px; }
+/* hero decorations */
+.hero { position: relative; }
+.hero .deco { position: absolute; right: 0; top: 24px; width: min(300px, 38vw); height: auto; pointer-events: none; }
+@media (max-width: 640px) { .hero .deco { width: 120px; top: 10px; opacity: .9; } }
+.feature .f-art { border-radius: 22px; box-shadow: var(--pop); border: 3px solid var(--ink); }
+@media (prefers-reduced-motion: no-preference) { .hero .deco .bob { animation: bob 3.2s ease-in-out infinite; transform-box: fill-box; transform-origin: center; } .hero .deco .bob2 { animation-delay: -1.2s; } }
+@keyframes bob { 50% { transform: translateY(-8px) rotate(6deg); } }
+</style>
+</head>
+<body>
+
+
+<div class="wrap">
+  <nav class="sitenav" aria-label="Site">
+      <a class="wordmark" href="index.html">Framework Finder</a>
+      <a href="index.html">Home</a>
+      <a href="early-years.html">Early years</a>
+      <a href="printables.html">Printables</a>
+      <a href="make.html">Make your own</a>
+      <a href="frameworks.html" aria-current="page">Frameworks</a>
+    </nav>
+  <header class="mast">
+    <h1>Framework <span>Finder</span></h1>
+    <p class="sub">The official frameworks and free teaching materials for student teachers, teachers and nursery practitioners across the UK. Every link goes to the original source.</p>
+    <p class="checked">Links and dates last checked on 1 November 2026. It covers the main UK frameworks, not every document that exists.</p>
+  </header>
+
+  <section class="controls" aria-label="Filters">
+    <div class="roles" id="roles" role="group" aria-label="I am a"></div>
+    <div class="filters">
+      <label class="field"><span>Phase</span>
+        <select id="f-phase">
+          <option value="all">Any phase</option>
+          <option value="early">Early years (birth to 5)</option>
+          <option value="primary">Primary</option>
+          <option value="secondary">Secondary</option>
+        </select>
+      </label>
+      <label class="field"><span>Nation</span>
+        <select id="f-nation">
+          <option value="all">Whole UK</option>
+          <option value="England">England</option>
+          <option value="Scotland">Scotland</option>
+          <option value="Wales">Wales</option>
+          <option value="Northern Ireland">Northern Ireland</option>
+        </select>
+      </label>
+      <label class="field"><span>Type</span>
+        <select id="f-type"><option value="all">Any type</option></select>
+      </label>
+    </div>
+    <div class="searchrow">
+      <label class="field"><span>Search</span><input id="q" type="search" placeholder="e.g. EYFS, standards, maths, inspection" autocomplete="off"></label>
+      <button class="chip" id="saved-toggle" type="button" aria-pressed="false">Saved (0)</button>
+    </div>
+  </section>
+
+  <div class="status-line"><span id="count" role="status"></span><button class="linkbtn" id="reset" type="button">Clear all filters</button></div>
+
+  <section class="path" id="path" hidden aria-live="polite"></section>
+
+  <ol class="index" id="index"></ol>
+
+  <section class="updates" aria-labelledby="upd-h">
+    <h2 id="upd-h">What changed recently</h2>
+    <p class="intro">Dated changes confirmed on official pages. Always open the source to check for the latest version.</p>
+    <ul class="upd" id="upd"></ul>
+  </section>
+
+  <footer>
+    <p>Framework Finder is an independent directory. It is not run by, or endorsed by, the Department for Education, Ofsted or any organisation listed. It holds no framework text; each link opens the owner's own page.</p>
+    <p>Check each source's licence before copying or sharing its content. Your saved items are kept in this browser only.</p>
+  </footer>
+</div>
+
+<script>
+/* ===== DATA: every url below was checked against official or owner pages ===== */
+const ROLES = [
+  { id: "all", label: "Everyone" },
+  { id: "student", label: "Student teacher" },
+  { id: "teacher", label: "Teacher" },
+  { id: "nursery", label: "Nursery practitioner" }
+];
+const PHASE_LABEL = { early: "Early years", primary: "Primary", secondary: "Secondary" };
+const ALL3 = ["student", "teacher", "nursery"];
+
+const R = [
+  { id: "eyfs", title: "EYFS statutory framework", org: "Department for Education", nation: "England", type: "Frameworks", status: "Statutory",
+    url: "https://www.gov.uk/government/publications/early-years-foundation-stage-framework--2",
+    desc: "The legal standards for the learning, development and care of children from birth to 5. There is one version for childminders and one for group and school-based providers. Updated versions apply from 1 September 2026.",
+    roles: ALL3, phases: ["early"] },
+  { id: "devmat", title: "Development Matters", org: "Department for Education", nation: "England", type: "Frameworks", status: "Non-statutory",
+    url: "https://www.gov.uk/government/publications/development-matters--2",
+    desc: "Curriculum guidance that supports the EYFS statutory framework and helps practitioners meet its requirements.",
+    roles: ALL3, phases: ["early"] },
+  { id: "b5m", title: "Birth to 5 Matters", org: "Birth to 5 Matters", nation: "England", type: "Frameworks", status: "Non-statutory",
+    url: "https://birthto5matters.org.uk/",
+    desc: "Non-statutory guidance for the Early Years Foundation Stage that settings can use alongside the statutory framework.",
+    roles: ALL3, phases: ["early"] },
+  { id: "progress", title: "Progress check at age 2 and the EYFS profile", org: "GOV.UK", nation: "England", type: "Guidance", status: "",
+    url: "https://www.gov.uk/progress-check-at-age-2-and-eyfs-profile",
+    desc: "Official guidance on the progress check at age 2 and the EYFS profile.",
+    roles: ["teacher", "nursery"], phases: ["early"] },
+  { id: "eyhelp", title: "Help for early years providers", org: "Department for Education", nation: "England", type: "Guidance", status: "",
+    url: "https://help-for-early-years-providers.education.gov.uk/",
+    desc: "The DfE's support site for early years providers and childminders.",
+    roles: ["nursery"], phases: ["early"] },
+  { id: "fy", title: "Foundation Years", org: "Foundation Years", nation: "England", type: "Guidance", status: "Free",
+    url: "https://foundationyears.org.uk/2024/04/about-us/",
+    desc: "A free online resource for nursery practitioners, childminders, apprentices, managers and early years students. It carries policy news, EYFS guidance, vodcasts, live Q&As and a community.",
+    roles: ["nursery", "student", "teacher"], phases: ["early"] },
+  { id: "nc", title: "National curriculum in England: framework for key stages 1 to 4", org: "Department for Education", nation: "England", type: "Frameworks", status: "Statutory",
+    url: "https://www.gov.uk/government/publications/national-curriculum-in-england-framework-for-key-stages-1-to-4",
+    desc: "The statutory framework for the national curriculum from key stage 1 to key stage 4.",
+    roles: ["student", "teacher"], phases: ["primary", "secondary"] },
+  { id: "nccoll", title: "National curriculum collection", org: "GOV.UK", nation: "England", type: "Frameworks", status: "",
+    url: "https://gov.uk/government/collections/national-curriculum",
+    desc: "The GOV.UK collection that brings the national curriculum documents together in one place.",
+    roles: ["student", "teacher"], phases: ["primary", "secondary"] },
+  { id: "ts", title: "Teachers' Standards", org: "Department for Education", nation: "England", type: "Frameworks", status: "Standards",
+    url: "https://www.gov.uk/government/publications/teachers-standards",
+    desc: "The minimum standards of practice and conduct expected of teachers, used in training and appraisal.",
+    roles: ["student", "teacher"], phases: ["primary", "secondary", "early"] },
+  { id: "ittecf", title: "Initial teacher training and early career framework", org: "Department for Education", nation: "England", type: "Frameworks", status: "Standards",
+    url: "https://www.gov.uk/government/publications/initial-teacher-training-and-early-career-framework",
+    desc: "The framework that sets out what trainee and early career teachers should learn. The current guidance applies from September 2025.",
+    roles: ["student", "teacher"], phases: ["primary", "secondary", "early"] },
+  { id: "hts", title: "Headteachers' standards 2020", org: "Department for Education", nation: "England", type: "Frameworks", status: "Standards",
+    url: "https://www.gov.uk/government/publications/national-standards-of-excellence-for-headteachers",
+    desc: "National standards of excellence for headteachers. Useful if you are aiming for leadership.",
+    roles: ["teacher"], phases: ["primary", "secondary", "early"] },
+  { id: "car", title: "Curriculum and Assessment Review: final report", org: "Department for Education", nation: "England", type: "Policy and inspection", status: "",
+    url: "https://www.gov.uk/government/publications/curriculum-and-assessment-review-final-report",
+    desc: "\"Building a world-class curriculum for all\", chaired by Professor Becky Francis and published on 5 November 2025. There is an Easy Read guide, and the DfE has published a government response.",
+    roles: ALL3, phases: ["early", "primary", "secondary"] },
+  { id: "ofsted", title: "Ofsted: new inspections and report cards", org: "GOV.UK news", nation: "England", type: "Policy and inspection", status: "",
+    url: "https://www.gov.uk/government/news/ofsted-confirms-changes-to-education-inspection-and-unveils-new-look-report-cards",
+    desc: "Confirms report cards with a 5-point scale, a new inclusion area, and early years inspections moving from every 6 years to every 4. Early years and state-funded schools from 10 November 2025.",
+    roles: ALL3, phases: ["early", "primary", "secondary"] },
+  { id: "oak", title: "Oak National Academy", org: "Oak National Academy", nation: "England", type: "Free teaching resources", status: "Free",
+    url: "https://support.thenational.academy/what-is-oak-national-academy",
+    desc: "Free lesson planning and teaching resources and curriculum plans for key stages 1 to 4 across all national curriculum subjects. It also has an AI lesson assistant called Aila and an area for pupils.",
+    roles: ["student", "teacher"], phases: ["primary", "secondary"] },
+  { id: "ncetm", title: "NCETM", org: "National Centre for Excellence in the Teaching of Mathematics", nation: "England", type: "Free teaching resources", status: "",
+    url: "https://ncetm.org.uk/about-the-ncetm/",
+    desc: "Support for maths teaching from the National Centre for Excellence in the Teaching of Mathematics. Start at its About page.",
+    roles: ["student", "teacher"], phases: ["primary", "secondary"] },
+  { id: "eef", title: "EEF Teaching and Learning Toolkit and Early Years Toolkit", org: "Education Endowment Foundation", nation: "UK-wide", type: "Evidence and training", status: "",
+    url: "https://educationendowmentfoundation.org.uk/education-evidence/using-the-toolkits",
+    desc: "Summaries of evidence on approaches used in schools, with an early years companion. They offer best bets to use with your professional judgement, not definitive answers.",
+    roles: ALL3, phases: ["early", "primary", "secondary"] },
+  { id: "chartered", title: "Early Career Hub", org: "Chartered College of Teaching", nation: "UK-wide", type: "Evidence and training", status: "",
+    url: "https://my.chartered.college/early-career-hub/making-evidence-accessible/",
+    desc: "An online resource for trainee and early career teachers from the Chartered College of Teaching.",
+    roles: ["student", "teacher"], phases: ["primary", "secondary", "early"] },
+  { id: "git", title: "How can I train to teach?", org: "Get Into Teaching, DfE", nation: "England", type: "Training and careers", status: "",
+    url: "https://getintoteaching.education.gov.uk/landing/train-to-teach",
+    desc: "The DfE's guide to the routes into teaching in England.",
+    roles: ["student"], phases: ["primary", "secondary", "early"] },
+  { id: "ucas", title: "Preparing for teacher training", org: "UCAS", nation: "UK-wide", type: "Training and careers", status: "",
+    url: "https://www.ucas.com/ucas/teacher-training/apply-and-track/preparing-teacher-training",
+    desc: "UCAS guidance on getting ready to apply for teacher training.",
+    roles: ["student"], phases: ["primary", "secondary", "early"] },
+  { id: "pacey", title: "Coram PACEY", org: "PACEY", nation: "UK-wide", type: "Sector bodies", status: "",
+    url: "https://pacey.org.uk",
+    desc: "A membership body for the childcare and early years workforce, including childminders and nursery workers.",
+    roles: ["nursery"], phases: ["early"] },
+  { id: "ndna", title: "National Day Nurseries Association", org: "NDNA", nation: "UK-wide", type: "Sector bodies", status: "",
+    url: "https://ndna.org.uk/",
+    desc: "A nursery sector body with blogs and guidance on the EYFS, Birth to 5 Matters and Ofsted changes.",
+    roles: ["nursery"], phases: ["early"] },
+  { id: "wales", title: "Curriculum for Wales", org: "Hwb, Welsh Government", nation: "Wales", type: "Frameworks", status: "",
+    url: "https://hwb.gov.wales/curriculum-for-wales",
+    desc: "The Curriculum for Wales framework guidance, including guidance on designing your curriculum.",
+    roles: ALL3, phases: ["early", "primary", "secondary"] },
+  { id: "walesupd", title: "Annual updates to the Curriculum for Wales framework guidance", org: "Welsh Government", nation: "Wales", type: "Policy and inspection", status: "",
+    url: "https://www.gov.wales/annual-updates-curriculum-wales-framework-guidance-html",
+    desc: "Welsh Government page on the yearly updates to the framework guidance.",
+    roles: ["teacher", "student"], phases: ["early", "primary", "secondary"] },
+  { id: "cfe", title: "Curriculum for Excellence", org: "Education Scotland", nation: "Scotland", type: "Frameworks", status: "",
+    url: "https://education.gov.scot/curriculum-for-excellence",
+    desc: "Scotland's national curriculum, including what Curriculum for Excellence is and how it is structured.",
+    roles: ALL3, phases: ["early", "primary", "secondary"] },
+  { id: "cfedocs", title: "Curriculum for Excellence documents", org: "Education Scotland", nation: "Scotland", type: "Frameworks", status: "",
+    url: "https://education.gov.scot/curriculum-for-excellence/curriculum-for-excellence-documents",
+    desc: "The library of Curriculum for Excellence documents.",
+    roles: ["teacher", "student"], phases: ["early", "primary", "secondary"] },
+  { id: "ccea", title: "Foundation Stage", org: "CCEA", nation: "Northern Ireland", type: "Frameworks", status: "",
+    url: "https://ccea.org.uk/foundation-stage",
+    desc: "The Northern Ireland Foundation Stage curriculum from the Council for the Curriculum, Examinations and Assessment.",
+    roles: ALL3, phases: ["early", "primary"] },
+  { id: "cceaguide", title: "Foundation Stage curricular guidance", org: "CCEA", nation: "Northern Ireland", type: "Guidance", status: "",
+    url: "https://ccea.org.uk/learning-resources/foundation-stage-curricular-guidance",
+    desc: "CCEA's curricular guidance for the Foundation Stage.",
+    roles: ["teacher", "nursery", "student"], phases: ["early", "primary"] },
+  { id: "nidirect", title: "School curriculum in Northern Ireland", org: "nidirect", nation: "Northern Ireland", type: "Guidance", status: "",
+    url: "https://www.nidirect.gov.uk/articles/school-curriculum",
+    desc: "A plain overview of the school curriculum in Northern Ireland.",
+    roles: ["student", "teacher"], phases: ["early", "primary", "secondary"] }
+];
+
+/* A true sequence: what to read first, in order */
+const PATHS = {
+  student: { title: "Start here as a student teacher", ids: ["ittecf", "ts", "nc", "oak", "eef"] },
+  teacher: { title: "Start here as a teacher", ids: ["nc", "oak", "eef", "car", "ofsted"] },
+  nursery: { title: "Start here as a nursery practitioner", ids: ["eyfs", "devmat", "fy", "ofsted"] }
+};
+
+const UPDATES = [
+  { when: "1 September 2026", text: "New EYFS statutory framework versions took effect. Changes include safer sleep, a requirement to have regard to screen use, and prohibiting childcare where banned dog breeds are present.", id: "eyfs" },
+  { when: "10 November 2025", text: "Ofsted's new report cards and inspection changes began for early years, state-funded schools and further education. Early years inspections move to every 4 years.", id: "ofsted" },
+  { when: "5 November 2025", text: "The Curriculum and Assessment Review final report was published. The DfE has also published a government response.", id: "car" },
+  { when: "September 2025", text: "The current Initial teacher training and early career framework guidance applies from this date.", id: "ittecf" }
+];
+
+/* ===== STATE ===== */
+const $ = (id) => document.getElementById(id);
+let role = "all";
+let showSaved = false;
+let saved = new Set();
+try {
+  const raw = localStorage.getItem("framework-finder-saved");
+  if (raw) saved = new Set(JSON.parse(raw));
+} catch (e) { /* storage unavailable: saving works for this visit only */ }
+function persist() {
+  try { localStorage.setItem("framework-finder-saved", JSON.stringify([...saved])); } catch (e) {}
+}
+const byId = Object.fromEntries(R.map((r) => [r.id, r]));
+
+/* ===== BUILD CONTROLS ===== */
+ROLES.forEach((r) => {
+  const b = document.createElement("button");
+  b.type = "button"; b.className = "chip"; b.textContent = r.label; b.dataset.role = r.id;
+  b.setAttribute("aria-pressed", r.id === role ? "true" : "false");
+  b.addEventListener("click", () => { role = r.id; render(); });
+  $("roles").appendChild(b);
+});
+[...new Set(R.map((r) => r.type))].forEach((t) => {
+  const o = document.createElement("option");
+  o.value = t; o.textContent = t;
+  $("f-type").appendChild(o);
+});
+
+/* ===== RENDER ===== */
+function matches(r) {
+  if (showSaved && !saved.has(r.id)) return false;
+  if (role !== "all" && !r.roles.includes(role)) return false;
+  const ph = $("f-phase").value;
+  if (ph !== "all" && !r.phases.includes(ph)) return false;
+  const na = $("f-nation").value;
+  if (na !== "all" && r.nation !== na && r.nation !== "UK-wide") return false;
+  const ty = $("f-type").value;
+  if (ty !== "all" && r.type !== ty) return false;
+  const q = $("q").value.trim().toLowerCase();
+  if (q) {
+    const hay = (r.title + " " + r.org + " " + r.desc + " " + r.type + " " + r.status + " " + r.nation).toLowerCase();
+    if (!q.split(/\s+/).every((w) => hay.includes(w))) return false;
+  }
+  return true;
+}
+
+function toggleSave(id) {
+  if (saved.has(id)) saved.delete(id); else saved.add(id);
+  persist();
+  render();
+}
+
+function makeItem(r) {
+  const li = document.createElement("li");
+  li.className = "item"; li.id = "res-" + r.id;
+
+  const head = document.createElement("div");
+  const h = document.createElement("h3"); h.textContent = r.title;
+  const org = document.createElement("div"); org.className = "org"; org.textContent = r.org;
+  head.append(h, org);
+
+  const desc = document.createElement("p"); desc.className = "desc"; desc.textContent = r.desc;
+
+  const tags = document.createElement("div"); tags.className = "tags";
+  const addTag = (text, cls) => {
+    const t = document.createElement("span");
+    t.className = "tag" + (cls ? " " + cls : ""); t.textContent = text; tags.appendChild(t);
+  };
+  if (r.status === "Free") addTag("Free", "free");
+  else if (r.status) addTag(r.status, "status");
+  addTag(r.nation);
+  r.phases.forEach((p) => addTag(PHASE_LABEL[p]));
+  addTag(r.type);
+
+  const acts = document.createElement("div"); acts.className = "acts";
+  const open = document.createElement("a");
+  open.className = "open"; open.href = r.url; open.target = "_blank"; open.rel = "noopener";
+  open.textContent = "Open the source";
+  const save = document.createElement("button");
+  save.type = "button"; save.className = "save";
+  const isSaved = saved.has(r.id);
+  save.setAttribute("aria-pressed", isSaved ? "true" : "false");
+  save.setAttribute("aria-label", (isSaved ? "Remove from saved: " : "Save: ") + r.title);
+  save.textContent = isSaved ? "Saved" : "Save";
+  save.addEventListener("click", () => toggleSave(r.id));
+  acts.append(open, save);
+
+  li.append(head, desc, tags, acts);
+  return li;
+}
+
+function renderPath() {
+  const box = $("path");
+  const p = PATHS[role];
+  box.textContent = "";
+  if (!p || showSaved) { box.hidden = true; return; }
+  const h = document.createElement("h2"); h.textContent = p.title;
+  const ol = document.createElement("ol");
+  p.ids.forEach((id) => {
+    const r = byId[id];
+    const li = document.createElement("li");
+    const b = document.createElement("button");
+    b.type = "button"; b.textContent = r.title;
+    b.addEventListener("click", () => jumpTo(id));
+    li.appendChild(b);
+    ol.appendChild(li);
+  });
+  box.append(h, ol);
+  box.hidden = false;
+}
+
+function jumpTo(id) {
+  /* Clear filters that could hide the target, then scroll to it */
+  $("f-phase").value = "all"; $("f-nation").value = "all"; $("f-type").value = "all"; $("q").value = "";
+  showSaved = false;
+  render();
+  const el = $("res-" + id);
+  if (el) {
+    el.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+    el.classList.remove("flash"); void el.offsetWidth; el.classList.add("flash");
+  }
+}
+
+function render() {
+  document.querySelectorAll("#roles .chip").forEach((b) => b.setAttribute("aria-pressed", b.dataset.role === role ? "true" : "false"));
+  $("saved-toggle").setAttribute("aria-pressed", showSaved ? "true" : "false");
+  $("saved-toggle").textContent = "Saved (" + saved.size + ")";
+
+  const list = R.filter(matches);
+  const idx = $("index");
+  idx.textContent = "";
+  list.forEach((r) => idx.appendChild(makeItem(r)));
+  if (!list.length) {
+    const li = document.createElement("li");
+    li.className = "empty";
+    li.textContent = showSaved
+      ? "Nothing saved yet. Use Save on any item and it appears here."
+      : "Nothing matches those filters. Clear a filter or try a shorter search word.";
+    idx.appendChild(li);
+  }
+  $("count").textContent = "Showing " + list.length + " of " + R.length;
+  renderPath();
+}
+
+/* Updates list */
+UPDATES.forEach((u) => {
+  const li = document.createElement("li");
+  const when = document.createElement("div"); when.className = "when"; when.textContent = u.when;
+  const body = document.createElement("div");
+  body.append(document.createTextNode(u.text + " "));
+  const a = document.createElement("a");
+  a.href = byId[u.id].url; a.target = "_blank"; a.rel = "noopener"; a.textContent = "Open the source";
+  body.appendChild(a);
+  li.append(when, body);
+  $("upd").appendChild(li);
+});
+
+/* Events */
+["f-phase", "f-nation", "f-type"].forEach((id) => $(id).addEventListener("change", render));
+$("q").addEventListener("input", render);
+$("saved-toggle").addEventListener("click", () => { showSaved = !showSaved; render(); });
+$("reset").addEventListener("click", () => {
+  role = "all"; showSaved = false;
+  $("f-phase").value = "all"; $("f-nation").value = "all"; $("f-type").value = "all"; $("q").value = "";
+  render();
+});
+
+render();
+</script>
+
+</body>
+</html>

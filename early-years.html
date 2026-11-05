@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Early Years Hub</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Andika:wght@400;700&family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap">
+
+<style>
+
+:root {
+  --bg: #f3f6f8; --surface: #ffffff; --ink: #142330; --muted: #4f606c; --line: #d3dce2;
+  --accent: #00756f; --accent-soft: #dff1ef; --mark: #ffd84d; --focus: #1c6ed5;
+  --display: "Bricolage Grotesque", "Arial Narrow", Arial, sans-serif;
+  --body: "Source Sans 3", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --a-communication: #1971c2;
+  --a-personal-social: #c2255c;
+  --a-physical: #c2410c;
+  --a-literacy: #6741d9;
+  --a-mathematics: #0c8599;
+  --a-understanding-world: #237a35;
+  --a-expressive-arts: #a16207;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d1a22; --surface: #13242e; --ink: #e7eff4; --muted: #9ab0bd; --line: #26394a;
+    --accent: #4fd1c5; --accent-soft: #123a3d; --focus: #6aa8ff; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d1a22; --surface: #13242e; --ink: #e7eff4; --muted: #9ab0bd; --line: #26394a;
+  --accent: #4fd1c5; --accent-soft: #123a3d; --focus: #6aa8ff; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { background: var(--bg); }
+body {
+  margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.5 var(--body);
+  padding-block: 0 64px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+img, svg { max-width: 100%; }
+[hidden] { display: none !important; }
+.wrap { max-width: 960px; margin-inline: auto; }
+h1, h2, h3 { font-family: var(--display); margin: 0; line-height: 1.05; text-wrap: balance; }
+p { margin: 0; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 0 20px; font: 600 1rem var(--body); text-decoration: none; border: 2px solid var(--ink); background: transparent; color: var(--ink); cursor: pointer; }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--bg); }
+.btn:hover { filter: brightness(1.08); }
+.eyebrow { font-size: 0.82rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); }
+.sec { padding-block: 52px 0; }
+.sec > h2 { font-size: clamp(1.8rem, 5vw, 2.5rem); font-weight: 800; letter-spacing: -0.01em; }
+.sec > .intro { margin-top: 10px; color: var(--muted); max-width: 62ch; }
+footer { margin-top: 64px; padding-top: 20px; border-top: 2px solid var(--ink); font-size: 0.88rem; color: var(--muted); max-width: 72ch; }
+footer p + p { margin-top: 8px; }
+.tiles { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; margin-top: 20px; }
+@media (min-width: 560px) { .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 860px) { .tiles.three { grid-template-columns: repeat(3, minmax(0, 1fr)); } .tiles.four { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.tile { display: flex; flex-direction: column; justify-content: space-between; gap: 18px; min-height: 120px; padding: 16px; background: var(--c, var(--ink)); color: #fff; text-decoration: none; }
+.tile .t-name { font-family: var(--display); font-size: 1.35rem; font-weight: 700; line-height: 1.1; }
+.tile .t-n { font-size: 0.92rem; font-weight: 600; opacity: 0.95; }
+.tile:hover { filter: brightness(1.1); }
+.grouplabel { margin-top: 26px; font-size: 0.82rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
+.rule-list { list-style: none; margin: 20px 0 0; padding: 0; border-top: 2px solid var(--ink); }
+.rule-list li { border-bottom: 1px solid var(--line); }
+.rule-list a { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 16px; padding: 16px 0; text-decoration: none; }
+.rule-list a:hover .rl-t { text-decoration: underline; }
+.rl-t { font-family: var(--display); font-size: 1.3rem; font-weight: 700; }
+.rl-d { grid-column: 1; color: var(--muted); max-width: 60ch; }
+.rl-n { grid-row: 1 / span 2; grid-column: 2; align-self: center; font-weight: 600; color: var(--accent); white-space: nowrap; }
+
+
+.sitenav { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding-block: 16px 0; }
+.sitenav a { font-weight: 600; text-decoration: none; padding: 8px 14px; border: 2px solid var(--ink); }
+.sitenav a[aria-current="page"] { background: var(--ink); color: var(--bg); }
+.sitenav a.wordmark { border: 0; padding-left: 0; margin-right: auto; font-family: var(--display); font-size: 1.3rem; font-weight: 800; letter-spacing: -0.01em; }
+@media (max-width: 640px) { .sitenav a.wordmark { flex: 1 0 100%; } }
+
+
+.hubhead { padding-block: 44px 4px; }
+.hubhead h1 { margin-top: 12px; font-size: clamp(2.4rem, 8vw, 4.2rem); font-weight: 800; letter-spacing: -0.02em; max-width: 16ch; }
+.hubhead .lead { margin-top: 18px; max-width: 58ch; font-size: 1.15rem; color: var(--muted); }
+.areas { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; margin-top: 22px; }
+@media (min-width: 640px) { .areas { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.area { background: var(--c); color: #fff; padding: 18px; display: flex; flex-direction: column; gap: 8px; }
+.area h3 { font-size: 1.35rem; font-weight: 700; }
+.a-kind { font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; opacity: 0.92; }
+.a-asp { opacity: 0.97; }
+.a-link { margin-top: auto; padding-top: 8px; font-weight: 600; }
+.a-link a { text-decoration: underline; }
+.a-n { opacity: 0.92; margin-left: 6px; }
+.fine { margin-top: 14px; font-size: 0.9rem; color: var(--muted); }
+
+/* cute-early-years */
+:root {
+  --bg: #fff8ec; --surface: #ffffff; --ink: #2b2a4c; --muted: #6a6788; --line: #f0e2c8;
+  --accent: #e8590c; --accent-soft: #ffe9d6; --mark: #ffd84d; --focus: #3b5bdb;
+  --display: "Fredoka", "Nunito", "Trebuchet MS", system-ui, sans-serif;
+  --body: "Nunito", "Trebuchet MS", system-ui, sans-serif;
+  --a-communication: #3b82e0; --a-personal-social: #e0457b; --a-physical: #f08a24; --a-literacy: #8b5cf6;
+  --a-mathematics: #14a8b8; --a-understanding-world: #3aa655; --a-expressive-arts: #e0a812;
+  --pop: 4px 4px 0 var(--ink);
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg: #211f3d; --surface: #2d2a52; --ink: #fff3de; --muted: #c5c0e6; --line: #433f75; --accent: #ff9a5c; --accent-soft: #4a3560; --focus: #8fb0ff; --pop: 4px 4px 0 #0f0e22; } }
+:root[data-theme="dark"] { --bg: #211f3d; --surface: #2d2a52; --ink: #fff3de; --muted: #c5c0e6; --line: #433f75; --accent: #ff9a5c; --accent-soft: #4a3560; --focus: #8fb0ff; --pop: 4px 4px 0 #0f0e22; }
+body { font-family: var(--body); font-weight: 600; background-image: radial-gradient(circle at 12px 12px, rgba(232,89,12,.07) 3px, transparent 4px); background-size: 48px 48px; }
+h1, h2, h3, .rl-t, .tile .t-name, .wordmark { font-family: var(--display) !important; letter-spacing: 0 !important; font-weight: 600 !important; }
+h1 { font-weight: 700 !important; }
+.eyebrow, .grouplabel, .field > span, .a-kind { font-family: var(--display); letter-spacing: .06em; }
+.eyebrow { display: inline-block; padding: 4px 14px; border-radius: 999px; background: var(--accent-soft); }
+/* rainbow ribbon at the very top */
+body::before { content: ""; display: block; height: 10px; margin-inline: calc(-1 * max(16px, env(safe-area-inset-left, 0px))); margin-bottom: 0;
+  background: linear-gradient(90deg, var(--a-communication) 0 14.28%, var(--a-personal-social) 0 28.56%, var(--a-physical) 0 42.84%, var(--a-literacy) 0 57.12%, var(--a-mathematics) 0 71.4%, var(--a-understanding-world) 0 85.68%, var(--a-expressive-arts) 0); }
+.sitenav a { border: 2px solid var(--ink) !important; border-radius: 999px; background: var(--surface); box-shadow: 2px 2px 0 var(--ink); transition: transform .12s; }
+.sitenav a:hover { transform: translateY(-2px) rotate(-1.5deg); }
+.sitenav a[aria-current="page"] { background: var(--accent) !important; color: #fff !important; border-color: var(--ink) !important; }
+.sitenav a.wordmark { border: 0 !important; box-shadow: none; background: none; font-size: 1.55rem; color: var(--accent); }
+.sitenav a.wordmark::before { content: "\2605 "; color: var(--mark); -webkit-text-stroke: 1.5px var(--ink); }
+.btn, .chip, .vbar button, .item .prev, .item .open { border-radius: 999px !important; border: 2px solid var(--ink) !important; box-shadow: 3px 3px 0 var(--ink); font-family: var(--display); font-weight: 600 !important; transition: transform .12s, box-shadow .12s; }
+.btn:hover, .chip:hover { transform: translate(-1px,-2px); box-shadow: 4px 5px 0 var(--ink); filter: none; }
+.btn:active, .chip:active { transform: translate(2px,2px); box-shadow: 1px 1px 0 var(--ink); }
+.btn.primary { background: var(--accent); color: #fff; }
+.chip[aria-pressed="true"] { background: var(--a-communication) !important; color: #fff !important; }
+.tile, .area { border-radius: 26px !important; border: 3px solid var(--ink); box-shadow: var(--pop); transition: transform .15s; }
+.tile:hover, .area:hover { transform: translateY(-4px) rotate(-1deg); filter: none; }
+.tiles .tile:nth-child(even):hover { transform: translateY(-4px) rotate(1deg); }
+.tile .t-n { background: rgba(255,255,255,.25); align-self: flex-start; padding: 2px 12px; border-radius: 999px; }
+.tile[href*="frameworks"], .tile[href$="teacher"], .tile[href$="student"] { background: var(--a-mathematics); }
+.tile[href$="student"] { background: var(--a-literacy); } .tile[href*="frameworks"] { background: var(--a-understanding-world); }
+.rule-list { border-top: 0 !important; display: grid; gap: 12px; }
+.rule-list li { border: 3px solid var(--ink) !important; border-radius: 22px; background: var(--surface); box-shadow: 3px 3px 0 var(--ink); overflow: hidden; }
+.rule-list a { padding: 14px 20px; } .rule-list li:hover { transform: translateY(-2px); }
+.rl-n { background: var(--accent-soft); border-radius: 999px; padding: 4px 14px; color: var(--accent); }
+.hero h1 span, .mast h1 span, .mkhead h1 { background-size: 100% 100%; }
+.hero h1 span { background: linear-gradient(transparent 58%, var(--mark) 58%, var(--mark) 92%, transparent 92%); border-radius: 10px; }
+.controls { border: 3px solid var(--ink) !important; border-radius: 26px; background: var(--surface); padding: 18px !important; box-shadow: var(--pop); }
+.field input, .field select, .field textarea { border: 2px solid var(--ink) !important; border-radius: 16px !important; background: var(--bg) !important; font-family: var(--body); font-weight: 600; }
+.item { border: 3px solid var(--ink) !important; border-radius: 22px; background: var(--surface); padding: 16px 20px !important; margin-bottom: 12px; box-shadow: 3px 3px 0 var(--ink); }
+.index { padding-left: 0 !important; list-style: none; } .group-head { border: 0 !important; color: var(--accent); }
+.tag { border-radius: 999px !important; border: 2px solid var(--line) !important; background: var(--bg); padding: 3px 12px !important; }
+.tag.new { background: var(--mark) !important; border-color: var(--ink) !important; color: #2b2a4c !important; }
+.tag.area { background: var(--accent-soft) !important; border-color: var(--accent-soft) !important; color: var(--accent); }
+.note { border-radius: 18px; border: 2px dashed var(--accent); background: var(--accent-soft); }
+.swrap { border-radius: 8px; }
+footer { border-top: 3px dashed var(--accent) !important; font-weight: 600; }
+.viewer { background: #1d1b3a !important; }
+a { text-decoration-thickness: 2px; text-underline-offset: 3px; }
+/* hero decorations */
+.hero { position: relative; }
+.hero .deco { position: absolute; right: 0; top: 24px; width: min(300px, 38vw); height: auto; pointer-events: none; }
+@media (max-width: 640px) { .hero .deco { width: 120px; top: 10px; opacity: .9; } }
+.feature .f-art { border-radius: 22px; box-shadow: var(--pop); border: 3px solid var(--ink); }
+@media (prefers-reduced-motion: no-preference) { .hero .deco .bob { animation: bob 3.2s ease-in-out infinite; transform-box: fill-box; transform-origin: center; } .hero .deco .bob2 { animation-delay: -1.2s; } }
+@keyframes bob { 50% { transform: translateY(-8px) rotate(6deg); } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav class="sitenav" aria-label="Site">
+      <a class="wordmark" href="index.html">Framework Finder</a>
+      <a href="index.html">Home</a>
+      <a href="early-years.html" aria-current="page">Early years</a>
+      <a href="printables.html">Printables</a>
+      <a href="make.html">Make your own</a>
+      <a href="frameworks.html">Frameworks</a>
+    </nav>
+
+  <header class="hubhead">
+    <p class="eyebrow">Early years hub</p>
+    <h1>The EYFS, and the sheets to go with it</h1>
+    <p class="lead">A short guide to the Early Years Foundation Stage for England, with links to the official documents and the printables that support each area of learning.</p>
+  </header>
+
+  <section class="sec" aria-labelledby="h-eyfs">
+    <h2 id="h-eyfs">The EYFS in brief</h2>
+    <p class="intro">The EYFS statutory framework sets the standards for learning, development and care from birth to 5. It has seven areas of learning: three prime areas, which come first and underpin the rest, and four specific areas. Practitioners also think about three characteristics of effective teaching and learning: playing and exploring, active learning, and creating and thinking critically.</p>
+    <div class="areas">
+      <article class="area" style="--c: var(--a-communication)">
+        <p class="a-kind">Prime area</p>
+        <h3>Communication and Language</h3>
+        <p class="a-asp">Listening, attention and understanding; speaking.</p>
+        <p class="a-link"><a href="printables.html#area-communication">See the sheets</a> <span class="a-n" data-area="communication"></span></p>
+      </article>
+      <article class="area" style="--c: var(--a-personal-social)">
+        <p class="a-kind">Prime area</p>
+        <h3>Personal, Social and Emotional Development</h3>
+        <p class="a-asp">Self-regulation; managing self; building relationships.</p>
+        <p class="a-link"><a href="printables.html#area-personal-social">See the sheets</a> <span class="a-n" data-area="personal-social"></span></p>
+      </article>
+      <article class="area" style="--c: var(--a-physical)">
+        <p class="a-kind">Prime area</p>
+        <h3>Physical Development</h3>
+        <p class="a-asp">Gross motor skills; fine motor skills.</p>
+        <p class="a-link"><a href="printables.html#area-physical">See the sheets</a> <span class="a-n" data-area="physical"></span></p>
+      </article>
+      <article class="area" style="--c: var(--a-literacy)">
+        <p class="a-kind">Specific area</p>
+        <h3>Literacy</h3>
+        <p class="a-asp">Comprehension; word reading; writing.</p>
+        <p class="a-link"><a href="printables.html#area-literacy">See the sheets</a> <span class="a-n" data-area="literacy"></span></p>
+      </article>
+      <article class="area" style="--c: var(--a-mathematics)">
+        <p class="a-kind">Specific area</p>
+        <h3>Mathematics</h3>
+        <p class="a-asp">Number; numerical patterns.</p>
+        <p class="a-link"><a href="printables.html#area-mathematics">See the sheets</a> <span class="a-n" data-area="mathematics"></span></p>
+      </article>
+      <article class="area" style="--c: var(--a-understanding-world)">
+        <p class="a-kind">Specific area</p>
+        <h3>Understanding the World</h3>
+        <p class="a-asp">Past and present; people, culture and communities; the natural world.</p>
+        <p class="a-link"><a href="printables.html#area-understanding-world">See the sheets</a> <span class="a-n" data-area="understanding-world"></span></p>
+      </article>
+      <article class="area" style="--c: var(--a-expressive-arts)">
+        <p class="a-kind">Specific area</p>
+        <h3>Expressive Arts and Design</h3>
+        <p class="a-asp">Creating with materials; being imaginative and expressive.</p>
+        <p class="a-link"><a href="printables.html#area-expressive-arts">See the sheets</a> <span class="a-n" data-area="expressive-arts"></span></p>
+      </article>
+    </div>
+    <p class="fine">The aspects listed above follow the early learning goal headings. Check the current framework for the exact wording.</p>
+  </section>
+
+  <section class="sec" aria-labelledby="h-sets">
+    <h2 id="h-sets">Setting essentials</h2>
+    <ul class="rule-list">
+      <li><a href="printables.html#ey-observation"><span class="rl-t">Observation and assessment</span><span class="rl-d">Capture what you see, then plan the next step.</span><span class="rl-n" data-cat="ey-observation"></span></a></li>
+      <li><a href="printables.html#ey-planning"><span class="rl-t">Planning and provision</span><span class="rl-d">Weekly plans, provision, enhancements and letters to families.</span><span class="rl-n" data-cat="ey-planning"></span></a></li>
+      <li><a href="printables.html#ey-records"><span class="rl-t">Records and checklists</span><span class="rl-d">Registers, safer sleep, nappy, hygiene and outdoor checks.</span><span class="rl-n" data-cat="ey-records"></span></a></li>
+      <li><a href="make.html"><span class="rl-t">Make your own</span><span class="rl-d">Name tracing sheets, labels and registers with your children's names.</span><span class="rl-n">Tools</span></a></li>
+    </ul>
+  </section>
+
+  <section class="sec" aria-labelledby="h-src">
+    <h2 id="h-src">Official sources</h2>
+    <p class="intro">These open on the owner's own page.</p>
+    <ul class="rule-list">
+      <li><a href="https://www.gov.uk/government/publications/early-years-foundation-stage-framework--2" target="_blank" rel="noopener"><span class="rl-t">EYFS statutory framework</span><span class="rl-d">Department for Education. The legal standards for providers in England.</span><span class="rl-n">GOV.UK</span></a></li>
+      <li><a href="https://www.gov.uk/government/publications/development-matters--2" target="_blank" rel="noopener"><span class="rl-t">Development Matters</span><span class="rl-d">Non-statutory curriculum guidance that supports the framework.</span><span class="rl-n">GOV.UK</span></a></li>
+      <li><a href="https://birthto5matters.org.uk/" target="_blank" rel="noopener"><span class="rl-t">Birth to 5 Matters</span><span class="rl-d">Non-statutory guidance that settings can use alongside the framework.</span><span class="rl-n">Birth to 5 Matters</span></a></li>
+      <li><a href="https://www.gov.uk/progress-check-at-age-2-and-eyfs-profile" target="_blank" rel="noopener"><span class="rl-t">Progress check at age 2 and the EYFS profile</span><span class="rl-d">Official guidance on both.</span><span class="rl-n">GOV.UK</span></a></li>
+      <li><a href="https://help-for-early-years-providers.education.gov.uk/" target="_blank" rel="noopener"><span class="rl-t">Help for early years providers</span><span class="rl-d">The DfE's support site for providers and childminders.</span><span class="rl-n">DfE</span></a></li>
+      <li><a href="https://foundationyears.org.uk/2024/04/about-us/" target="_blank" rel="noopener"><span class="rl-t">Foundation Years</span><span class="rl-d">Free guidance, news and community for early years practitioners.</span><span class="rl-n">Foundation Years</span></a></li>
+    </ul>
+    <p class="fine">More official links for Scotland, Wales and Northern Ireland are on the <a href="frameworks.html">Frameworks page</a>.</p>
+  </section>
+
+  <section class="sec" aria-labelledby="h-upd">
+    <h2 id="h-upd">What changed on 1 September 2026</h2>
+    <p class="intro">New EYFS statutory framework versions took effect. The changes include safer sleep, a requirement to have regard to screen use, and prohibiting childcare where banned dog breeds are present. Open the framework to read the exact wording for your type of provider.</p>
+  </section>
+
+  <footer>
+    <p>Framework Finder is an independent resource. It is not run by, or endorsed by, the Department for Education, Ofsted or any organisation it links to.</p>
+    <p>Sheets such as safeguarding, safer sleep, fire drill and risk assessment forms are general templates. Follow your own setting's policies and the current official requirements.</p>
+  </footer>
+</div>
+<script>
+
+function fillCounts(json) {
+  const items = json.items;
+  const byArea = {}, byCat = {};
+  items.forEach((i) => {
+    byCat[i.cat] = (byCat[i.cat] || 0) + 1;
+    (i.areas || []).forEach((a) => { byArea[a] = (byArea[a] || 0) + 1; });
+  });
+  document.querySelectorAll("[data-area]").forEach((el) => { const n = byArea[el.dataset.area] || 0; el.textContent = n + (n === 1 ? " printable" : " printables"); });
+  document.querySelectorAll("[data-cat]").forEach((el) => { const n = byCat[el.dataset.cat] || 0; el.textContent = n + (n === 1 ? " sheet" : " sheets"); });
+  const total = items.length, ey = items.filter((i) => i.phases.includes("early")).length;
+  document.querySelectorAll("[data-total]").forEach((el) => { el.textContent = total; });
+  document.querySelectorAll("[data-ey]").forEach((el) => { el.textContent = ey; });
+}
+fetch("resources.json").then((r) => r.ok ? r.json() : Promise.reject()).then(fillCounts).catch(() => {});
+
+</script>
+</body>
+</html>

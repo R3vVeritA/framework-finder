@@ -1,0 +1,5717 @@
+{
+ "brand": "Framework Finder",
+ "cats": {
+  "ey-observation": "Early years: observation and assessment",
+  "ey-planning": "Early years: planning and provision",
+  "ey-records": "Early years: records and checklists",
+  "ey-activities": "Early years: child activity sheets",
+  "ey-literacy": "Early years: letters, sounds and words",
+  "ey-maths": "Early years: early maths",
+  "ey-roleplay": "Early years: role play and provision",
+  "ey-topics": "Early years: topics and seasons",
+  "primary-planning": "Primary: planning and assessment",
+  "primary-maths-literacy": "Primary: maths and literacy tools",
+  "organisers": "Graphic organisers and study skills",
+  "secondary": "Secondary teaching tools",
+  "trainee": "Student teacher and early career toolkit",
+  "display": "Display, rewards and certificates"
+ },
+ "areaNames": {
+  "communication": "Communication and Language",
+  "personal-social": "Personal, Social and Emotional Development",
+  "physical": "Physical Development",
+  "literacy": "Literacy",
+  "mathematics": "Mathematics",
+  "understanding-world": "Understanding the World",
+  "expressive-arts": "Expressive Arts and Design"
+ },
+ "items": [
+  {
+   "id": "ey-observation-01-observation-sheet",
+   "title": "Observation sheet",
+   "desc": "A one-page observation with areas of learning, analysis and next steps.",
+   "cat": "ey-observation",
+   "catName": "Early years: observation and assessment",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early"
+   ],
+   "file": "resources/ey-observation/01-observation-sheet.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/ey-observation/01-observation-sheet"
+  },
+  {
+   "id": "ey-observation-02-wow-moment-slips",
+   "title": "WOW moment slips",
+   "desc": "Eight tear-off slips for capturing special moments to share with families.",
+   "cat": "ey-observation",
+   "catName": "Early years: observation and assessment",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early"
+   ],
+   "file": "resources/ey-observation/02-wow-moment-slips.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/ey-observation/02-wow-moment-slips"
+  },
+  {
+   "id": "ey-observation-03-next-steps-planner",
+   "title": "Next steps planner",
+   "desc": "Plan a next step for each area of learning, with how you will help.",
+   "cat": "ey-observation",
+   "catName": "Early years: observation and assessment",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early"
+   ],
+   "file": "resources/ey-observation/03-next-steps-planner.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/ey-observation/03-next-steps-planner"
+  },
+  {
+   "id": "ey-observation-04-group-observation-sheet",
+   "title": "Group observation sheet",
+   "desc": "Note what several children did and said during one activity.",
+   "cat": "ey-observation",
+   "catName": "Early years: observation and assessment",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early"
+   ],
+   "file": "resources/ey-observation/04-group-observation-sheet.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/ey-observation/04-group-observation-sheet"
+  },
+  {
+   "id": "ey-observation-05-learning-journey-page",
+   "title": "Learning journey page",
+   "desc": "A photo and story page for a child's learning journey book.",
+   "cat": "ey-observation",
+   "catName": "Early years: observation and assessment",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early"
+   ],
+   "file": "resources/ey-observation/05-learning-journey-page.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/ey-observation/05-learning-journey-page"
+  },
+  {
+   "id": "ey-observation-06-child-tracker-communication-and-language",
+   "title": "Child tracker: Communication and Language",
+   "desc": "Record dated observations and next steps for communication and language.",
+   "cat": "ey-observation",
+   "catName": "Early years: observation and assessment",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early"
+   ],
+   "file": "resources/ey-observation/06-child-tracker-communication-and-language.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "communication"
+   ],
+   "preview": "previews/ey-observation/06-child-tracker-communication-and-language"
+  },
+  {
+   "id": "ey-observation-07-child-tracker-personal-social-and-emotional-development",
+   "title": "Child tracker: Personal, Social and Emotional Development",
+   "desc": "Record dated observations and next steps for personal, social and emotional development.",
+   "cat": "ey-observation",
+   "catName": "Early years: observation and assessment",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early"
+   ],
+   "file": "resources/ey-observation/07-child-tracker-personal-social-and-emotional-development.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "personal-social"
+   ],
+   "preview": "previews/ey-observation/07-child-tracker-personal-social-and-emotional-development"
+  },
+  {
+   "id": "ey-observation-08-child-tracker-physical-development",
+   "title": "Child tracker: Physical Development",
+   "desc": "Record dated observations and next steps for physical development.",
+   "cat": "ey-observation",
+   "catName": "Early years: observation and assessment",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early"
+   ],
+   "file": "resources/ey-observation/08-child-tracker-physical-development.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "physical"
+   ],
+   "preview": "previews/ey-observation/08-child-tracker-physical-development"
+  },
+  {
+   "id": "ey-observation-09-child-tracker-literacy",
+   "title": "Child tracker: Literacy",
+   "desc": "Record dated observations and next steps for literacy.",
+   "cat": "ey-observation",
+   "catName": "Early years: observation and assessment",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early"
+   ],
+   "file": "resources/ey-observation/09-child-tracker-literacy.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "literacy"
+   ],
+   "preview": "previews/ey-observation/09-child-tracker-literacy"
+  },
+  {
+   "id": "ey-observation-10-child-tracker-mathematics",
+   "title": "Child tracker: Mathematics",
+   "desc": "Record dated observations and next steps for mathematics.",
+   "cat": "ey-observation",
+   "catName": "Early years: observation and assessment",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early"
+   ],
+   "file": "resources/ey-observation/10-child-tracker-mathematics.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "mathematics"
+   ],
+   "preview": "previews/ey-observation/10-child-tracker-mathematics"
+  },
+  {
+   "id": "ey-observation-11-child-tracker-understanding-the-world",
+   "title": "Child tracker: Understanding the World",
+   "desc": "Record dated observations and next steps for understanding the world.",
+   "cat": "ey-observation",
+   "catName": "Early years: observation and assessment",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early"
+   ],
+   "file": "resources/ey-observation/11-child-tracker-understanding-the-world.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "understanding-world"
+   ],
+   "preview": "previews/ey-observation/11-child-tracker-understanding-the-world"
+  },
+  {
+   "id": "ey-observation-12-child-tracker-expressive-arts-and-design",
+   "title": "Child tracker: Expressive Arts and Design",
+   "desc": "Record dated observations and next steps for expressive arts and design.",
+   "cat": "ey-observation",
+   "catName": "Early years: observation and assessment",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early"
+   ],
+   "file": "resources/ey-observation/12-child-tracker-expressive-arts-and-design.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "expressive-arts"
+   ],
+   "preview": "previews/ey-observation/12-child-tracker-expressive-arts-and-design"
+  },
+  {
+   "id": "ey-observation-13-all-about-me-key-person-profile",
+   "title": "All about me: key person profile",
+   "desc": "A starting profile to help a child feel settled with their key person.",
+   "cat": "ey-observation",
+   "catName": "Early years: observation and assessment",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early"
+   ],
+   "file": "resources/ey-observation/13-all-about-me-key-person-profile.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "personal-social"
+   ],
+   "preview": "previews/ey-observation/13-all-about-me-key-person-profile"
+  },
+  {
+   "id": "ey-observation-14-transition-handover-sheet",
+   "title": "Transition handover sheet",
+   "desc": "Pass on strengths, interests and needs when a child moves room or school.",
+   "cat": "ey-observation",
+   "catName": "Early years: observation and assessment",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early"
+   ],
+   "file": "resources/ey-observation/14-transition-handover-sheet.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "personal-social"
+   ],
+   "preview": "previews/ey-observation/14-transition-handover-sheet"
+  },
+  {
+   "id": "ey-observation-15-baseline-snapshot",
+   "title": "Baseline snapshot",
+   "desc": "A quick look at each area of learning when a child starts.",
+   "cat": "ey-observation",
+   "catName": "Early years: observation and assessment",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early"
+   ],
+   "file": "resources/ey-observation/15-baseline-snapshot.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/ey-observation/15-baseline-snapshot"
+  },
+  {
+   "id": "ey-observation-16-progress-check-at-2-practitioner-notes",
+   "title": "Progress check at 2: practitioner notes",
+   "desc": "Notes sheet to prepare for the two-year-old progress check conversation.",
+   "cat": "ey-observation",
+   "catName": "Early years: observation and assessment",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early"
+   ],
+   "file": "resources/ey-observation/16-progress-check-at-2-practitioner-notes.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/ey-observation/16-progress-check-at-2-practitioner-notes"
+  },
+  {
+   "id": "ey-observation-17-characteristics-of-learning-observation",
+   "title": "Characteristics of learning observation",
+   "desc": "Notice how a child learns: playing and exploring, active learning, creative thinking.",
+   "cat": "ey-observation",
+   "catName": "Early years: observation and assessment",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early"
+   ],
+   "file": "resources/ey-observation/17-characteristics-of-learning-observation.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/ey-observation/17-characteristics-of-learning-observation"
+  },
+  {
+   "id": "ey-observation-18-support-plan-targets-and-review",
+   "title": "Support plan: targets and review",
+   "desc": "Small targets, strategies and review dates for a child who needs extra help.",
+   "cat": "ey-observation",
+   "catName": "Early years: observation and assessment",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early"
+   ],
+   "file": "resources/ey-observation/18-support-plan-targets-and-review.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/ey-observation/18-support-plan-targets-and-review"
+  },
+  {
+   "id": "ey-observation-19-interests-and-schemas-tracker",
+   "title": "Interests and schemas tracker",
+   "desc": "Spot patterns in play so you can plan provision that fits.",
+   "cat": "ey-observation",
+   "catName": "Early years: observation and assessment",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early"
+   ],
+   "file": "resources/ey-observation/19-interests-and-schemas-tracker.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/ey-observation/19-interests-and-schemas-tracker"
+  },
+  {
+   "id": "ey-observation-20-parent-voice-what-we-do-at-home",
+   "title": "Parent voice: what we do at home",
+   "desc": "A sheet for families to share what their child enjoys and can do at home.",
+   "cat": "ey-observation",
+   "catName": "Early years: observation and assessment",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early"
+   ],
+   "file": "resources/ey-observation/20-parent-voice-what-we-do-at-home.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "personal-social"
+   ],
+   "preview": "previews/ey-observation/20-parent-voice-what-we-do-at-home"
+  },
+  {
+   "id": "ey-observation-21-child-s-voice-all-about-my-day",
+   "title": "Child's voice: all about my day",
+   "desc": "Let children show and tell what matters to them.",
+   "cat": "ey-observation",
+   "catName": "Early years: observation and assessment",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early"
+   ],
+   "file": "resources/ey-observation/21-child-s-voice-all-about-my-day.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "personal-social"
+   ],
+   "preview": "previews/ey-observation/21-child-s-voice-all-about-my-day"
+  },
+  {
+   "id": "ey-observation-22-weekly-observation-overview",
+   "title": "Weekly observation overview",
+   "desc": "See at a glance which children you have observed this week.",
+   "cat": "ey-observation",
+   "catName": "Early years: observation and assessment",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early"
+   ],
+   "file": "resources/ey-observation/22-weekly-observation-overview.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/ey-observation/22-weekly-observation-overview"
+  },
+  {
+   "id": "ey-observation-23-language-development-notes",
+   "title": "Language development notes",
+   "desc": "Capture new words, phrases and conversations to share with families.",
+   "cat": "ey-observation",
+   "catName": "Early years: observation and assessment",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early"
+   ],
+   "file": "resources/ey-observation/23-language-development-notes.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "communication"
+   ],
+   "preview": "previews/ey-observation/23-language-development-notes"
+  },
+  {
+   "id": "ey-planning-01-weekly-plan-seven-areas-of-learning",
+   "title": "Weekly plan: seven areas of learning",
+   "desc": "Plan across all seven areas for the week.",
+   "cat": "ey-planning",
+   "catName": "Early years: planning and provision",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early"
+   ],
+   "file": "resources/ey-planning/01-weekly-plan-seven-areas-of-learning.pdf",
+   "pages": 1,
+   "land": true,
+   "areas": [],
+   "preview": "previews/ey-planning/01-weekly-plan-seven-areas-of-learning"
+  },
+  {
+   "id": "ey-planning-02-continuous-provision-plan",
+   "title": "Continuous provision plan",
+   "desc": "List what is out in each area and how adults will join in.",
+   "cat": "ey-planning",
+   "catName": "Early years: planning and provision",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early"
+   ],
+   "file": "resources/ey-planning/02-continuous-provision-plan.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/ey-planning/02-continuous-provision-plan"
+  },
+  {
+   "id": "ey-planning-03-adult-led-activity-plan",
+   "title": "Adult-led activity plan",
+   "desc": "Plan a short adult-led activity: intent, vocabulary, questions and review.",
+   "cat": "ey-planning",
+   "catName": "Early years: planning and provision",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early"
+   ],
+   "file": "resources/ey-planning/03-adult-led-activity-plan.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/ey-planning/03-adult-led-activity-plan"
+  },
+  {
+   "id": "ey-planning-04-topic-web",
+   "title": "Topic web",
+   "desc": "Map out a topic and the ideas that grow from it.",
+   "cat": "ey-planning",
+   "catName": "Early years: planning and provision",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early"
+   ],
+   "file": "resources/ey-planning/04-topic-web.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "understanding-world"
+   ],
+   "preview": "previews/ey-planning/04-topic-web"
+  },
+  {
+   "id": "ey-planning-05-enhancements-by-area-of-learning",
+   "title": "Enhancements by area of learning",
+   "desc": "Plan enhancements to the provision for each area of learning.",
+   "cat": "ey-planning",
+   "catName": "Early years: planning and provision",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early"
+   ],
+   "file": "resources/ey-planning/05-enhancements-by-area-of-learning.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "expressive-arts"
+   ],
+   "preview": "previews/ey-planning/05-enhancements-by-area-of-learning"
+  },
+  {
+   "id": "ey-planning-06-outdoor-learning-plan",
+   "title": "Outdoor learning plan",
+   "desc": "Plan a learning experience outdoors, with a space for safety notes.",
+   "cat": "ey-planning",
+   "catName": "Early years: planning and provision",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early"
+   ],
+   "file": "resources/ey-planning/06-outdoor-learning-plan.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/ey-planning/06-outdoor-learning-plan"
+  },
+  {
+   "id": "ey-planning-07-small-world-planner",
+   "title": "Small world planner",
+   "desc": "Plan small world play linked to a story or interest.",
+   "cat": "ey-planning",
+   "catName": "Early years: planning and provision",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early"
+   ],
+   "file": "resources/ey-planning/07-small-world-planner.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "understanding-world"
+   ],
+   "preview": "previews/ey-planning/07-small-world-planner"
+  },
+  {
+   "id": "ey-planning-08-letter-to-families",
+   "title": "Letter to families",
+   "desc": "A friendly letter template to explain this half term's learning.",
+   "cat": "ey-planning",
+   "catName": "Early years: planning and provision",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early"
+   ],
+   "file": "resources/ey-planning/08-letter-to-families.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "literacy"
+   ],
+   "preview": "previews/ey-planning/08-letter-to-families"
+  },
+  {
+   "id": "ey-planning-09-newsletter-template",
+   "title": "Newsletter template",
+   "desc": "A two-column newsletter layout for your setting.",
+   "cat": "ey-planning",
+   "catName": "Early years: planning and provision",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early"
+   ],
+   "file": "resources/ey-planning/09-newsletter-template.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "literacy"
+   ],
+   "preview": "previews/ey-planning/09-newsletter-template"
+  },
+  {
+   "id": "ey-planning-10-home-learning-ideas-sheet",
+   "title": "Home learning ideas sheet",
+   "desc": "Simple ideas for families to try at home.",
+   "cat": "ey-planning",
+   "catName": "Early years: planning and provision",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early"
+   ],
+   "file": "resources/ey-planning/10-home-learning-ideas-sheet.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/ey-planning/10-home-learning-ideas-sheet"
+  },
+  {
+   "id": "ey-planning-11-open-questions-prompt-cards",
+   "title": "Open questions prompt cards",
+   "desc": "Six prompt cards to extend children's thinking.",
+   "cat": "ey-planning",
+   "catName": "Early years: planning and provision",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early"
+   ],
+   "file": "resources/ey-planning/11-open-questions-prompt-cards.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "communication"
+   ],
+   "preview": "previews/ey-planning/11-open-questions-prompt-cards"
+  },
+  {
+   "id": "ey-planning-12-story-of-the-week-planner",
+   "title": "Story of the week planner",
+   "desc": "Plan a core story across the week with activities in each area.",
+   "cat": "ey-planning",
+   "catName": "Early years: planning and provision",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early"
+   ],
+   "file": "resources/ey-planning/12-story-of-the-week-planner.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "literacy"
+   ],
+   "preview": "previews/ey-planning/12-story-of-the-week-planner"
+  },
+  {
+   "id": "ey-planning-13-risk-benefit-assessment-activity",
+   "title": "Risk-benefit assessment: activity",
+   "desc": "Think through benefits and risks before an activity.",
+   "cat": "ey-planning",
+   "catName": "Early years: planning and provision",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early"
+   ],
+   "file": "resources/ey-planning/13-risk-benefit-assessment-activity.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/ey-planning/13-risk-benefit-assessment-activity"
+  },
+  {
+   "id": "ey-planning-14-trip-permission-slip",
+   "title": "Trip permission slip",
+   "desc": "A short permission slip for a trip or visit.",
+   "cat": "ey-planning",
+   "catName": "Early years: planning and provision",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early"
+   ],
+   "file": "resources/ey-planning/14-trip-permission-slip.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/ey-planning/14-trip-permission-slip"
+  },
+  {
+   "id": "ey-records-01-daily-register",
+   "title": "Daily register",
+   "desc": "A simple daily attendance register.",
+   "cat": "ey-records",
+   "catName": "Early years: records and checklists",
+   "roles": [
+    "nursery"
+   ],
+   "phases": [
+    "early"
+   ],
+   "file": "resources/ey-records/01-daily-register.pdf",
+   "pages": 1,
+   "land": true,
+   "areas": [],
+   "preview": "previews/ey-records/01-daily-register"
+  },
+  {
+   "id": "ey-records-02-safer-sleep-check-chart",
+   "title": "Safer sleep check chart",
+   "desc": "Record regular checks on sleeping babies and children.",
+   "cat": "ey-records",
+   "catName": "Early years: records and checklists",
+   "roles": [
+    "nursery"
+   ],
+   "phases": [
+    "early"
+   ],
+   "file": "resources/ey-records/02-safer-sleep-check-chart.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "expressive-arts"
+   ],
+   "preview": "previews/ey-records/02-safer-sleep-check-chart"
+  },
+  {
+   "id": "ey-records-03-nappy-and-toileting-record",
+   "title": "Nappy and toileting record",
+   "desc": "Keep a clear record of nappy changes and toilet visits.",
+   "cat": "ey-records",
+   "catName": "Early years: records and checklists",
+   "roles": [
+    "nursery"
+   ],
+   "phases": [
+    "early"
+   ],
+   "file": "resources/ey-records/03-nappy-and-toileting-record.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/ey-records/03-nappy-and-toileting-record"
+  },
+  {
+   "id": "ey-records-04-meal-and-snack-planner",
+   "title": "Meal and snack planner",
+   "desc": "Plan the week's meals, snacks and dietary notes.",
+   "cat": "ey-records",
+   "catName": "Early years: records and checklists",
+   "roles": [
+    "nursery"
+   ],
+   "phases": [
+    "early"
+   ],
+   "file": "resources/ey-records/04-meal-and-snack-planner.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/ey-records/04-meal-and-snack-planner"
+  },
+  {
+   "id": "ey-records-05-cleaning-and-hygiene-checklist",
+   "title": "Cleaning and hygiene checklist",
+   "desc": "Daily and weekly hygiene tasks to tick off.",
+   "cat": "ey-records",
+   "catName": "Early years: records and checklists",
+   "roles": [
+    "nursery"
+   ],
+   "phases": [
+    "early"
+   ],
+   "file": "resources/ey-records/05-cleaning-and-hygiene-checklist.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/ey-records/05-cleaning-and-hygiene-checklist"
+  },
+  {
+   "id": "ey-records-06-staff-rota",
+   "title": "Staff rota",
+   "desc": "Plan staff on shift for the week.",
+   "cat": "ey-records",
+   "catName": "Early years: records and checklists",
+   "roles": [
+    "nursery"
+   ],
+   "phases": [
+    "early"
+   ],
+   "file": "resources/ey-records/06-staff-rota.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/ey-records/06-staff-rota"
+  },
+  {
+   "id": "ey-records-07-daily-handover-note",
+   "title": "Daily handover note",
+   "desc": "A short note to pass information between shifts or to families.",
+   "cat": "ey-records",
+   "catName": "Early years: records and checklists",
+   "roles": [
+    "nursery"
+   ],
+   "phases": [
+    "early"
+   ],
+   "file": "resources/ey-records/07-daily-handover-note.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/ey-records/07-daily-handover-note"
+  },
+  {
+   "id": "ey-records-08-parent-communication-log",
+   "title": "Parent communication log",
+   "desc": "Keep track of conversations with families.",
+   "cat": "ey-records",
+   "catName": "Early years: records and checklists",
+   "roles": [
+    "nursery"
+   ],
+   "phases": [
+    "early"
+   ],
+   "file": "resources/ey-records/08-parent-communication-log.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/ey-records/08-parent-communication-log"
+  },
+  {
+   "id": "ey-records-09-visitors-sign-in-sheet",
+   "title": "Visitors sign-in sheet",
+   "desc": "Sign in and out for visitors to your setting.",
+   "cat": "ey-records",
+   "catName": "Early years: records and checklists",
+   "roles": [
+    "nursery"
+   ],
+   "phases": [
+    "early"
+   ],
+   "file": "resources/ey-records/09-visitors-sign-in-sheet.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/ey-records/09-visitors-sign-in-sheet"
+  },
+  {
+   "id": "ey-records-10-fire-drill-log",
+   "title": "Fire drill log",
+   "desc": "Record evacuation drills and learning points.",
+   "cat": "ey-records",
+   "catName": "Early years: records and checklists",
+   "roles": [
+    "nursery"
+   ],
+   "phases": [
+    "early"
+   ],
+   "file": "resources/ey-records/10-fire-drill-log.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/ey-records/10-fire-drill-log"
+  },
+  {
+   "id": "ey-records-11-outdoor-area-daily-check",
+   "title": "Outdoor area daily check",
+   "desc": "Safety walk-round checklist before children use the outdoor space.",
+   "cat": "ey-records",
+   "catName": "Early years: records and checklists",
+   "roles": [
+    "nursery"
+   ],
+   "phases": [
+    "early"
+   ],
+   "file": "resources/ey-records/11-outdoor-area-daily-check.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/ey-records/11-outdoor-area-daily-check"
+  },
+  {
+   "id": "ey-records-12-resource-and-equipment-check",
+   "title": "Resource and equipment check",
+   "desc": "Check toys, furniture and equipment on a regular schedule.",
+   "cat": "ey-records",
+   "catName": "Early years: records and checklists",
+   "roles": [
+    "nursery"
+   ],
+   "phases": [
+    "early"
+   ],
+   "file": "resources/ey-records/12-resource-and-equipment-check.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/ey-records/12-resource-and-equipment-check"
+  },
+  {
+   "id": "ey-activities-01-pre-writing-patterns-straight-lines",
+   "title": "Pre-writing patterns: straight lines",
+   "desc": "Trace vertical and horizontal lines to build pencil control.",
+   "cat": "ey-activities",
+   "catName": "Early years: child activity sheets",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-activities/01-pre-writing-patterns-straight-lines.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "physical",
+    "expressive-arts"
+   ],
+   "preview": "previews/ey-activities/01-pre-writing-patterns-straight-lines"
+  },
+  {
+   "id": "ey-activities-02-pre-writing-patterns-waves-and-curves",
+   "title": "Pre-writing patterns: waves and curves",
+   "desc": "Trace wavy lines to build pencil control.",
+   "cat": "ey-activities",
+   "catName": "Early years: child activity sheets",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-activities/02-pre-writing-patterns-waves-and-curves.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "physical",
+    "expressive-arts"
+   ],
+   "preview": "previews/ey-activities/02-pre-writing-patterns-waves-and-curves"
+  },
+  {
+   "id": "ey-activities-03-pre-writing-patterns-zigzags",
+   "title": "Pre-writing patterns: zigzags",
+   "desc": "Trace zigzag lines of different sizes.",
+   "cat": "ey-activities",
+   "catName": "Early years: child activity sheets",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-activities/03-pre-writing-patterns-zigzags.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "physical",
+    "expressive-arts"
+   ],
+   "preview": "previews/ey-activities/03-pre-writing-patterns-zigzags"
+  },
+  {
+   "id": "ey-activities-04-pre-writing-patterns-loops-and-spirals",
+   "title": "Pre-writing patterns: loops and spirals",
+   "desc": "Trace loops and spirals for flowing hand movements.",
+   "cat": "ey-activities",
+   "catName": "Early years: child activity sheets",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-activities/04-pre-writing-patterns-loops-and-spirals.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "physical",
+    "expressive-arts"
+   ],
+   "preview": "previews/ey-activities/04-pre-writing-patterns-loops-and-spirals"
+  },
+  {
+   "id": "ey-activities-05-trace-and-draw-a-circle",
+   "title": "Trace and draw a circle",
+   "desc": "Trace a large dotted circle, then draw your own.",
+   "cat": "ey-activities",
+   "catName": "Early years: child activity sheets",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-activities/05-trace-and-draw-a-circle.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "physical",
+    "mathematics"
+   ],
+   "preview": "previews/ey-activities/05-trace-and-draw-a-circle"
+  },
+  {
+   "id": "ey-activities-06-trace-and-draw-a-square",
+   "title": "Trace and draw a square",
+   "desc": "Trace a large dotted square, then draw your own.",
+   "cat": "ey-activities",
+   "catName": "Early years: child activity sheets",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-activities/06-trace-and-draw-a-square.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "physical",
+    "mathematics"
+   ],
+   "preview": "previews/ey-activities/06-trace-and-draw-a-square"
+  },
+  {
+   "id": "ey-activities-07-trace-and-draw-a-triangle",
+   "title": "Trace and draw a triangle",
+   "desc": "Trace a large dotted triangle, then draw your own.",
+   "cat": "ey-activities",
+   "catName": "Early years: child activity sheets",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-activities/07-trace-and-draw-a-triangle.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "physical",
+    "mathematics"
+   ],
+   "preview": "previews/ey-activities/07-trace-and-draw-a-triangle"
+  },
+  {
+   "id": "ey-activities-08-trace-and-draw-a-rectangle",
+   "title": "Trace and draw a rectangle",
+   "desc": "Trace a large dotted rectangle, then draw your own.",
+   "cat": "ey-activities",
+   "catName": "Early years: child activity sheets",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-activities/08-trace-and-draw-a-rectangle.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "physical",
+    "mathematics"
+   ],
+   "preview": "previews/ey-activities/08-trace-and-draw-a-rectangle"
+  },
+  {
+   "id": "ey-activities-09-shape-hunt",
+   "title": "Shape hunt",
+   "desc": "Find circles, squares, triangles and rectangles around the setting.",
+   "cat": "ey-activities",
+   "catName": "Early years: child activity sheets",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-activities/09-shape-hunt.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "mathematics"
+   ],
+   "preview": "previews/ey-activities/09-shape-hunt"
+  },
+  {
+   "id": "ey-activities-10-number-cards-0-to-10",
+   "title": "Number cards 0 to 10",
+   "desc": "Large number cards for counting games and displays.",
+   "cat": "ey-activities",
+   "catName": "Early years: child activity sheets",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-activities/10-number-cards-0-to-10.pdf",
+   "pages": 2,
+   "land": false,
+   "areas": [
+    "mathematics"
+   ],
+   "preview": "previews/ey-activities/10-number-cards-0-to-10"
+  },
+  {
+   "id": "ey-activities-11-number-cards-11-to-20",
+   "title": "Number cards 11 to 20",
+   "desc": "Large number cards from 11 to 20.",
+   "cat": "ey-activities",
+   "catName": "Early years: child activity sheets",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-activities/11-number-cards-11-to-20.pdf",
+   "pages": 2,
+   "land": false,
+   "areas": [
+    "mathematics"
+   ],
+   "preview": "previews/ey-activities/11-number-cards-11-to-20"
+  },
+  {
+   "id": "ey-activities-12-ten-frames",
+   "title": "Ten frames",
+   "desc": "Eight blank ten frames for counting and number bonds.",
+   "cat": "ey-activities",
+   "catName": "Early years: child activity sheets",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-activities/12-ten-frames.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "mathematics"
+   ],
+   "preview": "previews/ey-activities/12-ten-frames"
+  },
+  {
+   "id": "ey-activities-13-trace-the-numbers-0-to-4",
+   "title": "Trace the numbers 0 to 4",
+   "desc": "Trace each number, then write it yourself.",
+   "cat": "ey-activities",
+   "catName": "Early years: child activity sheets",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-activities/13-trace-the-numbers-0-to-4.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "mathematics",
+    "physical"
+   ],
+   "preview": "previews/ey-activities/13-trace-the-numbers-0-to-4"
+  },
+  {
+   "id": "ey-activities-14-trace-the-numbers-5-to-9",
+   "title": "Trace the numbers 5 to 9",
+   "desc": "Trace each number, then write it yourself.",
+   "cat": "ey-activities",
+   "catName": "Early years: child activity sheets",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-activities/14-trace-the-numbers-5-to-9.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "mathematics",
+    "physical"
+   ],
+   "preview": "previews/ey-activities/14-trace-the-numbers-5-to-9"
+  },
+  {
+   "id": "ey-activities-15-count-the-stars-1-to-5",
+   "title": "Count the stars 1 to 5",
+   "desc": "Count the stars and write how many.",
+   "cat": "ey-activities",
+   "catName": "Early years: child activity sheets",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-activities/15-count-the-stars-1-to-5.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "mathematics"
+   ],
+   "preview": "previews/ey-activities/15-count-the-stars-1-to-5"
+  },
+  {
+   "id": "ey-activities-16-count-the-stars-6-to-10",
+   "title": "Count the stars 6 to 10",
+   "desc": "Count the stars and write how many.",
+   "cat": "ey-activities",
+   "catName": "Early years: child activity sheets",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-activities/16-count-the-stars-6-to-10.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "mathematics"
+   ],
+   "preview": "previews/ey-activities/16-count-the-stars-6-to-10"
+  },
+  {
+   "id": "ey-activities-17-alphabet-cards-capital-letters",
+   "title": "Alphabet cards: capital letters",
+   "desc": "Twenty-six large capital letter cards.",
+   "cat": "ey-activities",
+   "catName": "Early years: child activity sheets",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-activities/17-alphabet-cards-capital-letters.pdf",
+   "pages": 5,
+   "land": false,
+   "areas": [
+    "literacy"
+   ],
+   "preview": "previews/ey-activities/17-alphabet-cards-capital-letters"
+  },
+  {
+   "id": "ey-activities-18-alphabet-cards-lower-case-letters",
+   "title": "Alphabet cards: lower case letters",
+   "desc": "Twenty-six large lower case letter cards.",
+   "cat": "ey-activities",
+   "catName": "Early years: child activity sheets",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-activities/18-alphabet-cards-lower-case-letters.pdf",
+   "pages": 5,
+   "land": false,
+   "areas": [
+    "literacy"
+   ],
+   "preview": "previews/ey-activities/18-alphabet-cards-lower-case-letters"
+  },
+  {
+   "id": "ey-activities-19-name-tracing-template",
+   "title": "Name tracing template",
+   "desc": "A blank frame for writing a child's name to trace.",
+   "cat": "ey-activities",
+   "catName": "Early years: child activity sheets",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-activities/19-name-tracing-template.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "literacy",
+    "physical"
+   ],
+   "preview": "previews/ey-activities/19-name-tracing-template"
+  },
+  {
+   "id": "ey-activities-20-emotion-faces-cards",
+   "title": "Emotion faces cards",
+   "desc": "Eight faces to talk about feelings.",
+   "cat": "ey-activities",
+   "catName": "Early years: child activity sheets",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-activities/20-emotion-faces-cards.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "personal-social"
+   ],
+   "preview": "previews/ey-activities/20-emotion-faces-cards"
+  },
+  {
+   "id": "ey-activities-21-visual-timetable-cards",
+   "title": "Visual timetable cards",
+   "desc": "Pictureless word cards to build a daily routine.",
+   "cat": "ey-activities",
+   "catName": "Early years: child activity sheets",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-activities/21-visual-timetable-cards.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "communication"
+   ],
+   "preview": "previews/ey-activities/21-visual-timetable-cards"
+  },
+  {
+   "id": "ey-activities-22-colour-cards",
+   "title": "Colour cards",
+   "desc": "Ten colour cards for matching and naming games.",
+   "cat": "ey-activities",
+   "catName": "Early years: child activity sheets",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-activities/22-colour-cards.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "understanding-world"
+   ],
+   "preview": "previews/ey-activities/22-colour-cards"
+  },
+  {
+   "id": "ey-activities-23-colour-sorting-mats",
+   "title": "Colour sorting mats",
+   "desc": "Two sorting mats for sorting objects by colour.",
+   "cat": "ey-activities",
+   "catName": "Early years: child activity sheets",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-activities/23-colour-sorting-mats.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "understanding-world"
+   ],
+   "preview": "previews/ey-activities/23-colour-sorting-mats"
+  },
+  {
+   "id": "ey-activities-24-birthday-chart",
+   "title": "Birthday chart",
+   "desc": "A year of birthdays on one page.",
+   "cat": "ey-activities",
+   "catName": "Early years: child activity sheets",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-activities/24-birthday-chart.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "personal-social",
+    "expressive-arts"
+   ],
+   "preview": "previews/ey-activities/24-birthday-chart"
+  },
+  {
+   "id": "ey-activities-25-weather-chart",
+   "title": "Weather chart",
+   "desc": "Record the weather for the week.",
+   "cat": "ey-activities",
+   "catName": "Early years: child activity sheets",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-activities/25-weather-chart.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "understanding-world",
+    "expressive-arts"
+   ],
+   "preview": "previews/ey-activities/25-weather-chart"
+  },
+  {
+   "id": "ey-activities-26-helper-chart",
+   "title": "Helper chart",
+   "desc": "A simple rota for classroom helpers.",
+   "cat": "ey-activities",
+   "catName": "Early years: child activity sheets",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-activities/26-helper-chart.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "personal-social",
+    "expressive-arts"
+   ],
+   "preview": "previews/ey-activities/26-helper-chart"
+  },
+  {
+   "id": "primary-planning-01-lesson-plan-one-page",
+   "title": "Lesson plan: one page",
+   "desc": "A clean one-page lesson plan template.",
+   "cat": "primary-planning",
+   "catName": "Primary: planning and assessment",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "primary"
+   ],
+   "file": "resources/primary-planning/01-lesson-plan-one-page.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/primary-planning/01-lesson-plan-one-page"
+  },
+  {
+   "id": "primary-planning-02-lesson-plan-with-success-criteria",
+   "title": "Lesson plan with success criteria",
+   "desc": "Lesson plan with space for 'I can' statements and checks for understanding.",
+   "cat": "primary-planning",
+   "catName": "Primary: planning and assessment",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "primary"
+   ],
+   "file": "resources/primary-planning/02-lesson-plan-with-success-criteria.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/primary-planning/02-lesson-plan-with-success-criteria"
+  },
+  {
+   "id": "primary-planning-03-lesson-plan-five-part-structure",
+   "title": "Lesson plan: five-part structure",
+   "desc": "Hook, input, guided practice, independent practice, review.",
+   "cat": "primary-planning",
+   "catName": "Primary: planning and assessment",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "primary"
+   ],
+   "file": "resources/primary-planning/03-lesson-plan-five-part-structure.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/primary-planning/03-lesson-plan-five-part-structure"
+  },
+  {
+   "id": "primary-planning-04-cover-lesson-plan",
+   "title": "Cover lesson plan",
+   "desc": "Everything a cover teacher needs in one page.",
+   "cat": "primary-planning",
+   "catName": "Primary: planning and assessment",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "primary"
+   ],
+   "file": "resources/primary-planning/04-cover-lesson-plan.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/primary-planning/04-cover-lesson-plan"
+  },
+  {
+   "id": "primary-planning-05-lesson-plan-english",
+   "title": "Lesson plan: English",
+   "desc": "Lesson plan with prompts for vocabulary, grammar and writing focus.",
+   "cat": "primary-planning",
+   "catName": "Primary: planning and assessment",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "primary"
+   ],
+   "file": "resources/primary-planning/05-lesson-plan-english.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/primary-planning/05-lesson-plan-english"
+  },
+  {
+   "id": "primary-planning-06-lesson-plan-maths",
+   "title": "Lesson plan: Maths",
+   "desc": "Lesson plan with prompts for fluency, reasoning and problem solving.",
+   "cat": "primary-planning",
+   "catName": "Primary: planning and assessment",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "primary"
+   ],
+   "file": "resources/primary-planning/06-lesson-plan-maths.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/primary-planning/06-lesson-plan-maths"
+  },
+  {
+   "id": "primary-planning-07-lesson-plan-science",
+   "title": "Lesson plan: Science",
+   "desc": "Lesson plan with prompts for working scientifically and key vocabulary.",
+   "cat": "primary-planning",
+   "catName": "Primary: planning and assessment",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "primary"
+   ],
+   "file": "resources/primary-planning/07-lesson-plan-science.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/primary-planning/07-lesson-plan-science"
+  },
+  {
+   "id": "primary-planning-08-lesson-plan-history",
+   "title": "Lesson plan: History",
+   "desc": "Lesson plan with prompts for chronology, sources and enquiry question.",
+   "cat": "primary-planning",
+   "catName": "Primary: planning and assessment",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "primary"
+   ],
+   "file": "resources/primary-planning/08-lesson-plan-history.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/primary-planning/08-lesson-plan-history"
+  },
+  {
+   "id": "primary-planning-09-lesson-plan-geography",
+   "title": "Lesson plan: Geography",
+   "desc": "Lesson plan with prompts for locational knowledge and fieldwork.",
+   "cat": "primary-planning",
+   "catName": "Primary: planning and assessment",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "primary"
+   ],
+   "file": "resources/primary-planning/09-lesson-plan-geography.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/primary-planning/09-lesson-plan-geography"
+  },
+  {
+   "id": "primary-planning-10-lesson-plan-computing",
+   "title": "Lesson plan: Computing",
+   "desc": "Lesson plan with prompts for computational thinking and online safety.",
+   "cat": "primary-planning",
+   "catName": "Primary: planning and assessment",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "primary"
+   ],
+   "file": "resources/primary-planning/10-lesson-plan-computing.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/primary-planning/10-lesson-plan-computing"
+  },
+  {
+   "id": "primary-planning-11-lesson-plan-art-and-design",
+   "title": "Lesson plan: Art and design",
+   "desc": "Lesson plan with prompts for techniques, artists and sketchbook work.",
+   "cat": "primary-planning",
+   "catName": "Primary: planning and assessment",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "primary"
+   ],
+   "file": "resources/primary-planning/11-lesson-plan-art-and-design.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/primary-planning/11-lesson-plan-art-and-design"
+  },
+  {
+   "id": "primary-planning-12-lesson-plan-design-and-technology",
+   "title": "Lesson plan: Design and technology",
+   "desc": "Lesson plan with prompts for design, make, evaluate.",
+   "cat": "primary-planning",
+   "catName": "Primary: planning and assessment",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "primary"
+   ],
+   "file": "resources/primary-planning/12-lesson-plan-design-and-technology.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/primary-planning/12-lesson-plan-design-and-technology"
+  },
+  {
+   "id": "primary-planning-13-lesson-plan-pe",
+   "title": "Lesson plan: PE",
+   "desc": "Lesson plan with prompts for skills, warm-up and safety.",
+   "cat": "primary-planning",
+   "catName": "Primary: planning and assessment",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "primary"
+   ],
+   "file": "resources/primary-planning/13-lesson-plan-pe.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/primary-planning/13-lesson-plan-pe"
+  },
+  {
+   "id": "primary-planning-14-lesson-plan-re",
+   "title": "Lesson plan: RE",
+   "desc": "Lesson plan with prompts for key question, beliefs and reflection.",
+   "cat": "primary-planning",
+   "catName": "Primary: planning and assessment",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "primary"
+   ],
+   "file": "resources/primary-planning/14-lesson-plan-re.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/primary-planning/14-lesson-plan-re"
+  },
+  {
+   "id": "primary-planning-15-lesson-plan-music",
+   "title": "Lesson plan: Music",
+   "desc": "Lesson plan with prompts for listening, performing and composing.",
+   "cat": "primary-planning",
+   "catName": "Primary: planning and assessment",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "primary"
+   ],
+   "file": "resources/primary-planning/15-lesson-plan-music.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/primary-planning/15-lesson-plan-music"
+  },
+  {
+   "id": "primary-planning-16-lesson-plan-pshe",
+   "title": "Lesson plan: PSHE",
+   "desc": "Lesson plan with prompts for discussion, scenarios and reflection.",
+   "cat": "primary-planning",
+   "catName": "Primary: planning and assessment",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "primary"
+   ],
+   "file": "resources/primary-planning/16-lesson-plan-pshe.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/primary-planning/16-lesson-plan-pshe"
+  },
+  {
+   "id": "primary-planning-17-weekly-planner",
+   "title": "Weekly planner",
+   "desc": "Plan the week's lessons at a glance.",
+   "cat": "primary-planning",
+   "catName": "Primary: planning and assessment",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "primary"
+   ],
+   "file": "resources/primary-planning/17-weekly-planner.pdf",
+   "pages": 1,
+   "land": true,
+   "areas": [],
+   "preview": "previews/primary-planning/17-weekly-planner"
+  },
+  {
+   "id": "primary-planning-18-medium-term-plan",
+   "title": "Medium-term plan",
+   "desc": "Plan a unit across several weeks.",
+   "cat": "primary-planning",
+   "catName": "Primary: planning and assessment",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "primary"
+   ],
+   "file": "resources/primary-planning/18-medium-term-plan.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/primary-planning/18-medium-term-plan"
+  },
+  {
+   "id": "primary-planning-19-behaviour-log",
+   "title": "Behaviour log",
+   "desc": "Record behaviour incidents and follow-up.",
+   "cat": "primary-planning",
+   "catName": "Primary: planning and assessment",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "primary"
+   ],
+   "file": "resources/primary-planning/19-behaviour-log.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/primary-planning/19-behaviour-log"
+  },
+  {
+   "id": "primary-planning-20-parent-meeting-notes",
+   "title": "Parent meeting notes",
+   "desc": "Notes for a meeting with a parent or carer.",
+   "cat": "primary-planning",
+   "catName": "Primary: planning and assessment",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "primary"
+   ],
+   "file": "resources/primary-planning/20-parent-meeting-notes.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/primary-planning/20-parent-meeting-notes"
+  },
+  {
+   "id": "primary-planning-21-guided-reading-plan",
+   "title": "Guided reading plan",
+   "desc": "Plan a guided reading session with questions.",
+   "cat": "primary-planning",
+   "catName": "Primary: planning and assessment",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "primary"
+   ],
+   "file": "resources/primary-planning/21-guided-reading-plan.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/primary-planning/21-guided-reading-plan"
+  },
+  {
+   "id": "primary-planning-22-small-group-intervention-plan",
+   "title": "Small-group intervention plan",
+   "desc": "Plan targeted support for a small group of pupils.",
+   "cat": "primary-planning",
+   "catName": "Primary: planning and assessment",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "primary"
+   ],
+   "file": "resources/primary-planning/22-small-group-intervention-plan.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/primary-planning/22-small-group-intervention-plan"
+  },
+  {
+   "id": "primary-maths-literacy-01-number-line-0-to-10",
+   "title": "Number line 0 to 10",
+   "desc": "Five large number lines from 0 to 10.",
+   "cat": "primary-maths-literacy",
+   "catName": "Primary: maths and literacy tools",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "primary"
+   ],
+   "file": "resources/primary-maths-literacy/01-number-line-0-to-10.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/primary-maths-literacy/01-number-line-0-to-10"
+  },
+  {
+   "id": "primary-maths-literacy-02-number-line-0-to-20",
+   "title": "Number line 0 to 20",
+   "desc": "Five number lines from 0 to 20.",
+   "cat": "primary-maths-literacy",
+   "catName": "Primary: maths and literacy tools",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "primary"
+   ],
+   "file": "resources/primary-maths-literacy/02-number-line-0-to-20.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/primary-maths-literacy/02-number-line-0-to-20"
+  },
+  {
+   "id": "primary-maths-literacy-03-number-line-0-to-100",
+   "title": "Number line 0 to 100",
+   "desc": "Number lines with every 10 labelled.",
+   "cat": "primary-maths-literacy",
+   "catName": "Primary: maths and literacy tools",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "primary"
+   ],
+   "file": "resources/primary-maths-literacy/03-number-line-0-to-100.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/primary-maths-literacy/03-number-line-0-to-100"
+  },
+  {
+   "id": "primary-maths-literacy-04-number-line-10-to-10",
+   "title": "Number line -10 to 10",
+   "desc": "Number lines with negative numbers.",
+   "cat": "primary-maths-literacy",
+   "catName": "Primary: maths and literacy tools",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "primary"
+   ],
+   "file": "resources/primary-maths-literacy/04-number-line-10-to-10.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/primary-maths-literacy/04-number-line-10-to-10"
+  },
+  {
+   "id": "primary-maths-literacy-05-hundred-square",
+   "title": "Hundred square",
+   "desc": "A hundred square from 1 to 100.",
+   "cat": "primary-maths-literacy",
+   "catName": "Primary: maths and literacy tools",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "primary"
+   ],
+   "file": "resources/primary-maths-literacy/05-hundred-square.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/primary-maths-literacy/05-hundred-square"
+  },
+  {
+   "id": "primary-maths-literacy-06-blank-hundred-square",
+   "title": "Blank hundred square",
+   "desc": "A blank hundred grid to fill in.",
+   "cat": "primary-maths-literacy",
+   "catName": "Primary: maths and literacy tools",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "primary"
+   ],
+   "file": "resources/primary-maths-literacy/06-blank-hundred-square.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/primary-maths-literacy/06-blank-hundred-square"
+  },
+  {
+   "id": "primary-maths-literacy-07-multiplication-square-1-to-12",
+   "title": "Multiplication square 1 to 12",
+   "desc": "A full 12 by 12 multiplication grid.",
+   "cat": "primary-maths-literacy",
+   "catName": "Primary: maths and literacy tools",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "primary"
+   ],
+   "file": "resources/primary-maths-literacy/07-multiplication-square-1-to-12.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/primary-maths-literacy/07-multiplication-square-1-to-12"
+  },
+  {
+   "id": "primary-maths-literacy-08-blank-multiplication-grid",
+   "title": "Blank multiplication grid",
+   "desc": "Fill in the products for a 12 by 12 grid.",
+   "cat": "primary-maths-literacy",
+   "catName": "Primary: maths and literacy tools",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "primary"
+   ],
+   "file": "resources/primary-maths-literacy/08-blank-multiplication-grid.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/primary-maths-literacy/08-blank-multiplication-grid"
+  },
+  {
+   "id": "primary-maths-literacy-09-place-value-chart-hundreds-tens-ones",
+   "title": "Place value chart: hundreds, tens, ones",
+   "desc": "A large place value chart for three-digit numbers.",
+   "cat": "primary-maths-literacy",
+   "catName": "Primary: maths and literacy tools",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "primary"
+   ],
+   "file": "resources/primary-maths-literacy/09-place-value-chart-hundreds-tens-ones.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/primary-maths-literacy/09-place-value-chart-hundreds-tens-ones"
+  },
+  {
+   "id": "primary-maths-literacy-10-place-value-chart-to-thousands",
+   "title": "Place value chart: to thousands",
+   "desc": "A place value chart for four-digit numbers.",
+   "cat": "primary-maths-literacy",
+   "catName": "Primary: maths and literacy tools",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "primary"
+   ],
+   "file": "resources/primary-maths-literacy/10-place-value-chart-to-thousands.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/primary-maths-literacy/10-place-value-chart-to-thousands"
+  },
+  {
+   "id": "primary-maths-literacy-11-fraction-wall",
+   "title": "Fraction wall",
+   "desc": "Twelve rows of fractions from one whole to twelfths.",
+   "cat": "primary-maths-literacy",
+   "catName": "Primary: maths and literacy tools",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "primary"
+   ],
+   "file": "resources/primary-maths-literacy/11-fraction-wall.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/primary-maths-literacy/11-fraction-wall"
+  },
+  {
+   "id": "primary-maths-literacy-12-bar-model-template",
+   "title": "Bar model template",
+   "desc": "Six bar models for word problems.",
+   "cat": "primary-maths-literacy",
+   "catName": "Primary: maths and literacy tools",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "primary"
+   ],
+   "file": "resources/primary-maths-literacy/12-bar-model-template.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/primary-maths-literacy/12-bar-model-template"
+  },
+  {
+   "id": "primary-maths-literacy-13-part-whole-model-template",
+   "title": "Part-whole model template",
+   "desc": "Six part-whole models for number work.",
+   "cat": "primary-maths-literacy",
+   "catName": "Primary: maths and literacy tools",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "primary"
+   ],
+   "file": "resources/primary-maths-literacy/13-part-whole-model-template.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/primary-maths-literacy/13-part-whole-model-template"
+  },
+  {
+   "id": "primary-maths-literacy-14-number-bonds-to-10",
+   "title": "Number bonds to 10",
+   "desc": "Practise number bonds with number sentences.",
+   "cat": "primary-maths-literacy",
+   "catName": "Primary: maths and literacy tools",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "primary"
+   ],
+   "file": "resources/primary-maths-literacy/14-number-bonds-to-10.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/primary-maths-literacy/14-number-bonds-to-10"
+  },
+  {
+   "id": "primary-maths-literacy-15-number-bonds-to-20",
+   "title": "Number bonds to 20",
+   "desc": "Practise number bonds to 20.",
+   "cat": "primary-maths-literacy",
+   "catName": "Primary: maths and literacy tools",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "primary"
+   ],
+   "file": "resources/primary-maths-literacy/15-number-bonds-to-20.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/primary-maths-literacy/15-number-bonds-to-20"
+  },
+  {
+   "id": "primary-maths-literacy-16-clock-faces",
+   "title": "Clock faces",
+   "desc": "Four analogue clock faces for telling the time.",
+   "cat": "primary-maths-literacy",
+   "catName": "Primary: maths and literacy tools",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "primary"
+   ],
+   "file": "resources/primary-maths-literacy/16-clock-faces.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/primary-maths-literacy/16-clock-faces"
+  },
+  {
+   "id": "primary-maths-literacy-17-blank-clock-faces",
+   "title": "Blank clock faces",
+   "desc": "Four clock faces without numbers for children to complete.",
+   "cat": "primary-maths-literacy",
+   "catName": "Primary: maths and literacy tools",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "primary"
+   ],
+   "file": "resources/primary-maths-literacy/17-blank-clock-faces.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/primary-maths-literacy/17-blank-clock-faces"
+  },
+  {
+   "id": "primary-maths-literacy-18-squared-paper",
+   "title": "Squared paper",
+   "desc": "1 cm squared paper for graphs and arrays.",
+   "cat": "primary-maths-literacy",
+   "catName": "Primary: maths and literacy tools",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "primary"
+   ],
+   "file": "resources/primary-maths-literacy/18-squared-paper.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/primary-maths-literacy/18-squared-paper"
+  },
+  {
+   "id": "primary-maths-literacy-19-small-squared-paper",
+   "title": "Small squared paper",
+   "desc": "5 mm squared paper for detailed work.",
+   "cat": "primary-maths-literacy",
+   "catName": "Primary: maths and literacy tools",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "primary"
+   ],
+   "file": "resources/primary-maths-literacy/19-small-squared-paper.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/primary-maths-literacy/19-small-squared-paper"
+  },
+  {
+   "id": "primary-maths-literacy-20-dot-paper",
+   "title": "Dot paper",
+   "desc": "Square dot paper for symmetry and shapes.",
+   "cat": "primary-maths-literacy",
+   "catName": "Primary: maths and literacy tools",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "primary"
+   ],
+   "file": "resources/primary-maths-literacy/20-dot-paper.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/primary-maths-literacy/20-dot-paper"
+  },
+  {
+   "id": "primary-maths-literacy-21-isometric-dot-paper",
+   "title": "Isometric dot paper",
+   "desc": "Triangular dot paper for 3D drawing.",
+   "cat": "primary-maths-literacy",
+   "catName": "Primary: maths and literacy tools",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "primary"
+   ],
+   "file": "resources/primary-maths-literacy/21-isometric-dot-paper.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/primary-maths-literacy/21-isometric-dot-paper"
+  },
+  {
+   "id": "primary-maths-literacy-22-column-addition-frame",
+   "title": "Column addition frame",
+   "desc": "Nine grids for column addition.",
+   "cat": "primary-maths-literacy",
+   "catName": "Primary: maths and literacy tools",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "primary"
+   ],
+   "file": "resources/primary-maths-literacy/22-column-addition-frame.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/primary-maths-literacy/22-column-addition-frame"
+  },
+  {
+   "id": "primary-maths-literacy-23-column-subtraction-frame",
+   "title": "Column subtraction frame",
+   "desc": "Nine grids for column subtraction.",
+   "cat": "primary-maths-literacy",
+   "catName": "Primary: maths and literacy tools",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "primary"
+   ],
+   "file": "resources/primary-maths-literacy/23-column-subtraction-frame.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/primary-maths-literacy/23-column-subtraction-frame"
+  },
+  {
+   "id": "primary-maths-literacy-24-handwriting-lines-four-line-guide",
+   "title": "Handwriting lines: four-line guide",
+   "desc": "Four-line handwriting guides for early writing.",
+   "cat": "primary-maths-literacy",
+   "catName": "Primary: maths and literacy tools",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "primary"
+   ],
+   "file": "resources/primary-maths-literacy/24-handwriting-lines-four-line-guide.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/primary-maths-literacy/24-handwriting-lines-four-line-guide"
+  },
+  {
+   "id": "primary-maths-literacy-25-writing-lines",
+   "title": "Writing lines",
+   "desc": "Plain ruled lines for writing.",
+   "cat": "primary-maths-literacy",
+   "catName": "Primary: maths and literacy tools",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "primary"
+   ],
+   "file": "resources/primary-maths-literacy/25-writing-lines.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/primary-maths-literacy/25-writing-lines"
+  },
+  {
+   "id": "primary-maths-literacy-26-spelling-practice-grid",
+   "title": "Spelling practice grid",
+   "desc": "Look, cover, write, check practice grid.",
+   "cat": "primary-maths-literacy",
+   "catName": "Primary: maths and literacy tools",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "primary"
+   ],
+   "file": "resources/primary-maths-literacy/26-spelling-practice-grid.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/primary-maths-literacy/26-spelling-practice-grid"
+  },
+  {
+   "id": "organisers-01-kwl-chart",
+   "title": "KWL chart",
+   "desc": "Record what you know, want to know and learned.",
+   "cat": "organisers",
+   "catName": "Graphic organisers and study skills",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "primary",
+    "secondary"
+   ],
+   "file": "resources/organisers/01-kwl-chart.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/organisers/01-kwl-chart"
+  },
+  {
+   "id": "organisers-02-venn-diagram-two-circles",
+   "title": "Venn diagram: two circles",
+   "desc": "Compare and contrast two ideas.",
+   "cat": "organisers",
+   "catName": "Graphic organisers and study skills",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "primary",
+    "secondary"
+   ],
+   "file": "resources/organisers/02-venn-diagram-two-circles.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/organisers/02-venn-diagram-two-circles"
+  },
+  {
+   "id": "organisers-03-venn-diagram-three-circles",
+   "title": "Venn diagram: three circles",
+   "desc": "Compare three ideas.",
+   "cat": "organisers",
+   "catName": "Graphic organisers and study skills",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "primary",
+    "secondary"
+   ],
+   "file": "resources/organisers/03-venn-diagram-three-circles.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/organisers/03-venn-diagram-three-circles"
+  },
+  {
+   "id": "organisers-04-mind-map",
+   "title": "Mind map",
+   "desc": "A mind map with a central idea and six branches.",
+   "cat": "organisers",
+   "catName": "Graphic organisers and study skills",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "primary",
+    "secondary"
+   ],
+   "file": "resources/organisers/04-mind-map.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/organisers/04-mind-map"
+  },
+  {
+   "id": "organisers-05-timeline",
+   "title": "Timeline",
+   "desc": "Put events in order on a timeline.",
+   "cat": "organisers",
+   "catName": "Graphic organisers and study skills",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "primary",
+    "secondary"
+   ],
+   "file": "resources/organisers/05-timeline.pdf",
+   "pages": 1,
+   "land": true,
+   "areas": [],
+   "preview": "previews/organisers/05-timeline"
+  },
+  {
+   "id": "organisers-06-frayer-model",
+   "title": "Frayer model",
+   "desc": "Define a word with characteristics, examples and non-examples.",
+   "cat": "organisers",
+   "catName": "Graphic organisers and study skills",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "primary",
+    "secondary"
+   ],
+   "file": "resources/organisers/06-frayer-model.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/organisers/06-frayer-model"
+  },
+  {
+   "id": "organisers-07-cause-and-effect-chart",
+   "title": "Cause and effect chart",
+   "desc": "Link causes to their effects.",
+   "cat": "organisers",
+   "catName": "Graphic organisers and study skills",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "primary",
+    "secondary"
+   ],
+   "file": "resources/organisers/07-cause-and-effect-chart.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/organisers/07-cause-and-effect-chart"
+  },
+  {
+   "id": "organisers-08-t-chart",
+   "title": "T-chart",
+   "desc": "Two columns to compare or sort.",
+   "cat": "organisers",
+   "catName": "Graphic organisers and study skills",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "primary",
+    "secondary"
+   ],
+   "file": "resources/organisers/08-t-chart.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/organisers/08-t-chart"
+  },
+  {
+   "id": "organisers-09-flow-chart",
+   "title": "Flow chart",
+   "desc": "Plan a process or sequence.",
+   "cat": "organisers",
+   "catName": "Graphic organisers and study skills",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "primary",
+    "secondary"
+   ],
+   "file": "resources/organisers/09-flow-chart.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/organisers/09-flow-chart"
+  },
+  {
+   "id": "organisers-10-four-step-sequence",
+   "title": "Four-step sequence",
+   "desc": "First, next, then, finally.",
+   "cat": "organisers",
+   "catName": "Graphic organisers and study skills",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "primary",
+    "secondary"
+   ],
+   "file": "resources/organisers/10-four-step-sequence.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/organisers/10-four-step-sequence"
+  },
+  {
+   "id": "organisers-11-story-mountain",
+   "title": "Story mountain",
+   "desc": "Plan a story: opening, build-up, problem, resolution, ending.",
+   "cat": "organisers",
+   "catName": "Graphic organisers and study skills",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "primary",
+    "secondary"
+   ],
+   "file": "resources/organisers/11-story-mountain.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/organisers/11-story-mountain"
+  },
+  {
+   "id": "organisers-12-exit-tickets",
+   "title": "Exit tickets",
+   "desc": "Eight exit tickets to check understanding.",
+   "cat": "organisers",
+   "catName": "Graphic organisers and study skills",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "primary",
+    "secondary"
+   ],
+   "file": "resources/organisers/12-exit-tickets.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/organisers/12-exit-tickets"
+  },
+  {
+   "id": "organisers-13-two-stars-and-a-wish",
+   "title": "Two stars and a wish",
+   "desc": "Peer or self feedback with two positives and one wish.",
+   "cat": "organisers",
+   "catName": "Graphic organisers and study skills",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "primary",
+    "secondary"
+   ],
+   "file": "resources/organisers/13-two-stars-and-a-wish.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/organisers/13-two-stars-and-a-wish"
+  },
+  {
+   "id": "organisers-14-self-assessment-traffic-lights",
+   "title": "Self-assessment traffic lights",
+   "desc": "Pupils rate their confidence on 'I can' statements.",
+   "cat": "organisers",
+   "catName": "Graphic organisers and study skills",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "primary",
+    "secondary"
+   ],
+   "file": "resources/organisers/14-self-assessment-traffic-lights.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/organisers/14-self-assessment-traffic-lights"
+  },
+  {
+   "id": "secondary-01-lesson-plan-secondary",
+   "title": "Lesson plan: secondary",
+   "desc": "A one-page secondary lesson plan.",
+   "cat": "secondary",
+   "catName": "Secondary teaching tools",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "secondary"
+   ],
+   "file": "resources/secondary/01-lesson-plan-secondary.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/secondary/01-lesson-plan-secondary"
+  },
+  {
+   "id": "secondary-02-scheme-of-work-unit-planner",
+   "title": "Scheme of work: unit planner",
+   "desc": "Plan a whole unit lesson by lesson.",
+   "cat": "secondary",
+   "catName": "Secondary teaching tools",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "secondary"
+   ],
+   "file": "resources/secondary/02-scheme-of-work-unit-planner.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/secondary/02-scheme-of-work-unit-planner"
+  },
+  {
+   "id": "secondary-03-seating-plan-rows",
+   "title": "Seating plan: rows",
+   "desc": "Rows of desks facing the front.",
+   "cat": "secondary",
+   "catName": "Secondary teaching tools",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "secondary"
+   ],
+   "file": "resources/secondary/03-seating-plan-rows.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/secondary/03-seating-plan-rows"
+  },
+  {
+   "id": "secondary-04-seating-plan-groups",
+   "title": "Seating plan: groups",
+   "desc": "Six tables of six.",
+   "cat": "secondary",
+   "catName": "Secondary teaching tools",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "secondary"
+   ],
+   "file": "resources/secondary/04-seating-plan-groups.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/secondary/04-seating-plan-groups"
+  },
+  {
+   "id": "secondary-05-seating-plan-horseshoe",
+   "title": "Seating plan: horseshoe",
+   "desc": "A horseshoe layout for discussion.",
+   "cat": "secondary",
+   "catName": "Secondary teaching tools",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "secondary"
+   ],
+   "file": "resources/secondary/05-seating-plan-horseshoe.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/secondary/05-seating-plan-horseshoe"
+  },
+  {
+   "id": "secondary-06-marking-codes-key",
+   "title": "Marking codes key",
+   "desc": "Create your own marking code key for pupils.",
+   "cat": "secondary",
+   "catName": "Secondary teaching tools",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "secondary"
+   ],
+   "file": "resources/secondary/06-marking-codes-key.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/secondary/06-marking-codes-key"
+  },
+  {
+   "id": "secondary-07-feedback-sheet-what-went-well-and-even-better-if",
+   "title": "Feedback sheet: what went well and even better if",
+   "desc": "A feedback and improvement sheet.",
+   "cat": "secondary",
+   "catName": "Secondary teaching tools",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "secondary"
+   ],
+   "file": "resources/secondary/07-feedback-sheet-what-went-well-and-even-better-if.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/secondary/07-feedback-sheet-what-went-well-and-even-better-if"
+  },
+  {
+   "id": "secondary-08-improvement-task-planner",
+   "title": "Improvement task planner",
+   "desc": "Plan time for pupils to respond to feedback.",
+   "cat": "secondary",
+   "catName": "Secondary teaching tools",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "secondary"
+   ],
+   "file": "resources/secondary/08-improvement-task-planner.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/secondary/08-improvement-task-planner"
+  },
+  {
+   "id": "secondary-09-revision-timetable",
+   "title": "Revision timetable",
+   "desc": "A weekly revision planner.",
+   "cat": "secondary",
+   "catName": "Secondary teaching tools",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "secondary"
+   ],
+   "file": "resources/secondary/09-revision-timetable.pdf",
+   "pages": 1,
+   "land": true,
+   "areas": [],
+   "preview": "previews/secondary/09-revision-timetable"
+  },
+  {
+   "id": "secondary-10-exam-countdown-planner",
+   "title": "Exam countdown planner",
+   "desc": "Plan revision topic by topic before the exams.",
+   "cat": "secondary",
+   "catName": "Secondary teaching tools",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "secondary"
+   ],
+   "file": "resources/secondary/10-exam-countdown-planner.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/secondary/10-exam-countdown-planner"
+  },
+  {
+   "id": "secondary-11-cornell-notes-page",
+   "title": "Cornell notes page",
+   "desc": "Cue column, notes column and summary box.",
+   "cat": "secondary",
+   "catName": "Secondary teaching tools",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "secondary"
+   ],
+   "file": "resources/secondary/11-cornell-notes-page.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/secondary/11-cornell-notes-page"
+  },
+  {
+   "id": "secondary-12-retrieval-practice-grid",
+   "title": "Retrieval practice grid",
+   "desc": "Low-stakes quizzing across topics.",
+   "cat": "secondary",
+   "catName": "Secondary teaching tools",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "secondary"
+   ],
+   "file": "resources/secondary/12-retrieval-practice-grid.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/secondary/12-retrieval-practice-grid"
+  },
+  {
+   "id": "secondary-13-knowledge-organiser-template",
+   "title": "Knowledge organiser template",
+   "desc": "Summarise one topic on one page.",
+   "cat": "secondary",
+   "catName": "Secondary teaching tools",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "secondary"
+   ],
+   "file": "resources/secondary/13-knowledge-organiser-template.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/secondary/13-knowledge-organiser-template"
+  },
+  {
+   "id": "secondary-14-class-data-tracker",
+   "title": "Class data tracker",
+   "desc": "Track assessment marks for a class.",
+   "cat": "secondary",
+   "catName": "Secondary teaching tools",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "secondary"
+   ],
+   "file": "resources/secondary/14-class-data-tracker.pdf",
+   "pages": 1,
+   "land": true,
+   "areas": [],
+   "preview": "previews/secondary/14-class-data-tracker"
+  },
+  {
+   "id": "secondary-15-parents-evening-notes",
+   "title": "Parents' evening notes",
+   "desc": "Quick notes for each appointment.",
+   "cat": "secondary",
+   "catName": "Secondary teaching tools",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "secondary"
+   ],
+   "file": "resources/secondary/15-parents-evening-notes.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/secondary/15-parents-evening-notes"
+  },
+  {
+   "id": "secondary-16-homework-planner",
+   "title": "Homework planner",
+   "desc": "A weekly homework planner for pupils.",
+   "cat": "secondary",
+   "catName": "Secondary teaching tools",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "secondary"
+   ],
+   "file": "resources/secondary/16-homework-planner.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/secondary/16-homework-planner"
+  },
+  {
+   "id": "secondary-17-behaviour-reflection-form",
+   "title": "Behaviour reflection form",
+   "desc": "A restorative reflection sheet for pupils.",
+   "cat": "secondary",
+   "catName": "Secondary teaching tools",
+   "roles": [
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "secondary"
+   ],
+   "file": "resources/secondary/17-behaviour-reflection-form.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/secondary/17-behaviour-reflection-form"
+  },
+  {
+   "id": "trainee-01-weekly-placement-reflection",
+   "title": "Weekly placement reflection",
+   "desc": "A weekly reflection for your placement.",
+   "cat": "trainee",
+   "catName": "Student teacher and early career toolkit",
+   "roles": [
+    "student",
+    "teacher"
+   ],
+   "phases": [
+    "early",
+    "primary",
+    "secondary"
+   ],
+   "file": "resources/trainee/01-weekly-placement-reflection.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/trainee/01-weekly-placement-reflection"
+  },
+  {
+   "id": "trainee-02-lesson-observation-form",
+   "title": "Lesson observation form",
+   "desc": "For a mentor to record strengths and targets after observing a lesson.",
+   "cat": "trainee",
+   "catName": "Student teacher and early career toolkit",
+   "roles": [
+    "student",
+    "teacher"
+   ],
+   "phases": [
+    "early",
+    "primary",
+    "secondary"
+   ],
+   "file": "resources/trainee/02-lesson-observation-form.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/trainee/02-lesson-observation-form"
+  },
+  {
+   "id": "trainee-03-post-lesson-reflection",
+   "title": "Post-lesson reflection",
+   "desc": "Reflect quickly after teaching a lesson.",
+   "cat": "trainee",
+   "catName": "Student teacher and early career toolkit",
+   "roles": [
+    "student",
+    "teacher"
+   ],
+   "phases": [
+    "early",
+    "primary",
+    "secondary"
+   ],
+   "file": "resources/trainee/03-post-lesson-reflection.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/trainee/03-post-lesson-reflection"
+  },
+  {
+   "id": "trainee-04-teachers-standards-self-assessment",
+   "title": "Teachers' Standards self-assessment",
+   "desc": "Rate your confidence against the eight Teachers' Standards headings.",
+   "cat": "trainee",
+   "catName": "Student teacher and early career toolkit",
+   "roles": [
+    "student",
+    "teacher"
+   ],
+   "phases": [
+    "early",
+    "primary",
+    "secondary"
+   ],
+   "file": "resources/trainee/04-teachers-standards-self-assessment.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/trainee/04-teachers-standards-self-assessment"
+  },
+  {
+   "id": "trainee-05-placement-diary-page",
+   "title": "Placement diary page",
+   "desc": "A daily page for your placement diary.",
+   "cat": "trainee",
+   "catName": "Student teacher and early career toolkit",
+   "roles": [
+    "student",
+    "teacher"
+   ],
+   "phases": [
+    "early",
+    "primary",
+    "secondary"
+   ],
+   "file": "resources/trainee/05-placement-diary-page.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/trainee/05-placement-diary-page"
+  },
+  {
+   "id": "trainee-06-mentor-meeting-agenda",
+   "title": "Mentor meeting agenda",
+   "desc": "An agenda to plan a mentor meeting.",
+   "cat": "trainee",
+   "catName": "Student teacher and early career toolkit",
+   "roles": [
+    "student",
+    "teacher"
+   ],
+   "phases": [
+    "early",
+    "primary",
+    "secondary"
+   ],
+   "file": "resources/trainee/06-mentor-meeting-agenda.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/trainee/06-mentor-meeting-agenda"
+  },
+  {
+   "id": "trainee-07-mentor-meeting-record",
+   "title": "Mentor meeting record",
+   "desc": "Record the discussion and agreed actions.",
+   "cat": "trainee",
+   "catName": "Student teacher and early career toolkit",
+   "roles": [
+    "student",
+    "teacher"
+   ],
+   "phases": [
+    "early",
+    "primary",
+    "secondary"
+   ],
+   "file": "resources/trainee/07-mentor-meeting-record.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/trainee/07-mentor-meeting-record"
+  },
+  {
+   "id": "trainee-08-evidence-log",
+   "title": "Evidence log",
+   "desc": "Keep track of evidence for each Teachers' Standards heading.",
+   "cat": "trainee",
+   "catName": "Student teacher and early career toolkit",
+   "roles": [
+    "student",
+    "teacher"
+   ],
+   "phases": [
+    "early",
+    "primary",
+    "secondary"
+   ],
+   "file": "resources/trainee/08-evidence-log.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/trainee/08-evidence-log"
+  },
+  {
+   "id": "trainee-09-subject-knowledge-audit",
+   "title": "Subject knowledge audit",
+   "desc": "Rate your knowledge across a subject.",
+   "cat": "trainee",
+   "catName": "Student teacher and early career toolkit",
+   "roles": [
+    "student",
+    "teacher"
+   ],
+   "phases": [
+    "early",
+    "primary",
+    "secondary"
+   ],
+   "file": "resources/trainee/09-subject-knowledge-audit.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/trainee/09-subject-knowledge-audit"
+  },
+  {
+   "id": "trainee-10-behaviour-management-reflective-log",
+   "title": "Behaviour management reflective log",
+   "desc": "Reflect on strategies that worked.",
+   "cat": "trainee",
+   "catName": "Student teacher and early career toolkit",
+   "roles": [
+    "student",
+    "teacher"
+   ],
+   "phases": [
+    "early",
+    "primary",
+    "secondary"
+   ],
+   "file": "resources/trainee/10-behaviour-management-reflective-log.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/trainee/10-behaviour-management-reflective-log"
+  },
+  {
+   "id": "trainee-11-pupil-case-study-template",
+   "title": "Pupil case study template",
+   "desc": "Structure for a case study of one pupil.",
+   "cat": "trainee",
+   "catName": "Student teacher and early career toolkit",
+   "roles": [
+    "student",
+    "teacher"
+   ],
+   "phases": [
+    "early",
+    "primary",
+    "secondary"
+   ],
+   "file": "resources/trainee/11-pupil-case-study-template.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/trainee/11-pupil-case-study-template"
+  },
+  {
+   "id": "trainee-12-action-research-planner",
+   "title": "Action research planner",
+   "desc": "Plan a small piece of classroom research.",
+   "cat": "trainee",
+   "catName": "Student teacher and early career toolkit",
+   "roles": [
+    "student",
+    "teacher"
+   ],
+   "phases": [
+    "early",
+    "primary",
+    "secondary"
+   ],
+   "file": "resources/trainee/12-action-research-planner.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/trainee/12-action-research-planner"
+  },
+  {
+   "id": "trainee-13-professional-development-plan",
+   "title": "Professional development plan",
+   "desc": "Set SMART goals for your development.",
+   "cat": "trainee",
+   "catName": "Student teacher and early career toolkit",
+   "roles": [
+    "student",
+    "teacher"
+   ],
+   "phases": [
+    "early",
+    "primary",
+    "secondary"
+   ],
+   "file": "resources/trainee/13-professional-development-plan.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/trainee/13-professional-development-plan"
+  },
+  {
+   "id": "trainee-14-interview-preparation-sheet",
+   "title": "Interview preparation sheet",
+   "desc": "Plan answers for teaching interviews.",
+   "cat": "trainee",
+   "catName": "Student teacher and early career toolkit",
+   "roles": [
+    "student",
+    "teacher"
+   ],
+   "phases": [
+    "early",
+    "primary",
+    "secondary"
+   ],
+   "file": "resources/trainee/14-interview-preparation-sheet.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/trainee/14-interview-preparation-sheet"
+  },
+  {
+   "id": "trainee-15-first-week-checklist",
+   "title": "First-week checklist",
+   "desc": "Get ready for your first week in school.",
+   "cat": "trainee",
+   "catName": "Student teacher and early career toolkit",
+   "roles": [
+    "student",
+    "teacher"
+   ],
+   "phases": [
+    "early",
+    "primary",
+    "secondary"
+   ],
+   "file": "resources/trainee/15-first-week-checklist.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/trainee/15-first-week-checklist"
+  },
+  {
+   "id": "trainee-16-classroom-setup-checklist",
+   "title": "Classroom setup checklist",
+   "desc": "Set up your classroom for the first day.",
+   "cat": "trainee",
+   "catName": "Student teacher and early career toolkit",
+   "roles": [
+    "student",
+    "teacher"
+   ],
+   "phases": [
+    "early",
+    "primary",
+    "secondary"
+   ],
+   "file": "resources/trainee/16-classroom-setup-checklist.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/trainee/16-classroom-setup-checklist"
+  },
+  {
+   "id": "trainee-17-lesson-plan-linked-to-teachers-standards",
+   "title": "Lesson plan linked to Teachers' Standards",
+   "desc": "A lesson plan with space to link to the standards.",
+   "cat": "trainee",
+   "catName": "Student teacher and early career toolkit",
+   "roles": [
+    "student",
+    "teacher"
+   ],
+   "phases": [
+    "early",
+    "primary",
+    "secondary"
+   ],
+   "file": "resources/trainee/17-lesson-plan-linked-to-teachers-standards.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/trainee/17-lesson-plan-linked-to-teachers-standards"
+  },
+  {
+   "id": "trainee-18-ect-induction-meeting-log",
+   "title": "ECT induction meeting log",
+   "desc": "Record induction meetings during your early career years.",
+   "cat": "trainee",
+   "catName": "Student teacher and early career toolkit",
+   "roles": [
+    "student",
+    "teacher"
+   ],
+   "phases": [
+    "early",
+    "primary",
+    "secondary"
+   ],
+   "file": "resources/trainee/18-ect-induction-meeting-log.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/trainee/18-ect-induction-meeting-log"
+  },
+  {
+   "id": "trainee-19-ect-weekly-planner",
+   "title": "ECT weekly planner",
+   "desc": "A weekly planner for early career teachers.",
+   "cat": "trainee",
+   "catName": "Student teacher and early career toolkit",
+   "roles": [
+    "student",
+    "teacher"
+   ],
+   "phases": [
+    "early",
+    "primary",
+    "secondary"
+   ],
+   "file": "resources/trainee/19-ect-weekly-planner.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/trainee/19-ect-weekly-planner"
+  },
+  {
+   "id": "trainee-20-workload-planner",
+   "title": "Workload planner",
+   "desc": "Plan your week to protect your time.",
+   "cat": "trainee",
+   "catName": "Student teacher and early career toolkit",
+   "roles": [
+    "student",
+    "teacher"
+   ],
+   "phases": [
+    "early",
+    "primary",
+    "secondary"
+   ],
+   "file": "resources/trainee/20-workload-planner.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/trainee/20-workload-planner"
+  },
+  {
+   "id": "trainee-21-wellbeing-check-in",
+   "title": "Wellbeing check-in",
+   "desc": "A weekly self check-in.",
+   "cat": "trainee",
+   "catName": "Student teacher and early career toolkit",
+   "roles": [
+    "student",
+    "teacher"
+   ],
+   "phases": [
+    "early",
+    "primary",
+    "secondary"
+   ],
+   "file": "resources/trainee/21-wellbeing-check-in.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/trainee/21-wellbeing-check-in"
+  },
+  {
+   "id": "trainee-22-assignment-planner",
+   "title": "Assignment planner",
+   "desc": "Plan assignment work back from the deadline.",
+   "cat": "trainee",
+   "catName": "Student teacher and early career toolkit",
+   "roles": [
+    "student",
+    "teacher"
+   ],
+   "phases": [
+    "early",
+    "primary",
+    "secondary"
+   ],
+   "file": "resources/trainee/22-assignment-planner.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/trainee/22-assignment-planner"
+  },
+  {
+   "id": "trainee-23-research-reading-log",
+   "title": "Research reading log",
+   "desc": "Log what you read and what it means for your practice.",
+   "cat": "trainee",
+   "catName": "Student teacher and early career toolkit",
+   "roles": [
+    "student",
+    "teacher"
+   ],
+   "phases": [
+    "early",
+    "primary",
+    "secondary"
+   ],
+   "file": "resources/trainee/23-research-reading-log.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/trainee/23-research-reading-log"
+  },
+  {
+   "id": "trainee-24-source-evaluation-grid",
+   "title": "Source evaluation grid",
+   "desc": "Check how reliable a source is.",
+   "cat": "trainee",
+   "catName": "Student teacher and early career toolkit",
+   "roles": [
+    "student",
+    "teacher"
+   ],
+   "phases": [
+    "early",
+    "primary",
+    "secondary"
+   ],
+   "file": "resources/trainee/24-source-evaluation-grid.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/trainee/24-source-evaluation-grid"
+  },
+  {
+   "id": "trainee-25-essay-planning-sheet",
+   "title": "Essay planning sheet",
+   "desc": "Plan an academic essay.",
+   "cat": "trainee",
+   "catName": "Student teacher and early career toolkit",
+   "roles": [
+    "student",
+    "teacher"
+   ],
+   "phases": [
+    "early",
+    "primary",
+    "secondary"
+   ],
+   "file": "resources/trainee/25-essay-planning-sheet.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/trainee/25-essay-planning-sheet"
+  },
+  {
+   "id": "trainee-26-reference-list-tracker",
+   "title": "Reference list tracker",
+   "desc": "Keep a tidy list of the sources you use.",
+   "cat": "trainee",
+   "catName": "Student teacher and early career toolkit",
+   "roles": [
+    "student",
+    "teacher"
+   ],
+   "phases": [
+    "early",
+    "primary",
+    "secondary"
+   ],
+   "file": "resources/trainee/26-reference-list-tracker.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/trainee/26-reference-list-tracker"
+  },
+  {
+   "id": "trainee-27-placement-contacts-sheet",
+   "title": "Placement contacts sheet",
+   "desc": "Keep key contacts in one place.",
+   "cat": "trainee",
+   "catName": "Student teacher and early career toolkit",
+   "roles": [
+    "student",
+    "teacher"
+   ],
+   "phases": [
+    "early",
+    "primary",
+    "secondary"
+   ],
+   "file": "resources/trainee/27-placement-contacts-sheet.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/trainee/27-placement-contacts-sheet"
+  },
+  {
+   "id": "trainee-28-safeguarding-quick-card",
+   "title": "Safeguarding quick card",
+   "desc": "Fill in the key names and steps at your placement school.",
+   "cat": "trainee",
+   "catName": "Student teacher and early career toolkit",
+   "roles": [
+    "student",
+    "teacher"
+   ],
+   "phases": [
+    "early",
+    "primary",
+    "secondary"
+   ],
+   "file": "resources/trainee/28-safeguarding-quick-card.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/trainee/28-safeguarding-quick-card"
+  },
+  {
+   "id": "display-01-certificate-star-of-the-week",
+   "title": "Certificate: Star of the Week",
+   "desc": "A printable star of the week certificate.",
+   "cat": "display",
+   "catName": "Display, rewards and certificates",
+   "roles": [
+    "teacher",
+    "nursery",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary",
+    "secondary"
+   ],
+   "file": "resources/display/01-certificate-star-of-the-week.pdf",
+   "pages": 1,
+   "land": true,
+   "areas": [],
+   "preview": "previews/display/01-certificate-star-of-the-week"
+  },
+  {
+   "id": "display-02-certificate-super-reader",
+   "title": "Certificate: Super Reader",
+   "desc": "A printable super reader certificate.",
+   "cat": "display",
+   "catName": "Display, rewards and certificates",
+   "roles": [
+    "teacher",
+    "nursery",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary",
+    "secondary"
+   ],
+   "file": "resources/display/02-certificate-super-reader.pdf",
+   "pages": 1,
+   "land": true,
+   "areas": [],
+   "preview": "previews/display/02-certificate-super-reader"
+  },
+  {
+   "id": "display-03-certificate-kind-friend",
+   "title": "Certificate: Kind Friend",
+   "desc": "A printable kind friend certificate.",
+   "cat": "display",
+   "catName": "Display, rewards and certificates",
+   "roles": [
+    "teacher",
+    "nursery",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary",
+    "secondary"
+   ],
+   "file": "resources/display/03-certificate-kind-friend.pdf",
+   "pages": 1,
+   "land": true,
+   "areas": [],
+   "preview": "previews/display/03-certificate-kind-friend"
+  },
+  {
+   "id": "display-04-certificate-maths-star",
+   "title": "Certificate: Maths Star",
+   "desc": "A printable maths star certificate.",
+   "cat": "display",
+   "catName": "Display, rewards and certificates",
+   "roles": [
+    "teacher",
+    "nursery",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary",
+    "secondary"
+   ],
+   "file": "resources/display/04-certificate-maths-star.pdf",
+   "pages": 1,
+   "land": true,
+   "areas": [],
+   "preview": "previews/display/04-certificate-maths-star"
+  },
+  {
+   "id": "display-05-certificate-great-effort",
+   "title": "Certificate: Great Effort",
+   "desc": "A printable great effort certificate.",
+   "cat": "display",
+   "catName": "Display, rewards and certificates",
+   "roles": [
+    "teacher",
+    "nursery",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary",
+    "secondary"
+   ],
+   "file": "resources/display/05-certificate-great-effort.pdf",
+   "pages": 1,
+   "land": true,
+   "areas": [],
+   "preview": "previews/display/05-certificate-great-effort"
+  },
+  {
+   "id": "display-06-certificate-brilliant-writer",
+   "title": "Certificate: Brilliant Writer",
+   "desc": "A printable brilliant writer certificate.",
+   "cat": "display",
+   "catName": "Display, rewards and certificates",
+   "roles": [
+    "teacher",
+    "nursery",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary",
+    "secondary"
+   ],
+   "file": "resources/display/06-certificate-brilliant-writer.pdf",
+   "pages": 1,
+   "land": true,
+   "areas": [],
+   "preview": "previews/display/06-certificate-brilliant-writer"
+  },
+  {
+   "id": "display-07-certificate-super-scientist",
+   "title": "Certificate: Super Scientist",
+   "desc": "A printable super scientist certificate.",
+   "cat": "display",
+   "catName": "Display, rewards and certificates",
+   "roles": [
+    "teacher",
+    "nursery",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary",
+    "secondary"
+   ],
+   "file": "resources/display/07-certificate-super-scientist.pdf",
+   "pages": 1,
+   "land": true,
+   "areas": [],
+   "preview": "previews/display/07-certificate-super-scientist"
+  },
+  {
+   "id": "display-08-certificate-great-listener",
+   "title": "Certificate: Great Listener",
+   "desc": "A printable great listener certificate.",
+   "cat": "display",
+   "catName": "Display, rewards and certificates",
+   "roles": [
+    "teacher",
+    "nursery",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary",
+    "secondary"
+   ],
+   "file": "resources/display/08-certificate-great-listener.pdf",
+   "pages": 1,
+   "land": true,
+   "areas": [],
+   "preview": "previews/display/08-certificate-great-listener"
+  },
+  {
+   "id": "display-09-certificate-headteacher-s-award",
+   "title": "Certificate: Headteacher's Award",
+   "desc": "A printable headteacher's award certificate.",
+   "cat": "display",
+   "catName": "Display, rewards and certificates",
+   "roles": [
+    "teacher",
+    "nursery",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary",
+    "secondary"
+   ],
+   "file": "resources/display/09-certificate-headteacher-s-award.pdf",
+   "pages": 1,
+   "land": true,
+   "areas": [],
+   "preview": "previews/display/09-certificate-headteacher-s-award"
+  },
+  {
+   "id": "display-10-certificate-certificate-of-achievement",
+   "title": "Certificate: Certificate of Achievement",
+   "desc": "A printable certificate of achievement certificate.",
+   "cat": "display",
+   "catName": "Display, rewards and certificates",
+   "roles": [
+    "teacher",
+    "nursery",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary",
+    "secondary"
+   ],
+   "file": "resources/display/10-certificate-certificate-of-achievement.pdf",
+   "pages": 1,
+   "land": true,
+   "areas": [],
+   "preview": "previews/display/10-certificate-certificate-of-achievement"
+  },
+  {
+   "id": "display-11-sticker-reward-chart-10-stars",
+   "title": "Sticker reward chart: 10 stars",
+   "desc": "A ten-star reward chart.",
+   "cat": "display",
+   "catName": "Display, rewards and certificates",
+   "roles": [
+    "teacher",
+    "nursery",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary",
+    "secondary"
+   ],
+   "file": "resources/display/11-sticker-reward-chart-10-stars.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/display/11-sticker-reward-chart-10-stars"
+  },
+  {
+   "id": "display-12-sticker-reward-chart-20-stars",
+   "title": "Sticker reward chart: 20 stars",
+   "desc": "A twenty-star reward chart.",
+   "cat": "display",
+   "catName": "Display, rewards and certificates",
+   "roles": [
+    "teacher",
+    "nursery",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary",
+    "secondary"
+   ],
+   "file": "resources/display/12-sticker-reward-chart-20-stars.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/display/12-sticker-reward-chart-20-stars"
+  },
+  {
+   "id": "display-13-weekly-behaviour-chart",
+   "title": "Weekly behaviour chart",
+   "desc": "A Monday to Friday chart for positive choices.",
+   "cat": "display",
+   "catName": "Display, rewards and certificates",
+   "roles": [
+    "teacher",
+    "nursery",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary",
+    "secondary"
+   ],
+   "file": "resources/display/13-weekly-behaviour-chart.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/display/13-weekly-behaviour-chart"
+  },
+  {
+   "id": "display-14-class-rules-poster",
+   "title": "Class rules poster",
+   "desc": "A poster with space for your class rules.",
+   "cat": "display",
+   "catName": "Display, rewards and certificates",
+   "roles": [
+    "teacher",
+    "nursery",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary",
+    "secondary"
+   ],
+   "file": "resources/display/14-class-rules-poster.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/display/14-class-rules-poster"
+  },
+  {
+   "id": "display-15-door-signs",
+   "title": "Door signs",
+   "desc": "Six door and area signs.",
+   "cat": "display",
+   "catName": "Display, rewards and certificates",
+   "roles": [
+    "teacher",
+    "nursery",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary",
+    "secondary"
+   ],
+   "file": "resources/display/15-door-signs.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/display/15-door-signs"
+  },
+  {
+   "id": "display-16-peg-and-drawer-labels",
+   "title": "Peg and drawer labels",
+   "desc": "Thirty-six blank labels for pegs and drawers.",
+   "cat": "display",
+   "catName": "Display, rewards and certificates",
+   "roles": [
+    "teacher",
+    "nursery",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary",
+    "secondary"
+   ],
+   "file": "resources/display/16-peg-and-drawer-labels.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [],
+   "preview": "previews/display/16-peg-and-drawer-labels"
+  },
+  {
+   "id": "display-17-school-year-planner-2026-to-2027",
+   "title": "School year planner 2026 to 2027",
+   "desc": "A year-at-a-glance planner, September 2026 to August 2027.",
+   "cat": "display",
+   "catName": "Display, rewards and certificates",
+   "roles": [
+    "teacher",
+    "nursery",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary",
+    "secondary"
+   ],
+   "file": "resources/display/17-school-year-planner-2026-to-2027.pdf",
+   "pages": 1,
+   "land": true,
+   "areas": [],
+   "preview": "previews/display/17-school-year-planner-2026-to-2027"
+  },
+  {
+   "id": "display-18-monthly-planner",
+   "title": "Monthly planner",
+   "desc": "A blank monthly planner grid.",
+   "cat": "display",
+   "catName": "Display, rewards and certificates",
+   "roles": [
+    "teacher",
+    "nursery",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary",
+    "secondary"
+   ],
+   "file": "resources/display/18-monthly-planner.pdf",
+   "pages": 1,
+   "land": true,
+   "areas": [],
+   "preview": "previews/display/18-monthly-planner"
+  },
+  {
+   "id": "ey-literacy-01-single-letter-sound-cards",
+   "title": "Single letter sound cards",
+   "desc": "Twenty-six large lower case letter cards for sound games and displays.",
+   "cat": "ey-literacy",
+   "catName": "Early years: letters, sounds and words",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-literacy/01-single-letter-sound-cards.pdf",
+   "pages": 5,
+   "land": false,
+   "areas": [
+    "literacy"
+   ],
+   "preview": "previews/ey-literacy/01-single-letter-sound-cards"
+  },
+  {
+   "id": "ey-literacy-02-digraph-and-trigraph-cards",
+   "title": "Digraph and trigraph cards",
+   "desc": "Large cards for common letter pairs and groups, such as sh, ch, ai and igh.",
+   "cat": "ey-literacy",
+   "catName": "Early years: letters, sounds and words",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-literacy/02-digraph-and-trigraph-cards.pdf",
+   "pages": 3,
+   "land": false,
+   "areas": [
+    "literacy"
+   ],
+   "preview": "previews/ey-literacy/02-digraph-and-trigraph-cards"
+  },
+  {
+   "id": "ey-literacy-03-common-word-cards",
+   "title": "Common word cards",
+   "desc": "Eighteen high-frequency words for reading and matching games.",
+   "cat": "ey-literacy",
+   "catName": "Early years: letters, sounds and words",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-literacy/03-common-word-cards.pdf",
+   "pages": 3,
+   "land": false,
+   "areas": [
+    "literacy"
+   ],
+   "preview": "previews/ey-literacy/03-common-word-cards"
+  },
+  {
+   "id": "ey-literacy-04-simple-word-cards-cat-dog-sun",
+   "title": "Simple word cards: cat, dog, sun",
+   "desc": "Twelve simple three-letter words to sound out and blend.",
+   "cat": "ey-literacy",
+   "catName": "Early years: letters, sounds and words",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-literacy/04-simple-word-cards-cat-dog-sun.pdf",
+   "pages": 2,
+   "land": false,
+   "areas": [
+    "literacy"
+   ],
+   "preview": "previews/ey-literacy/04-simple-word-cards-cat-dog-sun"
+  },
+  {
+   "id": "ey-literacy-05-letter-formation-a-to-e",
+   "title": "Letter formation: a to e",
+   "desc": "Trace each lower case letter, then write it yourself.",
+   "cat": "ey-literacy",
+   "catName": "Early years: letters, sounds and words",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-literacy/05-letter-formation-a-to-e.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "literacy",
+    "physical"
+   ],
+   "preview": "previews/ey-literacy/05-letter-formation-a-to-e"
+  },
+  {
+   "id": "ey-literacy-06-letter-formation-f-to-j",
+   "title": "Letter formation: f to j",
+   "desc": "Trace each lower case letter, then write it yourself.",
+   "cat": "ey-literacy",
+   "catName": "Early years: letters, sounds and words",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-literacy/06-letter-formation-f-to-j.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "literacy",
+    "physical"
+   ],
+   "preview": "previews/ey-literacy/06-letter-formation-f-to-j"
+  },
+  {
+   "id": "ey-literacy-07-letter-formation-k-to-o",
+   "title": "Letter formation: k to o",
+   "desc": "Trace each lower case letter, then write it yourself.",
+   "cat": "ey-literacy",
+   "catName": "Early years: letters, sounds and words",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-literacy/07-letter-formation-k-to-o.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "literacy",
+    "physical"
+   ],
+   "preview": "previews/ey-literacy/07-letter-formation-k-to-o"
+  },
+  {
+   "id": "ey-literacy-08-letter-formation-p-to-t",
+   "title": "Letter formation: p to t",
+   "desc": "Trace each lower case letter, then write it yourself.",
+   "cat": "ey-literacy",
+   "catName": "Early years: letters, sounds and words",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-literacy/08-letter-formation-p-to-t.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "literacy",
+    "physical"
+   ],
+   "preview": "previews/ey-literacy/08-letter-formation-p-to-t"
+  },
+  {
+   "id": "ey-literacy-09-letter-formation-u-to-z",
+   "title": "Letter formation: u to z",
+   "desc": "Trace each lower case letter, then write it yourself.",
+   "cat": "ey-literacy",
+   "catName": "Early years: letters, sounds and words",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-literacy/09-letter-formation-u-to-z.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "literacy",
+    "physical"
+   ],
+   "preview": "previews/ey-literacy/09-letter-formation-u-to-z"
+  },
+  {
+   "id": "ey-literacy-10-reading-record",
+   "title": "Reading record",
+   "desc": "A simple record of books read in the setting and at home.",
+   "cat": "ey-literacy",
+   "catName": "Early years: letters, sounds and words",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-literacy/10-reading-record.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "literacy"
+   ],
+   "preview": "previews/ey-literacy/10-reading-record"
+  },
+  {
+   "id": "ey-literacy-11-sounds-tracker",
+   "title": "Sounds tracker",
+   "desc": "Record which letters and sounds a child knows and the next ones to teach.",
+   "cat": "ey-literacy",
+   "catName": "Early years: letters, sounds and words",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-literacy/11-sounds-tracker.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "literacy"
+   ],
+   "preview": "previews/ey-literacy/11-sounds-tracker"
+  },
+  {
+   "id": "ey-literacy-12-reading-bookmarks",
+   "title": "Reading bookmarks",
+   "desc": "Four bookmarks for children to fill in and keep.",
+   "cat": "ey-literacy",
+   "catName": "Early years: letters, sounds and words",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-literacy/12-reading-bookmarks.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "literacy"
+   ],
+   "preview": "previews/ey-literacy/12-reading-bookmarks"
+  },
+  {
+   "id": "ey-literacy-13-draw-and-write",
+   "title": "Draw and write",
+   "desc": "A picture box with writing lines for early writers.",
+   "cat": "ey-literacy",
+   "catName": "Early years: letters, sounds and words",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-literacy/13-draw-and-write.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "literacy",
+    "physical"
+   ],
+   "preview": "previews/ey-literacy/13-draw-and-write"
+  },
+  {
+   "id": "ey-literacy-14-word-wall-cards",
+   "title": "Word wall cards",
+   "desc": "Eighteen blank cards to build your own word wall.",
+   "cat": "ey-literacy",
+   "catName": "Early years: letters, sounds and words",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-literacy/14-word-wall-cards.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "literacy"
+   ],
+   "preview": "previews/ey-literacy/14-word-wall-cards"
+  },
+  {
+   "id": "ey-literacy-15-mark-making-prompt-cards",
+   "title": "Mark-making prompt cards",
+   "desc": "Eight prompts to spark drawing and early writing.",
+   "cat": "ey-literacy",
+   "catName": "Early years: letters, sounds and words",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-literacy/15-mark-making-prompt-cards.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "literacy",
+    "physical",
+    "expressive-arts"
+   ],
+   "preview": "previews/ey-literacy/15-mark-making-prompt-cards"
+  },
+  {
+   "id": "ey-maths-01-dot-pattern-cards-1-to-10",
+   "title": "Dot pattern cards 1 to 10",
+   "desc": "Dot patterns for recognising small amounts at a glance.",
+   "cat": "ey-maths",
+   "catName": "Early years: early maths",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-maths/01-dot-pattern-cards-1-to-10.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "mathematics"
+   ],
+   "preview": "previews/ey-maths/01-dot-pattern-cards-1-to-10"
+  },
+  {
+   "id": "ey-maths-02-shape-name-cards",
+   "title": "Shape name cards",
+   "desc": "Eight shape names for matching and display.",
+   "cat": "ey-maths",
+   "catName": "Early years: early maths",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-maths/02-shape-name-cards.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "mathematics"
+   ],
+   "preview": "previews/ey-maths/02-shape-name-cards"
+  },
+  {
+   "id": "ey-maths-03-days-of-the-week-cards",
+   "title": "Days of the week cards",
+   "desc": "Seven day cards for calendar time.",
+   "cat": "ey-maths",
+   "catName": "Early years: early maths",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-maths/03-days-of-the-week-cards.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "mathematics"
+   ],
+   "preview": "previews/ey-maths/03-days-of-the-week-cards"
+  },
+  {
+   "id": "ey-maths-04-months-of-the-year-cards",
+   "title": "Months of the year cards",
+   "desc": "Twelve month cards for calendar time.",
+   "cat": "ey-maths",
+   "catName": "Early years: early maths",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-maths/04-months-of-the-year-cards.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "mathematics"
+   ],
+   "preview": "previews/ey-maths/04-months-of-the-year-cards"
+  },
+  {
+   "id": "ey-maths-05-number-word-cards-zero-to-ten",
+   "title": "Number word cards zero to ten",
+   "desc": "Number words to match with numerals.",
+   "cat": "ey-maths",
+   "catName": "Early years: early maths",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-maths/05-number-word-cards-zero-to-ten.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "mathematics",
+    "literacy"
+   ],
+   "preview": "previews/ey-maths/05-number-word-cards-zero-to-ten"
+  },
+  {
+   "id": "ey-maths-06-position-word-cards",
+   "title": "Position word cards",
+   "desc": "Words for where things are: in, on, under and more.",
+   "cat": "ey-maths",
+   "catName": "Early years: early maths",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-maths/06-position-word-cards.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "mathematics",
+    "literacy"
+   ],
+   "preview": "previews/ey-maths/06-position-word-cards"
+  },
+  {
+   "id": "ey-maths-07-size-and-measure-word-cards",
+   "title": "Size and measure word cards",
+   "desc": "Words for comparing: big, small, long, short, heavy, light.",
+   "cat": "ey-maths",
+   "catName": "Early years: early maths",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-maths/07-size-and-measure-word-cards.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "mathematics",
+    "literacy"
+   ],
+   "preview": "previews/ey-maths/07-size-and-measure-word-cards"
+  },
+  {
+   "id": "ey-maths-08-open-maths-question-cards",
+   "title": "Open maths question cards",
+   "desc": "Six questions to deepen thinking during maths play.",
+   "cat": "ey-maths",
+   "catName": "Early years: early maths",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-maths/08-open-maths-question-cards.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "mathematics",
+    "communication"
+   ],
+   "preview": "previews/ey-maths/08-open-maths-question-cards"
+  },
+  {
+   "id": "ey-maths-09-measuring-record",
+   "title": "Measuring record",
+   "desc": "Record what children find when they compare lengths and weights.",
+   "cat": "ey-maths",
+   "catName": "Early years: early maths",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-maths/09-measuring-record.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "mathematics"
+   ],
+   "preview": "previews/ey-maths/09-measuring-record"
+  },
+  {
+   "id": "ey-maths-10-number-hunt-checklist",
+   "title": "Number hunt checklist",
+   "desc": "Hunt for the numbers 1 to 10 and tick them off.",
+   "cat": "ey-maths",
+   "catName": "Early years: early maths",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-maths/10-number-hunt-checklist.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "mathematics"
+   ],
+   "preview": "previews/ey-maths/10-number-hunt-checklist"
+  },
+  {
+   "id": "ey-maths-11-counting-record",
+   "title": "Counting record",
+   "desc": "Note what was counted and how many.",
+   "cat": "ey-maths",
+   "catName": "Early years: early maths",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-maths/11-counting-record.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "mathematics"
+   ],
+   "preview": "previews/ey-maths/11-counting-record"
+  },
+  {
+   "id": "ey-roleplay-01-role-play-signs-caf",
+   "title": "Role play signs: Caf\u00e9",
+   "desc": "Six signs to set up a caf\u00e9 role play area.",
+   "cat": "ey-roleplay",
+   "catName": "Early years: role play and provision",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early"
+   ],
+   "file": "resources/ey-roleplay/01-role-play-signs-caf.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "understanding-world",
+    "communication",
+    "literacy"
+   ],
+   "preview": "previews/ey-roleplay/01-role-play-signs-caf"
+  },
+  {
+   "id": "ey-roleplay-02-role-play-signs-shop",
+   "title": "Role play signs: Shop",
+   "desc": "Six signs to set up a shop role play area.",
+   "cat": "ey-roleplay",
+   "catName": "Early years: role play and provision",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early"
+   ],
+   "file": "resources/ey-roleplay/02-role-play-signs-shop.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "understanding-world",
+    "communication",
+    "literacy"
+   ],
+   "preview": "previews/ey-roleplay/02-role-play-signs-shop"
+  },
+  {
+   "id": "ey-roleplay-03-role-play-signs-vet",
+   "title": "Role play signs: Vet",
+   "desc": "Six signs to set up a vet role play area.",
+   "cat": "ey-roleplay",
+   "catName": "Early years: role play and provision",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early"
+   ],
+   "file": "resources/ey-roleplay/03-role-play-signs-vet.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "understanding-world",
+    "communication",
+    "literacy"
+   ],
+   "preview": "previews/ey-roleplay/03-role-play-signs-vet"
+  },
+  {
+   "id": "ey-roleplay-04-role-play-signs-doctor-s-surgery",
+   "title": "Role play signs: Doctor's surgery",
+   "desc": "Six signs to set up a doctor's surgery role play area.",
+   "cat": "ey-roleplay",
+   "catName": "Early years: role play and provision",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early"
+   ],
+   "file": "resources/ey-roleplay/04-role-play-signs-doctor-s-surgery.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "understanding-world",
+    "communication",
+    "literacy"
+   ],
+   "preview": "previews/ey-roleplay/04-role-play-signs-doctor-s-surgery"
+  },
+  {
+   "id": "ey-roleplay-05-role-play-signs-post-office",
+   "title": "Role play signs: Post office",
+   "desc": "Six signs to set up a post office role play area.",
+   "cat": "ey-roleplay",
+   "catName": "Early years: role play and provision",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early"
+   ],
+   "file": "resources/ey-roleplay/05-role-play-signs-post-office.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "understanding-world",
+    "communication",
+    "literacy"
+   ],
+   "preview": "previews/ey-roleplay/05-role-play-signs-post-office"
+  },
+  {
+   "id": "ey-roleplay-06-role-play-signs-garden-centre",
+   "title": "Role play signs: Garden centre",
+   "desc": "Six signs to set up a garden centre role play area.",
+   "cat": "ey-roleplay",
+   "catName": "Early years: role play and provision",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early"
+   ],
+   "file": "resources/ey-roleplay/06-role-play-signs-garden-centre.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "understanding-world",
+    "communication",
+    "literacy"
+   ],
+   "preview": "previews/ey-roleplay/06-role-play-signs-garden-centre"
+  },
+  {
+   "id": "ey-roleplay-07-role-play-signs-builders-yard",
+   "title": "Role play signs: Builders' yard",
+   "desc": "Six signs to set up a builders' yard role play area.",
+   "cat": "ey-roleplay",
+   "catName": "Early years: role play and provision",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early"
+   ],
+   "file": "resources/ey-roleplay/07-role-play-signs-builders-yard.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "understanding-world",
+    "communication",
+    "literacy"
+   ],
+   "preview": "previews/ey-roleplay/07-role-play-signs-builders-yard"
+  },
+  {
+   "id": "ey-roleplay-08-role-play-signs-space-station",
+   "title": "Role play signs: Space station",
+   "desc": "Six signs to set up a space station role play area.",
+   "cat": "ey-roleplay",
+   "catName": "Early years: role play and provision",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early"
+   ],
+   "file": "resources/ey-roleplay/08-role-play-signs-space-station.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "understanding-world",
+    "communication",
+    "literacy"
+   ],
+   "preview": "previews/ey-roleplay/08-role-play-signs-space-station"
+  },
+  {
+   "id": "ey-roleplay-09-provision-area-labels",
+   "title": "Provision area labels",
+   "desc": "Ten labels for the areas of your continuous provision.",
+   "cat": "ey-roleplay",
+   "catName": "Early years: role play and provision",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early"
+   ],
+   "file": "resources/ey-roleplay/09-provision-area-labels.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "expressive-arts",
+    "understanding-world",
+    "physical"
+   ],
+   "preview": "previews/ey-roleplay/09-provision-area-labels"
+  },
+  {
+   "id": "ey-topics-01-topic-web-minibeasts",
+   "title": "Topic web: Minibeasts",
+   "desc": "Plan a minibeasts topic from children's ideas and interests.",
+   "cat": "ey-topics",
+   "catName": "Early years: topics and seasons",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-topics/01-topic-web-minibeasts.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "understanding-world"
+   ],
+   "preview": "previews/ey-topics/01-topic-web-minibeasts"
+  },
+  {
+   "id": "ey-topics-02-vocabulary-cards-minibeasts",
+   "title": "Vocabulary cards: Minibeasts",
+   "desc": "Eight key words for a minibeasts topic.",
+   "cat": "ey-topics",
+   "catName": "Early years: topics and seasons",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-topics/02-vocabulary-cards-minibeasts.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "communication",
+    "understanding-world"
+   ],
+   "preview": "previews/ey-topics/02-vocabulary-cards-minibeasts"
+  },
+  {
+   "id": "ey-topics-03-topic-web-growing",
+   "title": "Topic web: Growing",
+   "desc": "Plan a growing topic from children's ideas and interests.",
+   "cat": "ey-topics",
+   "catName": "Early years: topics and seasons",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-topics/03-topic-web-growing.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "understanding-world"
+   ],
+   "preview": "previews/ey-topics/03-topic-web-growing"
+  },
+  {
+   "id": "ey-topics-04-vocabulary-cards-growing",
+   "title": "Vocabulary cards: Growing",
+   "desc": "Eight key words for a growing topic.",
+   "cat": "ey-topics",
+   "catName": "Early years: topics and seasons",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-topics/04-vocabulary-cards-growing.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "communication",
+    "understanding-world"
+   ],
+   "preview": "previews/ey-topics/04-vocabulary-cards-growing"
+  },
+  {
+   "id": "ey-topics-05-topic-web-transport",
+   "title": "Topic web: Transport",
+   "desc": "Plan a transport topic from children's ideas and interests.",
+   "cat": "ey-topics",
+   "catName": "Early years: topics and seasons",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-topics/05-topic-web-transport.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "understanding-world"
+   ],
+   "preview": "previews/ey-topics/05-topic-web-transport"
+  },
+  {
+   "id": "ey-topics-06-vocabulary-cards-transport",
+   "title": "Vocabulary cards: Transport",
+   "desc": "Eight key words for a transport topic.",
+   "cat": "ey-topics",
+   "catName": "Early years: topics and seasons",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-topics/06-vocabulary-cards-transport.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "communication",
+    "understanding-world"
+   ],
+   "preview": "previews/ey-topics/06-vocabulary-cards-transport"
+  },
+  {
+   "id": "ey-topics-07-topic-web-people-who-help-us",
+   "title": "Topic web: People who help us",
+   "desc": "Plan a people who help us topic from children's ideas and interests.",
+   "cat": "ey-topics",
+   "catName": "Early years: topics and seasons",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-topics/07-topic-web-people-who-help-us.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "understanding-world"
+   ],
+   "preview": "previews/ey-topics/07-topic-web-people-who-help-us"
+  },
+  {
+   "id": "ey-topics-08-vocabulary-cards-people-who-help-us",
+   "title": "Vocabulary cards: People who help us",
+   "desc": "Eight key words for a people who help us topic.",
+   "cat": "ey-topics",
+   "catName": "Early years: topics and seasons",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-topics/08-vocabulary-cards-people-who-help-us.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "communication",
+    "understanding-world"
+   ],
+   "preview": "previews/ey-topics/08-vocabulary-cards-people-who-help-us"
+  },
+  {
+   "id": "ey-topics-09-topic-web-under-the-sea",
+   "title": "Topic web: Under the sea",
+   "desc": "Plan a under the sea topic from children's ideas and interests.",
+   "cat": "ey-topics",
+   "catName": "Early years: topics and seasons",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-topics/09-topic-web-under-the-sea.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "understanding-world"
+   ],
+   "preview": "previews/ey-topics/09-topic-web-under-the-sea"
+  },
+  {
+   "id": "ey-topics-10-vocabulary-cards-under-the-sea",
+   "title": "Vocabulary cards: Under the sea",
+   "desc": "Eight key words for a under the sea topic.",
+   "cat": "ey-topics",
+   "catName": "Early years: topics and seasons",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-topics/10-vocabulary-cards-under-the-sea.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "communication",
+    "understanding-world"
+   ],
+   "preview": "previews/ey-topics/10-vocabulary-cards-under-the-sea"
+  },
+  {
+   "id": "ey-topics-11-topic-web-space",
+   "title": "Topic web: Space",
+   "desc": "Plan a space topic from children's ideas and interests.",
+   "cat": "ey-topics",
+   "catName": "Early years: topics and seasons",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-topics/11-topic-web-space.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "understanding-world"
+   ],
+   "preview": "previews/ey-topics/11-topic-web-space"
+  },
+  {
+   "id": "ey-topics-12-vocabulary-cards-space",
+   "title": "Vocabulary cards: Space",
+   "desc": "Eight key words for a space topic.",
+   "cat": "ey-topics",
+   "catName": "Early years: topics and seasons",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-topics/12-vocabulary-cards-space.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "communication",
+    "understanding-world"
+   ],
+   "preview": "previews/ey-topics/12-vocabulary-cards-space"
+  },
+  {
+   "id": "ey-topics-13-topic-web-dinosaurs",
+   "title": "Topic web: Dinosaurs",
+   "desc": "Plan a dinosaurs topic from children's ideas and interests.",
+   "cat": "ey-topics",
+   "catName": "Early years: topics and seasons",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-topics/13-topic-web-dinosaurs.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "understanding-world"
+   ],
+   "preview": "previews/ey-topics/13-topic-web-dinosaurs"
+  },
+  {
+   "id": "ey-topics-14-vocabulary-cards-dinosaurs",
+   "title": "Vocabulary cards: Dinosaurs",
+   "desc": "Eight key words for a dinosaurs topic.",
+   "cat": "ey-topics",
+   "catName": "Early years: topics and seasons",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-topics/14-vocabulary-cards-dinosaurs.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "communication",
+    "understanding-world"
+   ],
+   "preview": "previews/ey-topics/14-vocabulary-cards-dinosaurs"
+  },
+  {
+   "id": "ey-topics-15-topic-web-farm",
+   "title": "Topic web: Farm",
+   "desc": "Plan a farm topic from children's ideas and interests.",
+   "cat": "ey-topics",
+   "catName": "Early years: topics and seasons",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-topics/15-topic-web-farm.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "understanding-world"
+   ],
+   "preview": "previews/ey-topics/15-topic-web-farm"
+  },
+  {
+   "id": "ey-topics-16-vocabulary-cards-farm",
+   "title": "Vocabulary cards: Farm",
+   "desc": "Eight key words for a farm topic.",
+   "cat": "ey-topics",
+   "catName": "Early years: topics and seasons",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-topics/16-vocabulary-cards-farm.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "communication",
+    "understanding-world"
+   ],
+   "preview": "previews/ey-topics/16-vocabulary-cards-farm"
+  },
+  {
+   "id": "ey-topics-17-topic-web-wild-animals",
+   "title": "Topic web: Wild animals",
+   "desc": "Plan a wild animals topic from children's ideas and interests.",
+   "cat": "ey-topics",
+   "catName": "Early years: topics and seasons",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-topics/17-topic-web-wild-animals.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "understanding-world"
+   ],
+   "preview": "previews/ey-topics/17-topic-web-wild-animals"
+  },
+  {
+   "id": "ey-topics-18-vocabulary-cards-wild-animals",
+   "title": "Vocabulary cards: Wild animals",
+   "desc": "Eight key words for a wild animals topic.",
+   "cat": "ey-topics",
+   "catName": "Early years: topics and seasons",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-topics/18-vocabulary-cards-wild-animals.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "communication",
+    "understanding-world"
+   ],
+   "preview": "previews/ey-topics/18-vocabulary-cards-wild-animals"
+  },
+  {
+   "id": "ey-topics-19-topic-web-my-family-and-home",
+   "title": "Topic web: My family and home",
+   "desc": "Plan a my family and home topic from children's ideas and interests.",
+   "cat": "ey-topics",
+   "catName": "Early years: topics and seasons",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-topics/19-topic-web-my-family-and-home.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "understanding-world"
+   ],
+   "preview": "previews/ey-topics/19-topic-web-my-family-and-home"
+  },
+  {
+   "id": "ey-topics-20-vocabulary-cards-my-family-and-home",
+   "title": "Vocabulary cards: My family and home",
+   "desc": "Eight key words for a my family and home topic.",
+   "cat": "ey-topics",
+   "catName": "Early years: topics and seasons",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-topics/20-vocabulary-cards-my-family-and-home.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "communication",
+    "understanding-world"
+   ],
+   "preview": "previews/ey-topics/20-vocabulary-cards-my-family-and-home"
+  },
+  {
+   "id": "ey-topics-21-season-web-autumn",
+   "title": "Season web: Autumn",
+   "desc": "Plan autumn learning from what children notice.",
+   "cat": "ey-topics",
+   "catName": "Early years: topics and seasons",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-topics/21-season-web-autumn.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "understanding-world"
+   ],
+   "preview": "previews/ey-topics/21-season-web-autumn"
+  },
+  {
+   "id": "ey-topics-22-season-vocabulary-cards-autumn",
+   "title": "Season vocabulary cards: Autumn",
+   "desc": "Eight autumn words to talk about and display.",
+   "cat": "ey-topics",
+   "catName": "Early years: topics and seasons",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-topics/22-season-vocabulary-cards-autumn.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "communication",
+    "understanding-world"
+   ],
+   "preview": "previews/ey-topics/22-season-vocabulary-cards-autumn"
+  },
+  {
+   "id": "ey-topics-23-nature-hunt-autumn",
+   "title": "Nature hunt: Autumn",
+   "desc": "A autumn walk checklist. Look and tick. Do not pick or eat anything.",
+   "cat": "ey-topics",
+   "catName": "Early years: topics and seasons",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-topics/23-nature-hunt-autumn.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "understanding-world",
+    "physical"
+   ],
+   "preview": "previews/ey-topics/23-nature-hunt-autumn"
+  },
+  {
+   "id": "ey-topics-24-season-web-winter",
+   "title": "Season web: Winter",
+   "desc": "Plan winter learning from what children notice.",
+   "cat": "ey-topics",
+   "catName": "Early years: topics and seasons",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-topics/24-season-web-winter.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "understanding-world"
+   ],
+   "preview": "previews/ey-topics/24-season-web-winter"
+  },
+  {
+   "id": "ey-topics-25-season-vocabulary-cards-winter",
+   "title": "Season vocabulary cards: Winter",
+   "desc": "Eight winter words to talk about and display.",
+   "cat": "ey-topics",
+   "catName": "Early years: topics and seasons",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-topics/25-season-vocabulary-cards-winter.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "communication",
+    "understanding-world"
+   ],
+   "preview": "previews/ey-topics/25-season-vocabulary-cards-winter"
+  },
+  {
+   "id": "ey-topics-26-nature-hunt-winter",
+   "title": "Nature hunt: Winter",
+   "desc": "A winter walk checklist. Look and tick. Do not pick or eat anything.",
+   "cat": "ey-topics",
+   "catName": "Early years: topics and seasons",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-topics/26-nature-hunt-winter.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "understanding-world",
+    "physical"
+   ],
+   "preview": "previews/ey-topics/26-nature-hunt-winter"
+  },
+  {
+   "id": "ey-topics-27-season-web-spring",
+   "title": "Season web: Spring",
+   "desc": "Plan spring learning from what children notice.",
+   "cat": "ey-topics",
+   "catName": "Early years: topics and seasons",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-topics/27-season-web-spring.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "understanding-world"
+   ],
+   "preview": "previews/ey-topics/27-season-web-spring"
+  },
+  {
+   "id": "ey-topics-28-season-vocabulary-cards-spring",
+   "title": "Season vocabulary cards: Spring",
+   "desc": "Eight spring words to talk about and display.",
+   "cat": "ey-topics",
+   "catName": "Early years: topics and seasons",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-topics/28-season-vocabulary-cards-spring.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "communication",
+    "understanding-world"
+   ],
+   "preview": "previews/ey-topics/28-season-vocabulary-cards-spring"
+  },
+  {
+   "id": "ey-topics-29-nature-hunt-spring",
+   "title": "Nature hunt: Spring",
+   "desc": "A spring walk checklist. Look and tick. Do not pick or eat anything.",
+   "cat": "ey-topics",
+   "catName": "Early years: topics and seasons",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-topics/29-nature-hunt-spring.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "understanding-world",
+    "physical"
+   ],
+   "preview": "previews/ey-topics/29-nature-hunt-spring"
+  },
+  {
+   "id": "ey-topics-30-season-web-summer",
+   "title": "Season web: Summer",
+   "desc": "Plan summer learning from what children notice.",
+   "cat": "ey-topics",
+   "catName": "Early years: topics and seasons",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-topics/30-season-web-summer.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "understanding-world"
+   ],
+   "preview": "previews/ey-topics/30-season-web-summer"
+  },
+  {
+   "id": "ey-topics-31-season-vocabulary-cards-summer",
+   "title": "Season vocabulary cards: Summer",
+   "desc": "Eight summer words to talk about and display.",
+   "cat": "ey-topics",
+   "catName": "Early years: topics and seasons",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-topics/31-season-vocabulary-cards-summer.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "communication",
+    "understanding-world"
+   ],
+   "preview": "previews/ey-topics/31-season-vocabulary-cards-summer"
+  },
+  {
+   "id": "ey-topics-32-nature-hunt-summer",
+   "title": "Nature hunt: Summer",
+   "desc": "A summer walk checklist. Look and tick. Do not pick or eat anything.",
+   "cat": "ey-topics",
+   "catName": "Early years: topics and seasons",
+   "roles": [
+    "nursery",
+    "teacher",
+    "student"
+   ],
+   "phases": [
+    "early",
+    "primary"
+   ],
+   "file": "resources/ey-topics/32-nature-hunt-summer.pdf",
+   "pages": 1,
+   "land": false,
+   "areas": [
+    "understanding-world",
+    "physical"
+   ],
+   "preview": "previews/ey-topics/32-nature-hunt-summer"
+  }
+ ]
+}

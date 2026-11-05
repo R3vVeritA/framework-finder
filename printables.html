@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Framework Finder Printables</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Andika:wght@400;700&family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap">
+<style>
+/* Layout: same ruled index as the directory page. Filters on top, one printable per row with an Open PDF button. */
+:root {
+  --bg: #f3f6f8;
+  --surface: #ffffff;
+  --ink: #142330;
+  --muted: #4f606c;
+  --line: #d3dce2;
+  --accent: #00756f;
+  --accent-soft: #dff1ef;
+  --mark: #ffd84d;
+  --focus: #1c6ed5;
+  --display: "Bricolage Grotesque", "Arial Narrow", Arial, sans-serif;
+  --body: "Source Sans 3", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d1a22; --surface: #13242e; --ink: #e7eff4; --muted: #9ab0bd; --line: #26394a;
+    --accent: #4fd1c5; --accent-soft: #123a3d; --focus: #6aa8ff; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d1a22; --surface: #13242e; --ink: #e7eff4; --muted: #9ab0bd; --line: #26394a;
+  --accent: #4fd1c5; --accent-soft: #123a3d; --focus: #6aa8ff; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { background: var(--bg); }
+body {
+  margin: 0;
+  background: var(--bg); color: var(--ink);
+  font: 17px/1.5 var(--body);
+  padding-block: 0 64px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+img { max-width: 100%; }
+[hidden] { display: none !important; }
+.wrap { max-width: 900px; margin-inline: auto; }
+h1, h2, h3 { font-family: var(--display); margin: 0; line-height: 1.05; text-wrap: balance; }
+p { margin: 0; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+
+.sitenav { display: flex; flex-wrap: wrap; gap: 8px; padding-block: 16px 0; }
+.sitenav a { font-weight: 600; text-decoration: none; padding: 8px 14px; border: 2px solid var(--ink); }
+.sitenav a[aria-current="page"] { background: var(--ink); color: var(--bg); }
+
+.mast { padding-block: 40px 22px; }
+.mast h1 { font-size: clamp(2.6rem, 9vw, 4.6rem); font-weight: 800; letter-spacing: -0.02em; }
+.mast h1 span { background: linear-gradient(transparent 62%, var(--mark) 62%, var(--mark) 92%, transparent 92%); }
+.mast .sub { margin-top: 16px; max-width: 56ch; font-size: 1.12rem; color: var(--muted); }
+.howto { margin-top: 12px; font-size: 0.92rem; color: var(--muted); max-width: 66ch; }
+
+.controls { display: flex; flex-direction: column; gap: 14px; padding-block: 18px; border-block: 2px solid var(--ink); }
+.roles { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { font: 600 0.98rem/1 var(--body); min-height: 42px; padding: 0 16px; cursor: pointer; border: 2px solid var(--ink); background: transparent; color: var(--ink); }
+.chip[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+.filters { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; }
+@media (min-width: 640px) { .filters { grid-template-columns: 2fr 1fr 1fr; } }
+.field { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.field > span { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); }
+.field select, .field input { min-height: 44px; padding: 0 12px; border: 2px solid var(--line); border-radius: 0; background: var(--surface); color: var(--ink); font: 400 1rem var(--body); width: 100%; min-width: 0; }
+
+.status-line { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; font-size: 0.92rem; color: var(--muted); padding-block: 12px 4px; }
+.linkbtn { background: none; border: 0; padding: 0; font: 600 0.92rem var(--body); color: var(--accent); cursor: pointer; text-decoration: underline; }
+
+.index { list-style: none; margin: 14px 0 0; padding: 0; border-top: 2px solid var(--ink); }
+.group-head { padding: 22px 0 6px; font-family: var(--display); font-size: 1.5rem; font-weight: 700; border-bottom: 1px solid var(--line); }
+.item { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 6px 16px; align-items: center; padding: 14px 0; border-bottom: 1px solid var(--line); }
+.item h3 { font-size: 1.2rem; font-weight: 700; }
+.item .desc { color: var(--muted); max-width: 62ch; grid-column: 1; }
+.tags { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 6px; }
+.tag { font-size: 0.78rem; font-weight: 600; padding: 3px 8px; border: 1px solid var(--line); color: var(--muted); }
+.tag.new { background: var(--mark); border-color: var(--mark); color: #142330; }
+.btns { grid-column: 2; grid-row: 1 / span 2; display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end; }
+.open, .prev { display: inline-flex; align-items: center; min-height: 42px; padding: 0 16px; font: 600 1rem var(--body); text-decoration: none; white-space: nowrap; cursor: pointer; }
+.open { background: var(--accent); color: var(--bg); border: 2px solid var(--accent); }
+.prev { background: transparent; color: var(--ink); border: 2px solid var(--ink); }
+.open:hover, .prev:hover { filter: brightness(1.08); }
+@media (max-width: 560px) { .item { grid-template-columns: minmax(0, 1fr); } .btns { grid-column: 1; grid-row: auto; justify-content: flex-start; } }
+.note { margin-top: 12px; padding: 10px 14px; background: var(--accent-soft); font-size: 0.92rem; max-width: 66ch; }
+
+/* Preview viewer */
+.viewer { position: fixed; inset: 0; z-index: 50; display: flex; flex-direction: column; background: #0a1218; padding: max(12px, env(safe-area-inset-top, 0px)) max(12px, env(safe-area-inset-right, 0px)) max(12px, env(safe-area-inset-bottom, 0px)) max(12px, env(safe-area-inset-left, 0px)); }
+.viewer[hidden] { display: none; }
+.vbar { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; color: #fff; padding-bottom: 10px; }
+.vbar h2 { font-size: 1.2rem; flex: 1 1 200px; min-width: 0; }
+.vbar button { min-height: 40px; padding: 0 14px; border: 2px solid #fff; background: transparent; color: #fff; font: 600 0.95rem var(--body); cursor: pointer; }
+.vbar button:disabled { opacity: 0.35; cursor: default; }
+.vbar .pg { font-variant-numeric: tabular-nums; min-width: 4.5em; text-align: center; }
+.vstage { flex: 1; min-height: 0; overflow: auto; display: flex; justify-content: center; align-items: flex-start; }
+.vstage img { max-width: 100%; max-height: none; background: #fff; display: block; box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5); }
+.vstage.fit img { max-height: 100%; width: auto; }
+.empty, .error { padding: 32px 0; color: var(--muted); }
+.error { color: var(--ink); background: var(--accent-soft); padding: 16px; }
+footer { margin-top: 48px; font-size: 0.88rem; color: var(--muted); max-width: 70ch; }
+
+.sitenav { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding-block: 16px 0; }
+.sitenav a { font-weight: 600; text-decoration: none; padding: 8px 14px; border: 2px solid var(--ink); }
+.sitenav a[aria-current="page"] { background: var(--ink); color: var(--bg); }
+.sitenav a.wordmark { border: 0; padding-left: 0; margin-right: auto; font-family: var(--display); font-size: 1.3rem; font-weight: 800; letter-spacing: -0.01em; }
+@media (max-width: 640px) { .sitenav a.wordmark { flex: 1 0 100%; } }
+.tag.area { background: var(--accent-soft); }
+/* cute-early-years */
+:root {
+  --bg: #fff8ec; --surface: #ffffff; --ink: #2b2a4c; --muted: #6a6788; --line: #f0e2c8;
+  --accent: #e8590c; --accent-soft: #ffe9d6; --mark: #ffd84d; --focus: #3b5bdb;
+  --display: "Fredoka", "Nunito", "Trebuchet MS", system-ui, sans-serif;
+  --body: "Nunito", "Trebuchet MS", system-ui, sans-serif;
+  --a-communication: #3b82e0; --a-personal-social: #e0457b; --a-physical: #f08a24; --a-literacy: #8b5cf6;
+  --a-mathematics: #14a8b8; --a-understanding-world: #3aa655; --a-expressive-arts: #e0a812;
+  --pop: 4px 4px 0 var(--ink);
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg: #211f3d; --surface: #2d2a52; --ink: #fff3de; --muted: #c5c0e6; --line: #433f75; --accent: #ff9a5c; --accent-soft: #4a3560; --focus: #8fb0ff; --pop: 4px 4px 0 #0f0e22; } }
+:root[data-theme="dark"] { --bg: #211f3d; --surface: #2d2a52; --ink: #fff3de; --muted: #c5c0e6; --line: #433f75; --accent: #ff9a5c; --accent-soft: #4a3560; --focus: #8fb0ff; --pop: 4px 4px 0 #0f0e22; }
+body { font-family: var(--body); font-weight: 600; background-image: radial-gradient(circle at 12px 12px, rgba(232,89,12,.07) 3px, transparent 4px); background-size: 48px 48px; }
+h1, h2, h3, .rl-t, .tile .t-name, .wordmark { font-family: var(--display) !important; letter-spacing: 0 !important; font-weight: 600 !important; }
+h1 { font-weight: 700 !important; }
+.eyebrow, .grouplabel, .field > span, .a-kind { font-family: var(--display); letter-spacing: .06em; }
+.eyebrow { display: inline-block; padding: 4px 14px; border-radius: 999px; background: var(--accent-soft); }
+/* rainbow ribbon at the very top */
+body::before { content: ""; display: block; height: 10px; margin-inline: calc(-1 * max(16px, env(safe-area-inset-left, 0px))); margin-bottom: 0;
+  background: linear-gradient(90deg, var(--a-communication) 0 14.28%, var(--a-personal-social) 0 28.56%, var(--a-physical) 0 42.84%, var(--a-literacy) 0 57.12%, var(--a-mathematics) 0 71.4%, var(--a-understanding-world) 0 85.68%, var(--a-expressive-arts) 0); }
+.sitenav a { border: 2px solid var(--ink) !important; border-radius: 999px; background: var(--surface); box-shadow: 2px 2px 0 var(--ink); transition: transform .12s; }
+.sitenav a:hover { transform: translateY(-2px) rotate(-1.5deg); }
+.sitenav a[aria-current="page"] { background: var(--accent) !important; color: #fff !important; border-color: var(--ink) !important; }
+.sitenav a.wordmark { border: 0 !important; box-shadow: none; background: none; font-size: 1.55rem; color: var(--accent); }
+.sitenav a.wordmark::before { content: "\2605 "; color: var(--mark); -webkit-text-stroke: 1.5px var(--ink); }
+.btn, .chip, .vbar button, .item .prev, .item .open { border-radius: 999px !important; border: 2px solid var(--ink) !important; box-shadow: 3px 3px 0 var(--ink); font-family: var(--display); font-weight: 600 !important; transition: transform .12s, box-shadow .12s; }
+.btn:hover, .chip:hover { transform: translate(-1px,-2px); box-shadow: 4px 5px 0 var(--ink); filter: none; }
+.btn:active, .chip:active { transform: translate(2px,2px); box-shadow: 1px 1px 0 var(--ink); }
+.btn.primary { background: var(--accent); color: #fff; }
+.chip[aria-pressed="true"] { background: var(--a-communication) !important; color: #fff !important; }
+.tile, .area { border-radius: 26px !important; border: 3px solid var(--ink); box-shadow: var(--pop); transition: transform .15s; }
+.tile:hover, .area:hover { transform: translateY(-4px) rotate(-1deg); filter: none; }
+.tiles .tile:nth-child(even):hover { transform: translateY(-4px) rotate(1deg); }
+.tile .t-n { background: rgba(255,255,255,.25); align-self: flex-start; padding: 2px 12px; border-radius: 999px; }
+.tile[href*="frameworks"], .tile[href$="teacher"], .tile[href$="student"] { background: var(--a-mathematics); }
+.tile[href$="student"] { background: var(--a-literacy); } .tile[href*="frameworks"] { background: var(--a-understanding-world); }
+.rule-list { border-top: 0 !important; display: grid; gap: 12px; }
+.rule-list li { border: 3px solid var(--ink) !important; border-radius: 22px; background: var(--surface); box-shadow: 3px 3px 0 var(--ink); overflow: hidden; }
+.rule-list a { padding: 14px 20px; } .rule-list li:hover { transform: translateY(-2px); }
+.rl-n { background: var(--accent-soft); border-radius: 999px; padding: 4px 14px; color: var(--accent); }
+.hero h1 span, .mast h1 span, .mkhead h1 { background-size: 100% 100%; }
+.hero h1 span { background: linear-gradient(transparent 58%, var(--mark) 58%, var(--mark) 92%, transparent 92%); border-radius: 10px; }
+.controls { border: 3px solid var(--ink) !important; border-radius: 26px; background: var(--surface); padding: 18px !important; box-shadow: var(--pop); }
+.field input, .field select, .field textarea { border: 2px solid var(--ink) !important; border-radius: 16px !important; background: var(--bg) !important; font-family: var(--body); font-weight: 600; }
+.item { border: 3px solid var(--ink) !important; border-radius: 22px; background: var(--surface); padding: 16px 20px !important; margin-bottom: 12px; box-shadow: 3px 3px 0 var(--ink); }
+.index { padding-left: 0 !important; list-style: none; } .group-head { border: 0 !important; color: var(--accent); }
+.tag { border-radius: 999px !important; border: 2px solid var(--line) !important; background: var(--bg); padding: 3px 12px !important; }
+.tag.new { background: var(--mark) !important; border-color: var(--ink) !important; color: #2b2a4c !important; }
+.tag.area { background: var(--accent-soft) !important; border-color: var(--accent-soft) !important; color: var(--accent); }
+.note { border-radius: 18px; border: 2px dashed var(--accent); background: var(--accent-soft); }
+.swrap { border-radius: 8px; }
+footer { border-top: 3px dashed var(--accent) !important; font-weight: 600; }
+.viewer { background: #1d1b3a !important; }
+a { text-decoration-thickness: 2px; text-underline-offset: 3px; }
+/* hero decorations */
+.hero { position: relative; }
+.hero .deco { position: absolute; right: 0; top: 24px; width: min(300px, 38vw); height: auto; pointer-events: none; }
+@media (max-width: 640px) { .hero .deco { width: 120px; top: 10px; opacity: .9; } }
+.feature .f-art { border-radius: 22px; box-shadow: var(--pop); border: 3px solid var(--ink); }
+@media (prefers-reduced-motion: no-preference) { .hero .deco .bob { animation: bob 3.2s ease-in-out infinite; transform-box: fill-box; transform-origin: center; } .hero .deco .bob2 { animation-delay: -1.2s; } }
+@keyframes bob { 50% { transform: translateY(-8px) rotate(6deg); } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav class="sitenav" aria-label="Site">
+      <a class="wordmark" href="index.html">Framework Finder</a>
+      <a href="index.html">Home</a>
+      <a href="early-years.html">Early years</a>
+      <a href="printables.html" aria-current="page">Printables</a>
+      <a href="make.html">Make your own</a>
+      <a href="frameworks.html">Frameworks</a>
+    </nav>
+
+  <header class="mast">
+    <h1>Print<span>ables</span></h1>
+    <p class="sub" id="sub">Original A4 templates, charts, cards and certificates for student teachers, teachers and nursery practitioners.</p>
+    <p class="howto">Preview any sheet, or open it as a PDF and print it from your browser's PDF viewer. For card sets, print on card and cut along the dotted lines.</p>
+    <p class="note" id="pdfnote" hidden>This copy shows previews only. The downloadable PDFs are in the website folder you can host yourself.</p>
+  </header>
+
+  <section class="controls" aria-label="Filters">
+    <div class="roles" id="roles" role="group" aria-label="I am a"></div>
+    <div class="filters">
+      <label class="field"><span>Search</span><input id="q" type="search" placeholder="e.g. observation, lesson plan, number line" autocomplete="off"></label>
+      <label class="field"><span>Category</span><select id="f-cat"><option value="all">All categories</option></select></label>
+      <label class="field" id="area-field" hidden><span>Area of learning</span><select id="f-area"><option value="all">All areas</option></select></label>
+      <label class="field"><span>Phase</span>
+        <select id="f-phase">
+          <option value="all">Any phase</option>
+          <option value="early">Early years</option>
+          <option value="primary">Primary</option>
+          <option value="secondary">Secondary</option>
+        </select>
+      </label>
+    </div>
+  </section>
+
+  <div class="status-line"><span id="count" role="status">Loading</span><button class="linkbtn" id="reset" type="button">Clear all filters</button></div>
+
+  <div id="msg" class="error" hidden></div>
+  <ol class="index" id="index"></ol>
+
+  <div class="viewer" id="viewer" role="dialog" aria-modal="true" aria-label="Sheet preview" hidden>
+    <div class="vbar">
+      <h2 id="v-title"></h2>
+      <button type="button" id="v-prev" aria-label="Previous page">Previous</button>
+      <span class="pg" id="v-pg" aria-live="polite"></span>
+      <button type="button" id="v-next" aria-label="Next page">Next</button>
+      <button type="button" id="v-zoom" aria-pressed="false">Actual size</button>
+      <button type="button" id="v-close">Close</button>
+    </div>
+    <div class="vstage fit" id="v-stage"><img id="v-img" alt=""></div>
+  </div>
+
+  <footer>
+    <p>Framework Finder is an independent resource. Sheets such as safeguarding, safer sleep, fire drill and risk assessment forms are general templates: follow your own setting's policies and the current official requirements.</p>
+  </footer>
+</div>
+
+<script>
+const ROLES = [
+  { id: "all", label: "Everyone" },
+  { id: "student", label: "Student teacher" },
+  { id: "teacher", label: "Teacher" },
+  { id: "nursery", label: "Nursery practitioner" }
+];
+const PHASE = { early: "Early years", primary: "Primary", secondary: "Secondary" };
+const ROLE_LABEL = { student: "Student teacher", teacher: "Teacher", nursery: "Nursery" };
+const $ = (id) => document.getElementById(id);
+
+let data = { cats: {}, items: [] };
+let role = "all";
+let pdfOk = false; /* true only when the PDF files are served next to this page */
+
+ROLES.forEach((r) => {
+  const b = document.createElement("button");
+  b.type = "button"; b.className = "chip"; b.textContent = r.label; b.dataset.role = r.id;
+  b.setAttribute("aria-pressed", r.id === role ? "true" : "false");
+  b.addEventListener("click", () => { role = r.id; render(); });
+  $("roles").appendChild(b);
+});
+
+function isNew(it) {
+  if (!it.added) return false;
+  const t = Date.parse(it.added);
+  return !isNaN(t) && Date.now() - t < 30 * 24 * 3600 * 1000;
+}
+
+function matches(it) {
+  if (role !== "all" && !it.roles.includes(role)) return false;
+  const cat = $("f-cat").value;
+  if (cat !== "all" && it.cat !== cat) return false;
+  const ar = $("f-area").value;
+  if (ar !== "all" && !(it.areas || []).includes(ar)) return false;
+  const ph = $("f-phase").value;
+  if (ph !== "all" && !it.phases.includes(ph)) return false;
+  const q = $("q").value.trim().toLowerCase();
+  if (q) {
+    const hay = (it.title + " " + it.desc + " " + it.catName).toLowerCase();
+    if (!q.split(/\s+/).every((w) => hay.includes(w))) return false;
+  }
+  return true;
+}
+
+function makeItem(it) {
+  const li = document.createElement("li");
+  li.className = "item";
+  const h = document.createElement("h3"); h.textContent = it.title;
+  const d = document.createElement("p"); d.className = "desc"; d.textContent = it.desc;
+  const tags = document.createElement("div"); tags.className = "tags";
+  const tag = (t, cls) => { const s = document.createElement("span"); s.className = "tag" + (cls ? " " + cls : ""); s.textContent = t; tags.appendChild(s); };
+  if (isNew(it)) tag("New", "new");
+  tag(it.catName);
+  (it.areas || []).forEach((a) => tag((data.areaNames && data.areaNames[a]) || a, "area"));
+  tag(it.land ? "A4 landscape" : "A4 portrait");
+  tag(it.pages + (it.pages === 1 ? " page" : " pages"));
+  const btns = document.createElement("div"); btns.className = "btns";
+  if (it.preview) {
+    const p = document.createElement("button");
+    p.type = "button"; p.className = "prev"; p.textContent = "Preview";
+    p.setAttribute("aria-label", "Preview: " + it.title);
+    p.addEventListener("click", () => openViewer(it));
+    btns.appendChild(p);
+  }
+  if (pdfOk && typeof it.file === "string" && it.file.startsWith("resources/")) {
+    const a = document.createElement("a");
+    a.className = "open"; a.textContent = "Open PDF"; a.target = "_blank"; a.rel = "noopener";
+    a.href = it.file;
+    a.setAttribute("aria-label", "Open PDF: " + it.title);
+    btns.appendChild(a);
+  }
+  li.append(h, d, tags, btns);
+  return li;
+}
+
+/* ===== Preview viewer ===== */
+let cur = null, curPage = 1, lastFocus = null;
+function showPage() {
+  const n = cur.pages || 1;
+  $("v-img").src = cur.preview + "-" + curPage + ".png";
+  $("v-img").alt = cur.title + ", page " + curPage + " of " + n;
+  $("v-pg").textContent = curPage + " / " + n;
+  $("v-prev").disabled = curPage <= 1;
+  $("v-next").disabled = curPage >= n;
+  $("v-stage").scrollTop = 0;
+}
+function openViewer(it) {
+  cur = it; curPage = 1; lastFocus = document.activeElement;
+  $("v-title").textContent = it.title;
+  $("v-stage").classList.add("fit"); $("v-zoom").setAttribute("aria-pressed", "false"); $("v-zoom").textContent = "Actual size";
+  $("viewer").hidden = false;
+  showPage();
+  $("v-close").focus();
+}
+function closeViewer() {
+  $("viewer").hidden = true;
+  $("v-img").removeAttribute("src");
+  if (lastFocus && lastFocus.focus) lastFocus.focus();
+}
+$("v-close").addEventListener("click", closeViewer);
+$("v-prev").addEventListener("click", () => { if (curPage > 1) { curPage--; showPage(); } });
+$("v-next").addEventListener("click", () => { if (curPage < (cur.pages || 1)) { curPage++; showPage(); } });
+$("v-zoom").addEventListener("click", () => {
+  const fit = $("v-stage").classList.toggle("fit");
+  $("v-zoom").setAttribute("aria-pressed", fit ? "false" : "true");
+  $("v-zoom").textContent = fit ? "Actual size" : "Fit to screen";
+});
+document.addEventListener("keydown", (e) => {
+  if ($("viewer").hidden) return;
+  if (e.key === "Escape") closeViewer();
+  else if (e.key === "ArrowRight") $("v-next").click();
+  else if (e.key === "ArrowLeft") $("v-prev").click();
+});
+
+function render() {
+  document.querySelectorAll("#roles .chip").forEach((b) => b.setAttribute("aria-pressed", b.dataset.role === role ? "true" : "false"));
+  const list = data.items.filter(matches);
+  const idx = $("index");
+  idx.textContent = "";
+  const grouped = $("f-cat").value === "all";
+  let last = null;
+  list.forEach((it) => {
+    if (grouped && it.catName !== last) {
+      const g = document.createElement("li"); g.className = "group-head"; g.textContent = it.catName;
+      idx.appendChild(g); last = it.catName;
+    }
+    idx.appendChild(makeItem(it));
+  });
+  if (!list.length && data.items.length) {
+    const li = document.createElement("li"); li.className = "empty";
+    li.textContent = "Nothing matches those filters. Clear a filter or try a shorter search word.";
+    idx.appendChild(li);
+  }
+  $("count").textContent = data.items.length ? "Showing " + list.length + " of " + data.items.length : "";
+}
+
+function start(json) {
+  data = json;
+  data.items.sort((a, b) => (a.catName === b.catName ? 0 : a.catName < b.catName ? -1 : 1));
+  const cats = [...new Map(data.items.map((i) => [i.cat, i.catName])).entries()].sort((a, b) => a[1].localeCompare(b[1]));
+  cats.forEach(([id, name]) => {
+    const o = document.createElement("option"); o.value = id; o.textContent = name; $("f-cat").appendChild(o);
+  });
+  if (data.areaNames && data.items.some((i) => i.areas && i.areas.length)) {
+    Object.keys(data.areaNames).forEach((id) => {
+      const o = document.createElement("option"); o.value = id; o.textContent = data.areaNames[id]; $("f-area").appendChild(o);
+    });
+    $("area-field").hidden = false;
+  }
+  $("sub").textContent = data.items.length + " original A4 templates, charts, cards and certificates for student teachers, teachers and nursery practitioners.";
+  applyHash();
+}
+/* Deep links: #early, #primary, #secondary, #student, #teacher, #nursery, #area-literacy, or a category id */
+function applyHash() {
+  const h = decodeURIComponent((location.hash || "").slice(1));
+  role = "all"; $("f-cat").value = "all"; $("f-phase").value = "all"; $("f-area").value = "all"; $("q").value = "";
+  if (h) {
+    if (PHASE[h]) $("f-phase").value = h;
+    else if (ROLE_LABEL[h]) role = h;
+    else if (h.startsWith("area-") && data.areaNames && data.areaNames[h.slice(5)]) $("f-area").value = h.slice(5);
+    else if (data.items.some((i) => i.cat === h)) $("f-cat").value = h;
+  }
+  render();
+}
+window.addEventListener("hashchange", () => { if (data.items.length) applyHash(); });
+fetch("resources.json")
+  .then((r) => { if (!r.ok) throw new Error("status " + r.status); return r.json(); })
+  .then((json) => {
+    /* Check once whether the PDFs are actually there before offering Open PDF */
+    const first = json.items[0] && json.items[0].file;
+    const wanted = json.pdfLinks !== false; /* resources.json can switch PDF buttons off */
+    return (first && wanted ? fetch(first, { method: "HEAD" }).then((r) => r.ok, () => false) : Promise.resolve(false))
+      .then((ok) => { pdfOk = ok; $("pdfnote").hidden = ok; start(json); });
+  })
+  .catch(() => {
+    $("count").textContent = "";
+    $("msg").hidden = false;
+    $("msg").textContent = "The printables list could not load. If you opened this file by double-clicking it, upload the whole folder to a web host such as Netlify instead, because the list needs a web server.";
+  });
+
+["f-cat", "f-phase", "f-area"].forEach((id) => $(id).addEventListener("change", render));
+$("q").addEventListener("input", render);
+$("reset").addEventListener("click", () => { role = "all"; $("f-cat").value = "all"; $("f-phase").value = "all"; $("f-area").value = "all"; $("q").value = ""; render(); });
+</script>
+</body>
+</html>

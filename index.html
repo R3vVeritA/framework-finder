@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Framework Finder</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Andika:wght@400;700&family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap">
+
+<style>
+
+:root {
+  --bg: #f3f6f8; --surface: #ffffff; --ink: #142330; --muted: #4f606c; --line: #d3dce2;
+  --accent: #00756f; --accent-soft: #dff1ef; --mark: #ffd84d; --focus: #1c6ed5;
+  --display: "Bricolage Grotesque", "Arial Narrow", Arial, sans-serif;
+  --body: "Source Sans 3", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --a-communication: #1971c2;
+  --a-personal-social: #c2255c;
+  --a-physical: #c2410c;
+  --a-literacy: #6741d9;
+  --a-mathematics: #0c8599;
+  --a-understanding-world: #237a35;
+  --a-expressive-arts: #a16207;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d1a22; --surface: #13242e; --ink: #e7eff4; --muted: #9ab0bd; --line: #26394a;
+    --accent: #4fd1c5; --accent-soft: #123a3d; --focus: #6aa8ff; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d1a22; --surface: #13242e; --ink: #e7eff4; --muted: #9ab0bd; --line: #26394a;
+  --accent: #4fd1c5; --accent-soft: #123a3d; --focus: #6aa8ff; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { background: var(--bg); }
+body {
+  margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.5 var(--body);
+  padding-block: 0 64px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+img, svg { max-width: 100%; }
+[hidden] { display: none !important; }
+.wrap { max-width: 960px; margin-inline: auto; }
+h1, h2, h3 { font-family: var(--display); margin: 0; line-height: 1.05; text-wrap: balance; }
+p { margin: 0; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 0 20px; font: 600 1rem var(--body); text-decoration: none; border: 2px solid var(--ink); background: transparent; color: var(--ink); cursor: pointer; }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--bg); }
+.btn:hover { filter: brightness(1.08); }
+.eyebrow { font-size: 0.82rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); }
+.sec { padding-block: 52px 0; }
+.sec > h2 { font-size: clamp(1.8rem, 5vw, 2.5rem); font-weight: 800; letter-spacing: -0.01em; }
+.sec > .intro { margin-top: 10px; color: var(--muted); max-width: 62ch; }
+footer { margin-top: 64px; padding-top: 20px; border-top: 2px solid var(--ink); font-size: 0.88rem; color: var(--muted); max-width: 72ch; }
+footer p + p { margin-top: 8px; }
+.tiles { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; margin-top: 20px; }
+@media (min-width: 560px) { .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 860px) { .tiles.three { grid-template-columns: repeat(3, minmax(0, 1fr)); } .tiles.four { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.tile { display: flex; flex-direction: column; justify-content: space-between; gap: 18px; min-height: 120px; padding: 16px; background: var(--c, var(--ink)); color: #fff; text-decoration: none; }
+.tile .t-name { font-family: var(--display); font-size: 1.35rem; font-weight: 700; line-height: 1.1; }
+.tile .t-n { font-size: 0.92rem; font-weight: 600; opacity: 0.95; }
+.tile:hover { filter: brightness(1.1); }
+.grouplabel { margin-top: 26px; font-size: 0.82rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
+.rule-list { list-style: none; margin: 20px 0 0; padding: 0; border-top: 2px solid var(--ink); }
+.rule-list li { border-bottom: 1px solid var(--line); }
+.rule-list a { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 16px; padding: 16px 0; text-decoration: none; }
+.rule-list a:hover .rl-t { text-decoration: underline; }
+.rl-t { font-family: var(--display); font-size: 1.3rem; font-weight: 700; }
+.rl-d { grid-column: 1; color: var(--muted); max-width: 60ch; }
+.rl-n { grid-row: 1 / span 2; grid-column: 2; align-self: center; font-weight: 600; color: var(--accent); white-space: nowrap; }
+
+
+.sitenav { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding-block: 16px 0; }
+.sitenav a { font-weight: 600; text-decoration: none; padding: 8px 14px; border: 2px solid var(--ink); }
+.sitenav a[aria-current="page"] { background: var(--ink); color: var(--bg); }
+.sitenav a.wordmark { border: 0; padding-left: 0; margin-right: auto; font-family: var(--display); font-size: 1.3rem; font-weight: 800; letter-spacing: -0.01em; }
+@media (max-width: 640px) { .sitenav a.wordmark { flex: 1 0 100%; } }
+
+
+.hero { padding-block: 44px 8px; }
+.hero h1 { margin-top: 14px; font-size: clamp(2.9rem, 10vw, 5.6rem); font-weight: 800; letter-spacing: -0.025em; max-width: 12ch; }
+.hero h1 span { background: linear-gradient(transparent 62%, var(--mark) 62%, var(--mark) 92%, transparent 92%); }
+.hero .lead { margin-top: 20px; max-width: 54ch; font-size: 1.2rem; color: var(--muted); }
+.hero .cta { margin-top: 26px; display: flex; flex-wrap: wrap; gap: 12px; }
+.hero .count { margin-top: 20px; color: var(--muted); font-size: 0.95rem; }
+.feature { display: grid; grid-template-columns: minmax(0, 1fr); gap: 28px; align-items: center; }
+@media (min-width: 820px) { .feature { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 48px; } }
+.feature h2 { margin-top: 8px; }
+.f-art { width: 100%; height: auto; }
+
+/* cute-early-years */
+:root {
+  --bg: #fff8ec; --surface: #ffffff; --ink: #2b2a4c; --muted: #6a6788; --line: #f0e2c8;
+  --accent: #e8590c; --accent-soft: #ffe9d6; --mark: #ffd84d; --focus: #3b5bdb;
+  --display: "Fredoka", "Nunito", "Trebuchet MS", system-ui, sans-serif;
+  --body: "Nunito", "Trebuchet MS", system-ui, sans-serif;
+  --a-communication: #3b82e0; --a-personal-social: #e0457b; --a-physical: #f08a24; --a-literacy: #8b5cf6;
+  --a-mathematics: #14a8b8; --a-understanding-world: #3aa655; --a-expressive-arts: #e0a812;
+  --pop: 4px 4px 0 var(--ink);
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg: #211f3d; --surface: #2d2a52; --ink: #fff3de; --muted: #c5c0e6; --line: #433f75; --accent: #ff9a5c; --accent-soft: #4a3560; --focus: #8fb0ff; --pop: 4px 4px 0 #0f0e22; } }
+:root[data-theme="dark"] { --bg: #211f3d; --surface: #2d2a52; --ink: #fff3de; --muted: #c5c0e6; --line: #433f75; --accent: #ff9a5c; --accent-soft: #4a3560; --focus: #8fb0ff; --pop: 4px 4px 0 #0f0e22; }
+body { font-family: var(--body); font-weight: 600; background-image: radial-gradient(circle at 12px 12px, rgba(232,89,12,.07) 3px, transparent 4px); background-size: 48px 48px; }
+h1, h2, h3, .rl-t, .tile .t-name, .wordmark { font-family: var(--display) !important; letter-spacing: 0 !important; font-weight: 600 !important; }
+h1 { font-weight: 700 !important; }
+.eyebrow, .grouplabel, .field > span, .a-kind { font-family: var(--display); letter-spacing: .06em; }
+.eyebrow { display: inline-block; padding: 4px 14px; border-radius: 999px; background: var(--accent-soft); }
+/* rainbow ribbon at the very top */
+body::before { content: ""; display: block; height: 10px; margin-inline: calc(-1 * max(16px, env(safe-area-inset-left, 0px))); margin-bottom: 0;
+  background: linear-gradient(90deg, var(--a-communication) 0 14.28%, var(--a-personal-social) 0 28.56%, var(--a-physical) 0 42.84%, var(--a-literacy) 0 57.12%, var(--a-mathematics) 0 71.4%, var(--a-understanding-world) 0 85.68%, var(--a-expressive-arts) 0); }
+.sitenav a { border: 2px solid var(--ink) !important; border-radius: 999px; background: var(--surface); box-shadow: 2px 2px 0 var(--ink); transition: transform .12s; }
+.sitenav a:hover { transform: translateY(-2px) rotate(-1.5deg); }
+.sitenav a[aria-current="page"] { background: var(--accent) !important; color: #fff !important; border-color: var(--ink) !important; }
+.sitenav a.wordmark { border: 0 !important; box-shadow: none; background: none; font-size: 1.55rem; color: var(--accent); }
+.sitenav a.wordmark::before { content: "\2605 "; color: var(--mark); -webkit-text-stroke: 1.5px var(--ink); }
+.btn, .chip, .vbar button, .item .prev, .item .open { border-radius: 999px !important; border: 2px solid var(--ink) !important; box-shadow: 3px 3px 0 var(--ink); font-family: var(--display); font-weight: 600 !important; transition: transform .12s, box-shadow .12s; }
+.btn:hover, .chip:hover { transform: translate(-1px,-2px); box-shadow: 4px 5px 0 var(--ink); filter: none; }
+.btn:active, .chip:active { transform: translate(2px,2px); box-shadow: 1px 1px 0 var(--ink); }
+.btn.primary { background: var(--accent); color: #fff; }
+.chip[aria-pressed="true"] { background: var(--a-communication) !important; color: #fff !important; }
+.tile, .area { border-radius: 26px !important; border: 3px solid var(--ink); box-shadow: var(--pop); transition: transform .15s; }
+.tile:hover, .area:hover { transform: translateY(-4px) rotate(-1deg); filter: none; }
+.tiles .tile:nth-child(even):hover { transform: translateY(-4px) rotate(1deg); }
+.tile .t-n { background: rgba(255,255,255,.25); align-self: flex-start; padding: 2px 12px; border-radius: 999px; }
+.tile[href*="frameworks"], .tile[href$="teacher"], .tile[href$="student"] { background: var(--a-mathematics); }
+.tile[href$="student"] { background: var(--a-literacy); } .tile[href*="frameworks"] { background: var(--a-understanding-world); }
+.rule-list { border-top: 0 !important; display: grid; gap: 12px; }
+.rule-list li { border: 3px solid var(--ink) !important; border-radius: 22px; background: var(--surface); box-shadow: 3px 3px 0 var(--ink); overflow: hidden; }
+.rule-list a { padding: 14px 20px; } .rule-list li:hover { transform: translateY(-2px); }
+.rl-n { background: var(--accent-soft); border-radius: 999px; padding: 4px 14px; color: var(--accent); }
+.hero h1 span, .mast h1 span, .mkhead h1 { background-size: 100% 100%; }
+.hero h1 span { background: linear-gradient(transparent 58%, var(--mark) 58%, var(--mark) 92%, transparent 92%); border-radius: 10px; }
+.controls { border: 3px solid var(--ink) !important; border-radius: 26px; background: var(--surface); padding: 18px !important; box-shadow: var(--pop); }
+.field input, .field select, .field textarea { border: 2px solid var(--ink) !important; border-radius: 16px !important; background: var(--bg) !important; font-family: var(--body); font-weight: 600; }
+.item { border: 3px solid var(--ink) !important; border-radius: 22px; background: var(--surface); padding: 16px 20px !important; margin-bottom: 12px; box-shadow: 3px 3px 0 var(--ink); }
+.index { padding-left: 0 !important; list-style: none; } .group-head { border: 0 !important; color: var(--accent); }
+.tag { border-radius: 999px !important; border: 2px solid var(--line) !important; background: var(--bg); padding: 3px 12px !important; }
+.tag.new { background: var(--mark) !important; border-color: var(--ink) !important; color: #2b2a4c !important; }
+.tag.area { background: var(--accent-soft) !important; border-color: var(--accent-soft) !important; color: var(--accent); }
+.note { border-radius: 18px; border: 2px dashed var(--accent); background: var(--accent-soft); }
+.swrap { border-radius: 8px; }
+footer { border-top: 3px dashed var(--accent) !important; font-weight: 600; }
+.viewer { background: #1d1b3a !important; }
+a { text-decoration-thickness: 2px; text-underline-offset: 3px; }
+/* hero decorations */
+.hero { position: relative; }
+.hero .deco { position: absolute; right: 0; top: 24px; width: min(300px, 38vw); height: auto; pointer-events: none; }
+@media (max-width: 640px) { .hero .deco { width: 120px; top: 10px; opacity: .9; } }
+.feature .f-art { border-radius: 22px; box-shadow: var(--pop); border: 3px solid var(--ink); }
+@media (prefers-reduced-motion: no-preference) { .hero .deco .bob { animation: bob 3.2s ease-in-out infinite; transform-box: fill-box; transform-origin: center; } .hero .deco .bob2 { animation-delay: -1.2s; } }
+@keyframes bob { 50% { transform: translateY(-8px) rotate(6deg); } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav class="sitenav" aria-label="Site">
+      <a class="wordmark" href="index.html">Framework Finder</a>
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="early-years.html">Early years</a>
+      <a href="printables.html">Printables</a>
+      <a href="make.html">Make your own</a>
+      <a href="frameworks.html">Frameworks</a>
+    </nav>
+
+  <header class="hero">
+    <svg class="deco" viewBox="0 0 300 260" aria-hidden="true">
+  <g class="bob"><path d="M70 20l14 30 33 4-25 22 7 33-29-17-29 17 7-33-25-22 33-4z" fill="#ffd84d" stroke="#2b2a4c" stroke-width="5" stroke-linejoin="round"/></g>
+  <g class="bob bob2"><circle cx="218" cy="62" r="40" fill="#e0457b" stroke="#2b2a4c" stroke-width="5"/><circle cx="205" cy="55" r="5" fill="#2b2a4c"/><circle cx="232" cy="55" r="5" fill="#2b2a4c"/><path d="M203 72q15 14 30 0" fill="none" stroke="#2b2a4c" stroke-width="5" stroke-linecap="round"/><circle cx="196" cy="68" r="6" fill="#ff9db8"/><circle cx="240" cy="68" r="6" fill="#ff9db8"/></g>
+  <g class="bob"><rect x="40" y="130" width="88" height="88" rx="16" fill="#3b82e0" stroke="#2b2a4c" stroke-width="5"/><text x="84" y="195" text-anchor="middle" font-family="Fredoka, Nunito, sans-serif" font-size="64" font-weight="700" fill="#fff">A</text></g>
+  <g class="bob bob2"><rect x="150" y="150" width="88" height="88" rx="16" fill="#3aa655" stroke="#2b2a4c" stroke-width="5" transform="rotate(8 194 194)"/><text x="194" y="214" text-anchor="middle" font-family="Fredoka, Nunito, sans-serif" font-size="64" font-weight="700" fill="#fff" transform="rotate(8 194 194)">1</text></g>
+</svg>
+    <p class="eyebrow">For nursery, preschool and reception practitioners</p>
+    <h1>Early years, <span>ready to print.</span></h1>
+    <p class="lead">Observation sheets, planning, records and activity sheets that match the seven areas of learning. There are tools for teachers and student teachers too.</p>
+    <div class="cta">
+      <a class="btn primary" href="printables.html#early">Browse early years printables</a>
+      <a class="btn" href="make.html">Make a sheet with names on</a>
+    </div>
+    <p class="count"><strong data-total>267</strong> printables, <strong data-ey>200</strong> of them for early years. Every sheet is an original design, free to print.</p>
+  </header>
+
+  <section class="sec" aria-labelledby="h-areas">
+    <h2 id="h-areas">Find a sheet by area of learning</h2>
+    <p class="intro">The EYFS has three prime areas and four specific areas. Open one to see the sheets that support it.</p>
+    <p class="grouplabel">Prime areas</p>
+    <div class="tiles three">
+      <a class="tile" style="--c: var(--a-communication)" href="printables.html#area-communication"><span class="t-name">Communication and Language</span><span class="t-n" data-area="communication">Printables</span></a>
+      <a class="tile" style="--c: var(--a-personal-social)" href="printables.html#area-personal-social"><span class="t-name">Personal, Social and Emotional Development</span><span class="t-n" data-area="personal-social">Printables</span></a>
+      <a class="tile" style="--c: var(--a-physical)" href="printables.html#area-physical"><span class="t-name">Physical Development</span><span class="t-n" data-area="physical">Printables</span></a>
+    </div>
+    <p class="grouplabel">Specific areas</p>
+    <div class="tiles four">
+      <a class="tile" style="--c: var(--a-literacy)" href="printables.html#area-literacy"><span class="t-name">Literacy</span><span class="t-n" data-area="literacy">Printables</span></a>
+      <a class="tile" style="--c: var(--a-mathematics)" href="printables.html#area-mathematics"><span class="t-name">Mathematics</span><span class="t-n" data-area="mathematics">Printables</span></a>
+      <a class="tile" style="--c: var(--a-understanding-world)" href="printables.html#area-understanding-world"><span class="t-name">Understanding the World</span><span class="t-n" data-area="understanding-world">Printables</span></a>
+      <a class="tile" style="--c: var(--a-expressive-arts)" href="printables.html#area-expressive-arts"><span class="t-name">Expressive Arts and Design</span><span class="t-n" data-area="expressive-arts">Printables</span></a>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="h-need">
+    <h2 id="h-need">Start with what you need today</h2>
+    <ul class="rule-list">
+      <li><a href="printables.html#ey-observation"><span class="rl-t">Observe and assess</span><span class="rl-d">Observation sheets, WOW moment slips, a tracker for each area of learning, handover and baseline sheets.</span><span class="rl-n" data-cat="ey-observation"></span></a></li>
+      <li><a href="printables.html#ey-planning"><span class="rl-t">Plan and set up provision</span><span class="rl-d">Weekly plans, continuous provision, enhancements, letters to families and risk-benefit sheets.</span><span class="rl-n" data-cat="ey-planning"></span></a></li>
+      <li><a href="printables.html#ey-records"><span class="rl-t">Records and checklists</span><span class="rl-d">Registers, safer sleep and nappy charts, hygiene and outdoor checks, staff rota and logs.</span><span class="rl-n" data-cat="ey-records"></span></a></li>
+      <li><a href="printables.html#ey-literacy"><span class="rl-t">Letters, sounds and words</span><span class="rl-d">Sound cards, letter formation, word cards, reading records and bookmarks.</span><span class="rl-n" data-cat="ey-literacy"></span></a></li>
+      <li><a href="printables.html#ey-maths"><span class="rl-t">Early maths</span><span class="rl-d">Dot patterns, shape, day, month and number word cards, measuring and counting records.</span><span class="rl-n" data-cat="ey-maths"></span></a></li>
+      <li><a href="printables.html#ey-roleplay"><span class="rl-t">Role play and provision labels</span><span class="rl-d">Sign sets for a café, shop, vet, surgery, post office, garden centre, builders' yard and space station.</span><span class="rl-n" data-cat="ey-roleplay"></span></a></li>
+      <li><a href="printables.html#ey-topics"><span class="rl-t">Topics and seasons</span><span class="rl-d">A topic web, vocabulary cards and nature hunts for ten topics and all four seasons.</span><span class="rl-n" data-cat="ey-topics"></span></a></li>
+      <li><a href="printables.html#ey-activities"><span class="rl-t">Child activity sheets</span><span class="rl-d">Pre-writing patterns, tracing, number and letter cards, emotion faces and daily charts.</span><span class="rl-n" data-cat="ey-activities"></span></a></li>
+    </ul>
+  </section>
+
+  <section class="sec feature" aria-labelledby="h-make">
+    <div class="f-text">
+      <p class="eyebrow">Make your own</p>
+      <h2 id="h-make">Type the names. Print the sheets.</h2>
+      <p class="intro">Name tracing sheets, peg and drawer labels and class registers, made with your children's names. Names stay in your browser and are never sent anywhere.</p>
+      <p style="margin-top:18px"><a class="btn primary" href="make.html">Open the tools</a></p>
+    </div>
+    <svg class="f-art" viewBox="0 0 420 210" role="img" aria-label="Sample name tracing sheet with the name Ava in dotted letters">
+      <rect x="1" y="1" width="418" height="208" fill="var(--surface)" stroke="var(--ink)" stroke-width="2"/>
+      <g stroke="var(--line)" stroke-width="1.2">
+        <line x1="20" y1="48" x2="400" y2="48"/><line x1="20" y1="82" x2="400" y2="82" stroke-dasharray="5 4"/><line x1="20" y1="116" x2="400" y2="116"/>
+        <line x1="20" y1="118" x2="400" y2="118" stroke="none"/>
+        <line x1="20" y1="156" x2="400" y2="156"/><line x1="20" y1="190" x2="400" y2="190"/>
+      </g>
+      <text x="26" y="112" font-family="Andika, 'Trebuchet MS', sans-serif" font-size="82" font-weight="400" fill="var(--ink)">Ava</text>
+      <text x="206" y="112" font-family="Andika, 'Trebuchet MS', sans-serif" font-size="82" font-weight="400" fill="none" stroke="var(--ink)" stroke-width="1.6" stroke-dasharray="2 5" stroke-linecap="round">Ava</text>
+    </svg>
+  </section>
+
+  <section class="sec" aria-labelledby="h-roles">
+    <h2 id="h-roles">Teaching or training?</h2>
+    <p class="intro">Lesson plans, organisers and revision tools for the classroom, and a toolkit for placements and early career years.</p>
+    <div class="tiles three">
+      <a class="tile" href="printables.html#teacher"><span class="t-name">For teachers</span><span class="t-n">Lesson plans, maths tools, organisers</span></a>
+      <a class="tile" href="printables.html#student"><span class="t-name">For student teachers</span><span class="t-n">Placement, mentor and evidence tools</span></a>
+      <a class="tile" href="frameworks.html"><span class="t-name">Official frameworks</span><span class="t-n">England, Scotland, Wales, Northern Ireland</span></a>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="h-news">
+    <h2 id="h-news">What changed recently</h2>
+    <ul class="rule-list">
+      <li><a href="early-years.html"><span class="rl-t">1 September 2026</span><span class="rl-d">New EYFS statutory framework versions took effect, with changes on safer sleep, screen use and banned dog breeds.</span><span class="rl-n">Read more</span></a></li>
+      <li><a href="frameworks.html"><span class="rl-t">10 November 2025</span><span class="rl-d">Ofsted's new report cards and inspection changes began for early years and state-funded schools.</span><span class="rl-n">Sources</span></a></li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>Framework Finder is an independent resource. It is not run by, or endorsed by, the Department for Education, Ofsted or any organisation it links to.</p>
+    <p>Sheets such as safeguarding, safer sleep, fire drill and risk assessment forms are general templates. Follow your own setting's policies and the current official requirements.</p>
+  </footer>
+</div>
+<script>
+
+function fillCounts(json) {
+  const items = json.items;
+  const byArea = {}, byCat = {};
+  items.forEach((i) => {
+    byCat[i.cat] = (byCat[i.cat] || 0) + 1;
+    (i.areas || []).forEach((a) => { byArea[a] = (byArea[a] || 0) + 1; });
+  });
+  document.querySelectorAll("[data-area]").forEach((el) => { const n = byArea[el.dataset.area] || 0; el.textContent = n + (n === 1 ? " printable" : " printables"); });
+  document.querySelectorAll("[data-cat]").forEach((el) => { const n = byCat[el.dataset.cat] || 0; el.textContent = n + (n === 1 ? " sheet" : " sheets"); });
+  const total = items.length, ey = items.filter((i) => i.phases.includes("early")).length;
+  document.querySelectorAll("[data-total]").forEach((el) => { el.textContent = total; });
+  document.querySelectorAll("[data-ey]").forEach((el) => { el.textContent = ey; });
+}
+fetch("resources.json").then((r) => r.ok ? r.json() : Promise.reject()).then(fillCounts).catch(() => {});
+
+</script>
+</body>
+</html>

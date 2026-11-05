@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Make Your Own Sheets</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Andika:wght@400;700&family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap">
+
+<style>
+
+:root {
+  --bg: #f3f6f8; --surface: #ffffff; --ink: #142330; --muted: #4f606c; --line: #d3dce2;
+  --accent: #00756f; --accent-soft: #dff1ef; --mark: #ffd84d; --focus: #1c6ed5;
+  --display: "Bricolage Grotesque", "Arial Narrow", Arial, sans-serif;
+  --body: "Source Sans 3", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --a-communication: #1971c2;
+  --a-personal-social: #c2255c;
+  --a-physical: #c2410c;
+  --a-literacy: #6741d9;
+  --a-mathematics: #0c8599;
+  --a-understanding-world: #237a35;
+  --a-expressive-arts: #a16207;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d1a22; --surface: #13242e; --ink: #e7eff4; --muted: #9ab0bd; --line: #26394a;
+    --accent: #4fd1c5; --accent-soft: #123a3d; --focus: #6aa8ff; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d1a22; --surface: #13242e; --ink: #e7eff4; --muted: #9ab0bd; --line: #26394a;
+  --accent: #4fd1c5; --accent-soft: #123a3d; --focus: #6aa8ff; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { background: var(--bg); }
+body {
+  margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.5 var(--body);
+  padding-block: 0 64px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+img, svg { max-width: 100%; }
+[hidden] { display: none !important; }
+.wrap { max-width: 960px; margin-inline: auto; }
+h1, h2, h3 { font-family: var(--display); margin: 0; line-height: 1.05; text-wrap: balance; }
+p { margin: 0; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 0 20px; font: 600 1rem var(--body); text-decoration: none; border: 2px solid var(--ink); background: transparent; color: var(--ink); cursor: pointer; }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--bg); }
+.btn:hover { filter: brightness(1.08); }
+.eyebrow { font-size: 0.82rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); }
+.sec { padding-block: 52px 0; }
+.sec > h2 { font-size: clamp(1.8rem, 5vw, 2.5rem); font-weight: 800; letter-spacing: -0.01em; }
+.sec > .intro { margin-top: 10px; color: var(--muted); max-width: 62ch; }
+footer { margin-top: 64px; padding-top: 20px; border-top: 2px solid var(--ink); font-size: 0.88rem; color: var(--muted); max-width: 72ch; }
+footer p + p { margin-top: 8px; }
+.tiles { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; margin-top: 20px; }
+@media (min-width: 560px) { .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 860px) { .tiles.three { grid-template-columns: repeat(3, minmax(0, 1fr)); } .tiles.four { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.tile { display: flex; flex-direction: column; justify-content: space-between; gap: 18px; min-height: 120px; padding: 16px; background: var(--c, var(--ink)); color: #fff; text-decoration: none; }
+.tile .t-name { font-family: var(--display); font-size: 1.35rem; font-weight: 700; line-height: 1.1; }
+.tile .t-n { font-size: 0.92rem; font-weight: 600; opacity: 0.95; }
+.tile:hover { filter: brightness(1.1); }
+.grouplabel { margin-top: 26px; font-size: 0.82rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
+.rule-list { list-style: none; margin: 20px 0 0; padding: 0; border-top: 2px solid var(--ink); }
+.rule-list li { border-bottom: 1px solid var(--line); }
+.rule-list a { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 16px; padding: 16px 0; text-decoration: none; }
+.rule-list a:hover .rl-t { text-decoration: underline; }
+.rl-t { font-family: var(--display); font-size: 1.3rem; font-weight: 700; }
+.rl-d { grid-column: 1; color: var(--muted); max-width: 60ch; }
+.rl-n { grid-row: 1 / span 2; grid-column: 2; align-self: center; font-weight: 600; color: var(--accent); white-space: nowrap; }
+
+
+.sitenav { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding-block: 16px 0; }
+.sitenav a { font-weight: 600; text-decoration: none; padding: 8px 14px; border: 2px solid var(--ink); }
+.sitenav a[aria-current="page"] { background: var(--ink); color: var(--bg); }
+.sitenav a.wordmark { border: 0; padding-left: 0; margin-right: auto; font-family: var(--display); font-size: 1.3rem; font-weight: 800; letter-spacing: -0.01em; }
+@media (max-width: 640px) { .sitenav a.wordmark { flex: 1 0 100%; } }
+
+
+.mkhead { padding-block: 40px 8px; }
+.mkhead h1 { margin-top: 12px; font-size: clamp(2.3rem, 8vw, 4rem); font-weight: 800; letter-spacing: -0.02em; max-width: 16ch; }
+.mkhead .lead { margin-top: 16px; max-width: 54ch; font-size: 1.12rem; color: var(--muted); }
+.mk { display: grid; grid-template-columns: minmax(0, 1fr); gap: 28px; margin-top: 26px; align-items: start; }
+@media (min-width: 900px) { .mk { grid-template-columns: 320px minmax(0, 1fr); } .controls { position: sticky; top: 12px; } }
+.controls { display: flex; flex-direction: column; gap: 14px; padding: 18px; border: 2px solid var(--ink); background: var(--surface); }
+.roles { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { font: 600 0.98rem/1 var(--body); min-height: 42px; padding: 0 14px; cursor: pointer; border: 2px solid var(--ink); background: transparent; color: var(--ink); }
+.chip[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+.field { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.field > span { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); }
+.field input, .field select, .field textarea { padding: 10px 12px; border: 2px solid var(--line); border-radius: 0; background: var(--bg); color: var(--ink); font: 400 1rem var(--body); width: 100%; min-width: 0; }
+.field textarea { resize: vertical; min-height: 130px; }
+.check { display: flex; gap: 8px; align-items: center; }
+.row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+.row .btn { min-height: 40px; padding: 0 14px; font-size: 0.95rem; }
+.muted { color: var(--muted); font-size: 0.92rem; }
+.note { font-size: 0.88rem; padding: 8px 10px; background: var(--accent-soft); }
+.stage { min-width: 0; }
+.swrap { margin-bottom: 18px; background: #fff; box-shadow: 0 2px 14px rgba(0, 0, 0, 0.18); overflow: hidden; }
+.sheet { width: 210mm; height: 297mm; background: #fff; color: #142330; transform-origin: top left; position: relative; font-family: "Source Sans 3", Arial, sans-serif; overflow: hidden; }
+.sheet .s-head { position: absolute; left: 14mm; right: 14mm; top: 10mm; display: flex; justify-content: space-between; font-size: 10pt; color: #4f606c; }
+.sheet .s-foot { position: absolute; left: 14mm; right: 14mm; bottom: 8mm; font-size: 8pt; color: #8fa3af; display: flex; justify-content: space-between; }
+.trace { position: absolute; left: 14mm; right: 14mm; top: 24mm; }
+.trace h3 { font-family: "Source Sans 3", Arial, sans-serif; font-size: 11pt; font-weight: 600; color: #4f606c; margin-bottom: 4mm; }
+.trace svg { width: 100%; height: auto; display: block; margin-bottom: 6mm; }
+.labels { position: absolute; left: 7mm; top: 13mm; display: grid; grid-template-columns: repeat(3, 63.5mm); grid-auto-rows: 33.9mm; gap: 0 2.5mm; }
+.lab { border: 0.3mm dashed #c9d6dd; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 2mm; overflow: hidden; }
+.lab .nm { font-family: Andika, "Trebuchet MS", sans-serif; font-weight: 700; white-space: nowrap; color: #142330; line-height: 1.1; }
+.lab .st { font-size: 8pt; color: #4f606c; margin-top: 1.5mm; white-space: nowrap; }
+.reg { position: absolute; left: 10mm; right: 10mm; top: 20mm; }
+.reg table { width: 100%; border-collapse: collapse; table-layout: fixed; font-size: 10pt; }
+.reg th, .reg td { border: 0.3mm solid #8fa3af; height: 9.6mm; padding: 0 1.5mm; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.reg th { background: #00756f; color: #fff; font-weight: 600; height: 8mm; font-size: 9pt; }
+.reg th.d { font-size: 8.5pt; }
+.reg td.nm { font-weight: 600; }
+@page { size: A4; margin: 0; }
+@media print {
+  html, body { background: #fff !important; padding: 0 !important; }
+  .sitenav, .mkhead, .controls, footer, #empty { display: none !important; }
+  .wrap { max-width: none; }
+  .mk { display: block; margin: 0; }
+  .swrap { height: auto !important; width: auto !important; margin: 0; box-shadow: none; overflow: visible; break-after: page; }
+  .swrap:last-child { break-after: auto; }
+  .sheet { transform: none !important; }
+}
+
+/* cute-early-years */
+:root {
+  --bg: #fff8ec; --surface: #ffffff; --ink: #2b2a4c; --muted: #6a6788; --line: #f0e2c8;
+  --accent: #e8590c; --accent-soft: #ffe9d6; --mark: #ffd84d; --focus: #3b5bdb;
+  --display: "Fredoka", "Nunito", "Trebuchet MS", system-ui, sans-serif;
+  --body: "Nunito", "Trebuchet MS", system-ui, sans-serif;
+  --a-communication: #3b82e0; --a-personal-social: #e0457b; --a-physical: #f08a24; --a-literacy: #8b5cf6;
+  --a-mathematics: #14a8b8; --a-understanding-world: #3aa655; --a-expressive-arts: #e0a812;
+  --pop: 4px 4px 0 var(--ink);
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg: #211f3d; --surface: #2d2a52; --ink: #fff3de; --muted: #c5c0e6; --line: #433f75; --accent: #ff9a5c; --accent-soft: #4a3560; --focus: #8fb0ff; --pop: 4px 4px 0 #0f0e22; } }
+:root[data-theme="dark"] { --bg: #211f3d; --surface: #2d2a52; --ink: #fff3de; --muted: #c5c0e6; --line: #433f75; --accent: #ff9a5c; --accent-soft: #4a3560; --focus: #8fb0ff; --pop: 4px 4px 0 #0f0e22; }
+body { font-family: var(--body); font-weight: 600; background-image: radial-gradient(circle at 12px 12px, rgba(232,89,12,.07) 3px, transparent 4px); background-size: 48px 48px; }
+h1, h2, h3, .rl-t, .tile .t-name, .wordmark { font-family: var(--display) !important; letter-spacing: 0 !important; font-weight: 600 !important; }
+h1 { font-weight: 700 !important; }
+.eyebrow, .grouplabel, .field > span, .a-kind { font-family: var(--display); letter-spacing: .06em; }
+.eyebrow { display: inline-block; padding: 4px 14px; border-radius: 999px; background: var(--accent-soft); }
+/* rainbow ribbon at the very top */
+body::before { content: ""; display: block; height: 10px; margin-inline: calc(-1 * max(16px, env(safe-area-inset-left, 0px))); margin-bottom: 0;
+  background: linear-gradient(90deg, var(--a-communication) 0 14.28%, var(--a-personal-social) 0 28.56%, var(--a-physical) 0 42.84%, var(--a-literacy) 0 57.12%, var(--a-mathematics) 0 71.4%, var(--a-understanding-world) 0 85.68%, var(--a-expressive-arts) 0); }
+.sitenav a { border: 2px solid var(--ink) !important; border-radius: 999px; background: var(--surface); box-shadow: 2px 2px 0 var(--ink); transition: transform .12s; }
+.sitenav a:hover { transform: translateY(-2px) rotate(-1.5deg); }
+.sitenav a[aria-current="page"] { background: var(--accent) !important; color: #fff !important; border-color: var(--ink) !important; }
+.sitenav a.wordmark { border: 0 !important; box-shadow: none; background: none; font-size: 1.55rem; color: var(--accent); }
+.sitenav a.wordmark::before { content: "\2605 "; color: var(--mark); -webkit-text-stroke: 1.5px var(--ink); }
+.btn, .chip, .vbar button, .item .prev, .item .open { border-radius: 999px !important; border: 2px solid var(--ink) !important; box-shadow: 3px 3px 0 var(--ink); font-family: var(--display); font-weight: 600 !important; transition: transform .12s, box-shadow .12s; }
+.btn:hover, .chip:hover { transform: translate(-1px,-2px); box-shadow: 4px 5px 0 var(--ink); filter: none; }
+.btn:active, .chip:active { transform: translate(2px,2px); box-shadow: 1px 1px 0 var(--ink); }
+.btn.primary { background: var(--accent); color: #fff; }
+.chip[aria-pressed="true"] { background: var(--a-communication) !important; color: #fff !important; }
+.tile, .area { border-radius: 26px !important; border: 3px solid var(--ink); box-shadow: var(--pop); transition: transform .15s; }
+.tile:hover, .area:hover { transform: translateY(-4px) rotate(-1deg); filter: none; }
+.tiles .tile:nth-child(even):hover { transform: translateY(-4px) rotate(1deg); }
+.tile .t-n { background: rgba(255,255,255,.25); align-self: flex-start; padding: 2px 12px; border-radius: 999px; }
+.tile[href*="frameworks"], .tile[href$="teacher"], .tile[href$="student"] { background: var(--a-mathematics); }
+.tile[href$="student"] { background: var(--a-literacy); } .tile[href*="frameworks"] { background: var(--a-understanding-world); }
+.rule-list { border-top: 0 !important; display: grid; gap: 12px; }
+.rule-list li { border: 3px solid var(--ink) !important; border-radius: 22px; background: var(--surface); box-shadow: 3px 3px 0 var(--ink); overflow: hidden; }
+.rule-list a { padding: 14px 20px; } .rule-list li:hover { transform: translateY(-2px); }
+.rl-n { background: var(--accent-soft); border-radius: 999px; padding: 4px 14px; color: var(--accent); }
+.hero h1 span, .mast h1 span, .mkhead h1 { background-size: 100% 100%; }
+.hero h1 span { background: linear-gradient(transparent 58%, var(--mark) 58%, var(--mark) 92%, transparent 92%); border-radius: 10px; }
+.controls { border: 3px solid var(--ink) !important; border-radius: 26px; background: var(--surface); padding: 18px !important; box-shadow: var(--pop); }
+.field input, .field select, .field textarea { border: 2px solid var(--ink) !important; border-radius: 16px !important; background: var(--bg) !important; font-family: var(--body); font-weight: 600; }
+.item { border: 3px solid var(--ink) !important; border-radius: 22px; background: var(--surface); padding: 16px 20px !important; margin-bottom: 12px; box-shadow: 3px 3px 0 var(--ink); }
+.index { padding-left: 0 !important; list-style: none; } .group-head { border: 0 !important; color: var(--accent); }
+.tag { border-radius: 999px !important; border: 2px solid var(--line) !important; background: var(--bg); padding: 3px 12px !important; }
+.tag.new { background: var(--mark) !important; border-color: var(--ink) !important; color: #2b2a4c !important; }
+.tag.area { background: var(--accent-soft) !important; border-color: var(--accent-soft) !important; color: var(--accent); }
+.note { border-radius: 18px; border: 2px dashed var(--accent); background: var(--accent-soft); }
+.swrap { border-radius: 8px; }
+footer { border-top: 3px dashed var(--accent) !important; font-weight: 600; }
+.viewer { background: #1d1b3a !important; }
+a { text-decoration-thickness: 2px; text-underline-offset: 3px; }
+/* hero decorations */
+.hero { position: relative; }
+.hero .deco { position: absolute; right: 0; top: 24px; width: min(300px, 38vw); height: auto; pointer-events: none; }
+@media (max-width: 640px) { .hero .deco { width: 120px; top: 10px; opacity: .9; } }
+.feature .f-art { border-radius: 22px; box-shadow: var(--pop); border: 3px solid var(--ink); }
+@media (prefers-reduced-motion: no-preference) { .hero .deco .bob { animation: bob 3.2s ease-in-out infinite; transform-box: fill-box; transform-origin: center; } .hero .deco .bob2 { animation-delay: -1.2s; } }
+@keyframes bob { 50% { transform: translateY(-8px) rotate(6deg); } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav class="sitenav" aria-label="Site">
+      <a class="wordmark" href="index.html">Framework Finder</a>
+      <a href="index.html">Home</a>
+      <a href="early-years.html">Early years</a>
+      <a href="printables.html">Printables</a>
+      <a href="make.html" aria-current="page">Make your own</a>
+      <a href="frameworks.html">Frameworks</a>
+    </nav>
+
+  <header class="mkhead">
+    <p class="eyebrow">Make your own</p>
+    <h1>Sheets with your children's names on</h1>
+    <p class="lead">Type the names, check the preview, then print. Names stay in this browser and are never sent anywhere.</p>
+  </header>
+
+  <div class="mk">
+    <section class="controls" aria-label="Sheet settings">
+      <div class="roles" id="tools" role="group" aria-label="Choose a sheet"></div>
+      <label class="field"><span>Names, one per line</span>
+        <textarea id="names" rows="8" placeholder="Type one child's name on each line"></textarea>
+      </label>
+      <div class="row">
+        <button class="btn" type="button" id="example">Fill with example names</button>
+        <button class="btn" type="button" id="clear">Clear names</button>
+      </div>
+      <label class="field"><span id="setting-label">Setting or class name (optional)</span>
+        <input id="setting" type="text" autocomplete="off" placeholder="e.g. Robins class">
+      </label>
+      <label class="field" id="rows-field"><span>Traced rows on each sheet</span>
+        <select id="rows"><option value="1">1</option><option value="2" selected>2</option><option value="3">3</option></select>
+      </label>
+      <label class="check" id="small-field"><input id="small" type="checkbox"> <span>Show the setting name under each label</span></label>
+      <div class="row">
+        <button class="btn primary" type="button" id="print">Print</button>
+        <span id="count" role="status" class="muted"></span>
+      </div>
+      <p class="note" id="framed" hidden>Printing may be blocked inside an app preview. If Print does nothing, open the website in your browser. The sheets look the same.</p>
+    </section>
+
+    <section class="stage" aria-label="Preview">
+      <p class="muted" id="empty">Add at least one name to see the sheets.</p>
+      <div id="sheets"></div>
+    </section>
+  </div>
+
+  <footer>
+    <p>Framework Finder is an independent resource. It is not run by, or endorsed by, the Department for Education, Ofsted or any organisation it links to.</p>
+    <p>Sheets such as safeguarding, safer sleep, fire drill and risk assessment forms are general templates. Follow your own setting's policies and the current official requirements.</p>
+  </footer>
+</div>
+<script>
+
+const $ = (id) => document.getElementById(id);
+const SVGNS = "http://www.w3.org/2000/svg";
+const TOOLS = [
+  { id: "tracing", label: "Name tracing" },
+  { id: "labels", label: "Name labels" },
+  { id: "register", label: "Class register" }
+];
+const EXAMPLE = ["Amelia", "Noah", "Fatima", "Oliver", "Zainab", "Leo", "Isla", "Ravi"];
+let tool = "tracing";
+
+/* Remember what was typed, in this browser only */
+function load(key, fallback) { try { const v = localStorage.getItem(key); return v === null ? fallback : v; } catch (e) { return fallback; } }
+function save(key, value) { try { localStorage.setItem(key, value); } catch (e) {} }
+$("names").value = load("ff-make-names", "");
+$("setting").value = load("ff-make-setting", "");
+try { if (window.self !== window.top) $("framed").hidden = false; } catch (e) { $("framed").hidden = false; }
+
+TOOLS.forEach((t) => {
+  const b = document.createElement("button");
+  b.type = "button"; b.className = "chip"; b.textContent = t.label; b.dataset.tool = t.id;
+  b.addEventListener("click", () => { tool = t.id; render(); });
+  $("tools").appendChild(b);
+});
+
+function getNames() {
+  return $("names").value.split(/\r?\n/).map((s) => s.trim()).filter(Boolean).slice(0, 200);
+}
+function el(tag, cls, text) { const e = document.createElement(tag); if (cls) e.className = cls; if (text !== undefined) e.textContent = text; return e; }
+
+/* Shrink an SVG text element until it fits the width */
+function fitSvgText(textEl, maxW, startSize) {
+  let size = startSize;
+  textEl.setAttribute("font-size", size);
+  let guard = 0;
+  while (textEl.getComputedTextLength() > maxW && size > 20 && guard++ < 60) { size -= 4; textEl.setAttribute("font-size", size); }
+  return size;
+}
+
+function sheetShell(headLeft, headRight) {
+  const wrap = el("div", "swrap");
+  const sheet = el("div", "sheet");
+  const h = el("div", "s-head"); h.append(el("span", "", headLeft), el("span", "", headRight));
+  const f = el("div", "s-foot"); f.append(el("span", "", "Framework Finder"), el("span", "", "Free to print and use in your own setting."));
+  sheet.append(h, f); wrap.appendChild(sheet);
+  return { wrap, sheet };
+}
+
+function svgEl(tag, attrs) {
+  const e = document.createElementNS(SVGNS, tag);
+  Object.keys(attrs).forEach((k) => e.setAttribute(k, attrs[k]));
+  return e;
+}
+
+function tracingSheet(name, setting, rowsWanted) {
+  const { wrap, sheet } = sheetShell(setting || "Name tracing", "Name:");
+  const box = el("div", "trace");
+  box.appendChild(el("h3", "", "Trace over the letters, then write your name on the line."));
+  const W = 700, H = 170;
+  const rows = [];
+  for (let i = 0; i < rowsWanted; i++) rows.push(i === 0 ? "model" : "dots");
+  rows.push("write");
+  rows.forEach((kind) => {
+    const svg = svgEl("svg", { viewBox: "0 0 " + W + " " + H, role: "img", "aria-label": kind === "write" ? "Blank writing line" : "Name " + name });
+    const g = svgEl("g", { stroke: "#c9d6dd", "stroke-width": "1.5" });
+    g.appendChild(svgEl("line", { x1: 0, y1: 30, x2: W, y2: 30 }));
+    g.appendChild(svgEl("line", { x1: 0, y1: 80, x2: W, y2: 80, "stroke-dasharray": "6 5" }));
+    g.appendChild(svgEl("line", { x1: 0, y1: 130, x2: W, y2: 130, stroke: "#8fa3af" }));
+    svg.appendChild(g);
+    if (kind !== "write") {
+      const attrs = { x: 6, y: 130, "font-family": "Andika, 'Trebuchet MS', 'Comic Sans MS', sans-serif", "font-weight": "400" };
+      if (kind === "model") Object.assign(attrs, { fill: "#142330" });
+      else Object.assign(attrs, { fill: "none", stroke: "#142330", "stroke-width": "1.6", "stroke-dasharray": "2 6", "stroke-linecap": "round" });
+      const t = svgEl("text", attrs);
+      t.textContent = name;
+      svg.appendChild(t);
+      svg.__text = t;
+    }
+    box.appendChild(svg);
+  });
+  sheet.appendChild(box);
+  return { wrap, sheet, svgs: box.querySelectorAll("svg") };
+}
+
+function renderTracing(names) {
+  const out = $("sheets");
+  const rows = parseInt($("rows").value, 10);
+  const made = names.map((n) => tracingSheet(n, $("setting").value.trim(), rows));
+  made.forEach((m) => out.appendChild(m.wrap));
+  /* fit after they are in the page, so text can be measured */
+  made.forEach((m) => {
+    let size = null;
+    m.sheet.querySelectorAll("svg text").forEach((t) => {
+      if (size === null) size = fitSvgText(t, 680, 118); else t.setAttribute("font-size", size);
+    });
+  });
+}
+
+function renderLabels(names) {
+  const out = $("sheets");
+  const per = 24;
+  const showSetting = $("small").checked;
+  const setting = $("setting").value.trim();
+  for (let p = 0; p < names.length; p += per) {
+    const { wrap, sheet } = sheetShell("", "");
+    sheet.querySelector(".s-head").remove();
+    const grid = el("div", "labels");
+    names.slice(p, p + per).forEach((n) => {
+      const lab = el("div", "lab");
+      const nm = el("div", "nm", n); nm.style.fontSize = "26pt";
+      lab.appendChild(nm);
+      if (showSetting && setting) lab.appendChild(el("div", "st", setting));
+      grid.appendChild(lab);
+    });
+    sheet.appendChild(grid);
+    out.appendChild(wrap);
+    grid.querySelectorAll(".nm").forEach((nm) => {
+      let size = 26, guard = 0;
+      while (nm.scrollWidth > 53 * 3.7795 && size > 9 && guard++ < 40) { size -= 1; nm.style.fontSize = size + "pt"; }
+    });
+  }
+}
+
+function renderRegister(names) {
+  const out = $("sheets");
+  const per = 24;
+  const pages = Math.max(1, Math.ceil(names.length / per));
+  for (let p = 0; p < pages; p++) {
+    const { wrap, sheet } = sheetShell($("setting").value.trim() || "Register", "Week beginning:");
+    const box = el("div", "reg");
+    const table = el("table");
+    const thead = el("thead");
+    const tr1 = el("tr"), tr2 = el("tr");
+    const nameTh = el("th", "", "Name"); nameTh.rowSpan = 2; nameTh.style.width = "46mm"; tr1.appendChild(nameTh);
+    ["Mon", "Tue", "Wed", "Thu", "Fri"].forEach((d) => { const th = el("th", "d", d); th.colSpan = 2; tr1.appendChild(th); });
+    for (let i = 0; i < 5; i++) { tr2.appendChild(el("th", "d", "AM")); tr2.appendChild(el("th", "d", "PM")); }
+    thead.append(tr1, tr2);
+    const tbody = el("tbody");
+    for (let r = 0; r < per; r++) {
+      const tr = el("tr");
+      const nm = names[p * per + r];
+      tr.appendChild(el("td", "nm", nm || ""));
+      for (let c = 0; c < 10; c++) tr.appendChild(el("td", ""));
+      tbody.appendChild(tr);
+    }
+    table.append(thead, tbody); box.appendChild(table); sheet.appendChild(box);
+    out.appendChild(wrap);
+  }
+}
+
+/* Scale the A4 preview to the width of the page; printing ignores this */
+function scaleSheets() {
+  const stage = $("sheets");
+  const avail = stage.clientWidth;
+  const full = 210 * 3.7795;
+  const s = Math.min(1, avail / full);
+  stage.querySelectorAll(".swrap").forEach((w) => {
+    const sheet = w.firstChild;
+    sheet.style.transform = "scale(" + s + ")";
+    w.style.width = (full * s) + "px";
+    w.style.height = (297 * 3.7795 * s) + "px";
+  });
+}
+
+function render() {
+  document.querySelectorAll("#tools .chip").forEach((b) => b.setAttribute("aria-pressed", b.dataset.tool === tool ? "true" : "false"));
+  $("rows-field").hidden = tool !== "tracing";
+  $("small-field").hidden = tool !== "labels";
+  $("setting-label").textContent = tool === "register" ? "Setting or class name (shown at the top)" : "Setting or class name (optional)";
+  const names = getNames();
+  $("sheets").textContent = "";
+  $("empty").hidden = names.length > 0;
+  $("print").disabled = names.length === 0;
+  if (names.length) {
+    if (tool === "tracing") renderTracing(names);
+    else if (tool === "labels") renderLabels(names);
+    else renderRegister(names);
+  }
+  const n = $("sheets").querySelectorAll(".swrap").length;
+  $("count").textContent = names.length ? names.length + (names.length === 1 ? " name, " : " names, ") + n + (n === 1 ? " page" : " pages") : "";
+  scaleSheets();
+}
+
+$("names").addEventListener("input", () => { save("ff-make-names", $("names").value); render(); });
+$("setting").addEventListener("input", () => { save("ff-make-setting", $("setting").value); render(); });
+["rows", "small"].forEach((id) => $(id).addEventListener("change", render));
+$("example").addEventListener("click", () => { $("names").value = EXAMPLE.join("\n"); save("ff-make-names", $("names").value); render(); });
+$("clear").addEventListener("click", () => { $("names").value = ""; save("ff-make-names", ""); render(); });
+$("print").addEventListener("click", () => { try { window.print(); } catch (e) {} });
+window.addEventListener("resize", scaleSheets);
+if (document.fonts && document.fonts.ready) document.fonts.ready.then(render);
+render();
+
+</script>
+</body>
+</html>
